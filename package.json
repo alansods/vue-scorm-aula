@@ -1,5 +1,5 @@
 {
-  "name": "site",
+  "name": "Aula Scorm Vue Template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -16,7 +16,6 @@
     "vue": "^2.6.14",
     "vue-awesome": "^4.3.1",
     "vue-router": "^3.2.0",
-    "vuesax": "^4.0.1-alpha.25",
     "vuex": "^3.6.2"
   },
   "devDependencies": {

@@ -41,39 +41,6 @@
       importância na rotina das oficinas.
     </p>
 
-
-  </div>
-
-  <div class="container bloco">
-
-    <p>
-      Ao finalizar este capítulo, você aprenderá a:
-    </p>
-
-    <ul class="lista-check">
-      <li>
-        Reconhecer todo o funcionamento do sistema de som e multimídia automotivo e todos os
-        componentes que compõem esse sistema;
-      </li>
-
-      <li>
-        Instalar de forma adequada e prestar manutenção, e os cuidados que você deve tomar
-        com o sistema de som automotivo;
-      </li>
-
-      <li>
-        Correlacionar os sistemas de entretenimento;
-      </li>
-
-      <li>
-        Analisar se os resultados obtidos durante os testes de diagnóstico nos sistemas de entretenimento
-        estão de acordo com os parâmetros estabelecidos pelo fabricante.
-      </li>
-    </ul>
-
-    <p>
-      Continue seus estudos!
-    </p>
   </div>
 
   </div>

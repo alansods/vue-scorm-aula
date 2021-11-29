@@ -11,12 +11,12 @@ Vue.component('v-icon', Icon)
 //Importing the global css file
 import "@/assets/css/styles.css";
 
-import HeaderPrincipal from "@/components/HeaderPrincipal.vue"; //Importando como global
+import Navbar from "@/components/layout/Navbar.vue"; //Importando como global
 import CustomModal from "@/components/CustomModal.vue"; //Importando como global
 import PageLoading from "@/components/PageLoading.vue"; //Importando como global
 
 // Registrando componentes globais
-Vue.component("HeaderPrincipal", HeaderPrincipal);
+Vue.component("Navbar", Navbar);
 Vue.component("CustomModal", CustomModal);
 Vue.component("PageLoading", PageLoading);
 

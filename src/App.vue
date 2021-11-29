@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="bg-gray-200">
-    <header-principal/>
+    <Navbar />
     <div class="sm:w-full xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto py-10">
       <transition mode="out-in">
         <router-view />
