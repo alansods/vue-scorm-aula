@@ -1,7 +1,7 @@
 <template>
-  <div id="card-aula" class="md:flex md:items-center shadow rounded-lg bg-white my-6">
+  <div id="card-aula" class="xl:flex xl:items-center shadow rounded-lg bg-white my-6">
     <div id="card-img">
-      <img :src="require(`@/assets/img/${card.img}`)" class="w-full h-full object-cover md:rounded-bl-lg md:rounded-tl-lg"  />
+      <img :src="require(`@/assets/img/${card.img}`)" class="w-full h-full object-cover rounded-t-lg rounded-b-none xl:rounded-tr-none xl:rounded-bl-lg"  />
     </div>
     <div id="card-content" class="py-5 px-8 text-dark-color">
       <div class="font-bold text-xl">Aula {{ card.numeroAula }}</div>

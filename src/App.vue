@@ -1,15 +1,19 @@
 <template>
-  <div id="app" class="bg-gray-200 font-poppins">
+  <div id="app" class="bg-gray-200 font-poppins pb-10">
     <Navbar />
-    <div>
+    <div class="pt-10">
       <transition mode="out-in">
         <router-view />
       </transition>
     </div>
+    <Footer />
   </div>
 </template>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
 
 .v-enter,
 .v-leave-to {
@@ -23,5 +27,4 @@
 }
 </style>
 
-<script>
-</script>
+<script></script>

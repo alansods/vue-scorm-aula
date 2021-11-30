@@ -1,5 +1,8 @@
 module.exports = {
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  purge: [
+    './public/**/*.html',
+    './src/**/*.{js,jsx,ts,tsx,vue}',
+  ],
   darkMode: false, // or 'media' or 'class' or 'false'
   theme: {
     extend: {
@@ -14,7 +17,10 @@ module.exports = {
       },
       backgroundImage: theme => ({
         'video-apresentacao': 'url(../img/padrao/bg-apresentacao.png)'
-      })
+      }),
+      height: {
+        'bg-apresentacao': 'calc(100vh - 2.5rem)'
+      }
     },
   },
   variants: {

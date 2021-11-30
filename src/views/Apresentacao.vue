@@ -1,39 +1,50 @@
 <template>
   <div id="apresentação">
-    <div id="container-bg-video" class="bg-video-apresentacao h-screen text-white">
-      <div id="container-video" class="sm:w-full xl:max-w-screen-lg mx-auto py-10">
-        <div id="titulo-curso">
-          <h1 class="text-center text-4xl font-bold">
+    <div
+      id="container-bg-video"
+      class="bg-video-apresentacao bg-cover h-bg-apresentacao px-3 xl:px-0 mx-auto text-white"
+    >
+      <div
+        id="container-all-content-bg-video"
+        class="w-full xl:max-w-screen-lg h-bg-apresentacao mx-auto flex flex-col justify-center xl:justify-evenly items-center"
+      >
+        <div id="titulo-curso" class="xl:w-2/3">
+          <h1 class="text-center text-3xl md:text-4xl font-bold">
             {{ $store.state.nomeDoCurso }}
           </h1>
         </div>
-        <div id="video">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/93wkCvje2ro"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          >
-          </iframe>
+
+        <div id="container-video-apresentacao" class="w-full md:w-2/4 2xl:w-3/4 mx-auto my-12 xl:my-4">
+          <div id="video-apresentacao" class="aspect-w-16 aspect-h-9">
+            <iframe
+              class="border-white border-4 shadow-xl rounded-sm"
+              src="https://www.youtube.com/embed/93wkCvje2ro"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
-        <div id="seta-descer">icone seta para baixo animada</div>
+
+        <div @click="goto('div1')" id="seta-descer" class="text-center cursor-pointer">
+          <v-icon scale="2" name="chevron-down" class="animate-bounce" />
+        </div>
       </div>
     </div>
 
-    <div id="corpo" class="sm:w-full xl:max-w-screen-lg mx-auto mt-16">
+    <div id="corpo" class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16">
       <div id="container-descricao-curso">
-        <div>
-          <h2 class="text-center text-3xl font-bold text-primary-color">Apresentação</h2>
+        <div ref="div1">
+          <h2 class="text-center text-3xl font-bold text-primary-color">
+            Apresentação
+          </h2>
         </div>
-          <p class="text-center mt-5 mb-16">
-            Seja bem-vindo ao Curso Básico de Segurança em Instalações e
-            Serviços em Eletricidade – NR 10, modalidade à distância – EAD. Este
-            curso inicia uma nova etapa de formação profissional oferecida pelo
-            SENAI para a sociedade a qual pertence.
-          </p>
+        <p class="text-center mt-5 mb-16 mx-auto">
+          Seja bem-vindo ao Curso Básico de Segurança em Instalações e Serviços
+          em Eletricidade – NR 10, modalidade à distância – EAD. Este curso
+          inicia uma nova etapa de formação profissional oferecida pelo SENAI
+          para a sociedade a qual pertence.
+        </p>
       </div>
 
       <div id="container-cards-aulas">
@@ -47,5 +58,13 @@
 import ListaAulas from "@/components/cards-aulas/ListaAulas.vue";
 export default {
   components: { ListaAulas },
+  methods: {
+    goto(refName) {
+      var element = this.$refs[refName];
+      var top = element.offsetTop - 100;
+
+      window.scrollTo(0, top);
+    }
+  }
 };
 </script>
