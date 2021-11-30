@@ -13,6 +13,7 @@
 <style>
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .v-enter,
@@ -27,4 +28,8 @@ html {
 }
 </style>
 
-<script></script>
+<script>
+export default {
+
+};
+</script>
