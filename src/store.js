@@ -12,22 +12,25 @@ export default new Vuex.Store({
         id: "1",
         numeroAula: "01",
         nomeAula: "Introdução",
-        descricaoAula: "fdfdfdfdfdfdfdfd",
-        img: "figura1.jpg"
+        descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
+        img: "aula-1.jpg",
+        link: "/aula1"
       },
       {
         id: "2",
         numeroAula: "02",
         nomeAula: "Energia Elétrica",
-        descricaoAula: "aaeeeaaeaeaea",
-        img: "figura1.jpg"
+        descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
+        img: "aula-2.jpg",
+        link: "/aula1"
       },
       {
         id: "3",
         numeroAula: "03",
         nomeAula: "Produtos de Energia",
-        descricaoAula: "gfhththgrrtrtr",
-        img: "figura1.jpg"
+        descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
+        img: "aula-3.jpg",
+        link: "/aula1"
       },
     ],
   },

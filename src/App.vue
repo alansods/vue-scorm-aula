@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="bg-gray-200">
+  <div id="app" class="bg-gray-200 font-poppins">
     <Navbar />
-    <div class="sm:w-full xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto py-10">
+    <div>
       <transition mode="out-in">
         <router-view />
       </transition>
@@ -10,9 +10,6 @@
 </template>
 
 <style>
-body {
-  font-family: "Poppins", Helvetica, Arial, sans-serif;
-}
 
 .v-enter,
 .v-leave-to {

@@ -8,8 +8,13 @@ module.exports = {
       },
       colors: {
         'primary-color': '#3F51B5',
+        'primary-color-hover': '#3B52D0',
         'secondary-color': '#21be8f',
+        'dark-color': '#464555',
       },
+      backgroundImage: theme => ({
+        'video-apresentacao': 'url(../img/padrao/bg-apresentacao.png)'
+      })
     },
   },
   variants: {
@@ -17,5 +22,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
   ],
 }

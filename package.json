@@ -1,5 +1,5 @@
 {
-  "name": "Aula Scorm Vue Template",
+  "name": "site",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -19,6 +19,7 @@
     "vuex": "^3.6.2"
   },
   "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.3.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
