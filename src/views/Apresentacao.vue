@@ -6,10 +6,10 @@
     >
       <div
         id="container-all-content-bg-video"
-        class="w-full xl:max-w-screen-lg h-bg-apresentacao mx-auto flex flex-col justify-center xl:justify-evenly items-center"
+        class="w-full xl:max-w-screen-lg h-bg-apresentacao mx-auto flex flex-col justify-center xl:justify-evenly items-center pt-5"
       >
         <div id="titulo-curso" class="xl:w-2/3">
-          <h1 class="text-center text-3xl md:text-4xl font-bold shadow-sm">
+          <h1 class="text-center text-3xl xl:text-4xl font-bold shadow-sm">
             {{ $store.state.nomeDoCurso }}
           </h1>
         </div>

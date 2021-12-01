@@ -34,6 +34,37 @@ export default new Vuex.Store({
         link: "/aula1"
       },
     ],
+    navbarItems: [
+      {
+        id: '1',
+        nome: 'Apresentação',
+        icone: 'home',
+        link: '/'
+      },
+      {
+        id: '2',
+        nome: 'Aula 01',
+        icone: 'book-open',
+        link: '/aulas/Aula01'
+      },
+      {
+        nome: 'Aula 02',
+        icone: 'book-open',
+        link: '/aulas/Aula02'
+      },
+      {
+        id: '3',
+        nome: 'Aula 03',
+        icone: 'book-open',
+        link: '/aulas/Aula03'
+      },
+      {
+        id: '4',
+        nome: 'Referências',
+        icone: 'book',
+        link: '/aulas/Referências'
+      },
+    ]
   },
   mutations: {
 
