@@ -13,6 +13,7 @@ import "@/assets/css/styles.css";
 
 import Navbar from "@/components/layout/navbar/Navbar.vue"; //Importando como global
 import Footer from "@/components/layout/Footer.vue"; //Importando como global
+import FixedNav from "@/components/fixedNav//FixedNav.vue"; //Importando como global
 import CustomModal from "@/components/CustomModal.vue"; //Importando como global
 import PageLoading from "@/components/PageLoading.vue"; //Importando como global
 
@@ -21,6 +22,7 @@ Vue.component("Navbar", Navbar);
 Vue.component("Footer", Footer);
 Vue.component("CustomModal", CustomModal);
 Vue.component("PageLoading", PageLoading);
+Vue.component("FixedNav", FixedNav);
 
 Vue.config.productionTip = false;
 

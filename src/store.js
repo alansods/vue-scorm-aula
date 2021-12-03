@@ -12,10 +12,10 @@ export default new Vuex.Store({
       {
         id: "1",
         numeroAula: "01",
-        nomeAula: "Introdução",
+        nomeAula: "Introdução ao Assunto",
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-1.jpg",
-        link: "/aulas/aula_01/Aula_01_Introducao"
+        link: "/aulas/aula-01/Aula01Introducao"
       },
       {
         id: "2",
@@ -23,7 +23,7 @@ export default new Vuex.Store({
         nomeAula: "Energia Elétrica",
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-2.jpg",
-        link: "/Aula_02"
+        link: "/Aula-02"
       },
       {
         id: "3",
@@ -31,7 +31,7 @@ export default new Vuex.Store({
         nomeAula: "Produtos de Energia",
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-3.jpg",
-        link: "/Aula_03"
+        link: "/Aula-03"
       },
     ],
     topicosAula_01: [
@@ -39,7 +39,7 @@ export default new Vuex.Store({
         id: '1',
         numeroTopico: '01',
         nome: 'Eletricidade na Vida',
-        link: '/'
+        link: '/aulas/aula-01/Aula01Topico01'
       },
       {
         id: '2',
@@ -65,7 +65,7 @@ export default new Vuex.Store({
         id: '2',
         nome: 'Aula 01',
         icone: 'book-open',
-        link: '/aulas/aula_01/Aula_01_Introducao'
+        link: '/aulas/aula-01/Aula01Introducao'
       },
       {
         nome: 'Aula 02',

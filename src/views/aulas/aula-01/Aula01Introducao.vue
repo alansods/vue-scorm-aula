@@ -13,7 +13,7 @@
     >
       <div
         id="container-all-content-bg-video"
-        class="w-full xl:max-w-screen-lg h-1/4 mx-auto flex items-center pt-5"
+        class="w-full xl:max-w-screen-lg mx-auto flex items-center pt-7 pb-5"
       >
         <div id="titulo-curso" class="xl:w-3/4 text-left">
           <h2 class="text-3xl xl:text-4xl font-bold shadow-sm">
@@ -49,44 +49,27 @@
       class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
       <div
-        v-for="topico in $store.state.topicosAula_01"
-        :key="topico.id"
-        :topico="topico"
-
         id="container-principal"
-        class="flex justify-center items-center bg-white rounded-lg shadow my-7"
+        
       >
-        <div
-          id="container-left"
-          class="
-            bg-primary-color
-            w-20
-            text-center
-            py-5
-            text-white
-            font-bold
-            text-2xl
-            rounded-l-lg
-          "
-        >
-          {{ topico.numeroTopico }}
-        </div>
-
-        <div id="container-middle" class="flex-1 pl-5">
-          <div class="font-bold text-xl">Tópico {{ topico.numeroTopico }}</div>
-          <div>{{ topico.nome }}</div>
-        </div>
-
-        <div id="container-right" class="pr-5 text-primary-color">
-          <v-icon scale="2" name="sign-in-alt" />
-        </div>
+        <Aula01ListaTopicos
+          v-for="topico in $store.state.topicosAula_01"
+          :key="topico.id"
+          :topico="topico"
+          
+        />
       </div>
     </div>
+    <FixedNav />
   </div>
 </template>
 
 <script>
-export default {};
+import Aula01ListaTopicos from "@/components/Aula01ListaTopicos.vue";
+
+export default {
+  components: { Aula01ListaTopicos },
+};
 </script>
 
 <style></style>
