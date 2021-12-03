@@ -5,7 +5,7 @@
   >
     <div id="card-img">
       <img
-        :src="require(`@/assets/img/${card.img}`)"
+        :src="require(`@/assets/img/${aula.img}`)"
         class="
           w-full
           h-52
@@ -17,9 +17,10 @@
       />
     </div>
     <div id="card-content" class="py-5 px-8 text-dark-color">
-      <div class="font-bold text-xl">Aula {{ card.numeroAula }}</div>
-      <div class="text-lg font-medium">{{ card.nomeAula }}</div>
-      <div class="text-sm">{{ card.descricaoAula }}</div>
+      <div class="font-bold text-xl">Aula {{ aula.numeroAula }}</div>
+      <div class="text-lg font-medium">{{ aula.nomeAula }}</div>
+      <div class="text-sm">{{ aula.descricaoAula }}</div>
+      <router-link :to="aula.link">
       <button
         class="
           bg-primary-color
@@ -38,13 +39,14 @@
       >
         Começar
       </button>
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["card"],
+  props: ["aula"],
 };
 </script>
 

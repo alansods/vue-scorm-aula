@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-gray-200 font-poppins pb-10">
+  <div id="app" class="bg-gray-200 font-poppins pb-10 text-dark-color">
     <Navbar />
     <div class="pt-10">
       <transition mode="out-in">

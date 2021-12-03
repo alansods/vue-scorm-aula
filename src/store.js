@@ -8,14 +8,14 @@ export default new Vuex.Store({
     menuShow: false,
     nomeDoCurso: "NR - 10 Segurança em Instalações e Serviços em Eletricidade",
     user: "Lobo",
-    cards: [
+    aulas: [
       {
         id: "1",
         numeroAula: "01",
         nomeAula: "Introdução",
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-1.jpg",
-        link: "/aula1"
+        link: "/aulas/aula_01/Aula_01_Introducao"
       },
       {
         id: "2",
@@ -23,7 +23,7 @@ export default new Vuex.Store({
         nomeAula: "Energia Elétrica",
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-2.jpg",
-        link: "/aula1"
+        link: "/Aula_02"
       },
       {
         id: "3",
@@ -31,7 +31,27 @@ export default new Vuex.Store({
         nomeAula: "Produtos de Energia",
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-3.jpg",
-        link: "/aula1"
+        link: "/Aula_03"
+      },
+    ],
+    topicosAula_01: [
+      {
+        id: '1',
+        numeroTopico: '01',
+        nome: 'Eletricidade na Vida',
+        link: '/'
+      },
+      {
+        id: '2',
+        numeroTopico: '02',
+        nome: 'Moinhos de Vento',
+        link: '/'
+      },
+      {
+        id: '2',
+        numeroTopico: '03',
+        nome: 'Gasolina e Petróleo',
+        link: '/'
       },
     ],
     navbarItems: [
@@ -45,18 +65,18 @@ export default new Vuex.Store({
         id: '2',
         nome: 'Aula 01',
         icone: 'book-open',
-        link: '/aulas/Aula01'
+        link: '/aulas/aula_01/Aula_01_Introducao'
       },
       {
         nome: 'Aula 02',
         icone: 'book-open',
-        link: '/aulas/Aula02'
+        link: '/aulas/Aula_02'
       },
       {
         id: '3',
         nome: 'Aula 03',
         icone: 'book-open',
-        link: '/aulas/Aula03'
+        link: '/aulas/Aula_03'
       },
       {
         id: '4',

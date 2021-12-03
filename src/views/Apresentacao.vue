@@ -60,8 +60,8 @@ export default {
   components: { ListaAulas },
   methods: {
     goto(refName) {
-      var element = this.$refs[refName];
-      var top = element.offsetTop - 100;
+      let element = this.$refs[refName];
+      let top = element.offsetTop - 100;
 
       window.scrollTo(0, top);
     }

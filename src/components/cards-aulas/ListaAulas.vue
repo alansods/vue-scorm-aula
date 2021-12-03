@@ -1,9 +1,9 @@
 <template>
   <div id="lista-aulas">
     <CardAula
-      v-for="card in $store.state.cards"
-      :key="card.id"
-      :card="card"
+      v-for="aula in $store.state.aulas"
+      :key="aula.id"
+      :aula="aula"
       />
   </div>
 </template>

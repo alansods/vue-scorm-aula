@@ -21,7 +21,7 @@
       </div>
 
       <div class="text-white font-light text-right text-xs xl:pr-5 w-2/3">
-        {{ $store.state.nomeDoCurso }}
+        <router-link to="/">{{ $store.state.nomeDoCurso }}</router-link>
       </div>
     </nav>
 
@@ -94,10 +94,13 @@ export default {
   },
   //quando muda rota fecha o menu
   watch: {
-    '$route' () {
-      this.menuShow = !this.menuShow
-    }
-  }
+    $route() {
+      if (this.menuShow) {
+        this.menuShow = !this.menuShow;
+        this.iconeMenu = "bars";
+      }
+    },
+  },
 };
 </script>
 
