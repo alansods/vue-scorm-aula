@@ -18,7 +18,7 @@ html {
 
 .v-enter,
 .v-leave-to {
-  transform: translate3d(-20px, 0, 0);
+  transform: translate3d(0, -20px, 0);
   opacity: 0;
 }
 
