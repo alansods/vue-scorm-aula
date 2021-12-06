@@ -33,7 +33,7 @@
           text-white
           rounded-full
           shadow
-          md:hover:bg-primary-color-hover
+          xl:hover:bg-primary-color-hover
           transition-all
         "
       >

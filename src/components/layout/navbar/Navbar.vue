@@ -72,7 +72,7 @@ export default {
     return {
       menuShow: false,
       iconeMenu: "bars",
-    };
+    }
   },
   methods: {
     cliqueFora({ currentTarget, target }) {
@@ -88,9 +88,9 @@ export default {
         this.iconeMenu = "bars";
       }
     },
-    goToAbout() {
-      this.$router.push("/about");
-    },
+    // goToAbout() {
+    //   this.$router.push("/about");
+    // },
   },
   //quando muda rota fecha o menu
   watch: {
@@ -105,14 +105,7 @@ export default {
 </script>
 
 <style scoped>
-.v-enter,
-.v-leave-to {
-  transform: translate3d(-20px, 0, 0);
-  opacity: 0;
-}
 
-.v-enter-active,
-.v-leave-active {
-  transition: all 0.3s;
-}
+
+
 </style>

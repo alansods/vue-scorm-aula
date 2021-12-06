@@ -15,7 +15,7 @@ export default new Vuex.Store({
         nomeAula: "Introdução ao Assunto",
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-1.jpg",
-        link: "/aulas/aula-01/Aula01Introducao"
+        link: "/aula-01"
       },
       {
         id: "2",
@@ -39,19 +39,19 @@ export default new Vuex.Store({
         id: '1',
         numeroTopico: '01',
         nome: 'Eletricidade na Vida',
-        link: '/aulas/aula-01/Aula01Topico01'
+        link: '/aula-01/topico-01'
       },
       {
         id: '2',
         numeroTopico: '02',
         nome: 'Moinhos de Vento',
-        link: '/'
+        link: '/aula-01/topico-02'
       },
       {
         id: '2',
         numeroTopico: '03',
         nome: 'Gasolina e Petróleo',
-        link: '/'
+        link: '/aula-01/topico-03'
       },
     ],
     navbarItems: [
@@ -65,24 +65,24 @@ export default new Vuex.Store({
         id: '2',
         nome: 'Aula 01',
         icone: 'book-open',
-        link: '/aulas/aula-01/Aula01Introducao'
+        link: '/aula-01'
       },
       {
         nome: 'Aula 02',
         icone: 'book-open',
-        link: '/aulas/Aula_02'
+        link: '/aula_02'
       },
       {
         id: '3',
         nome: 'Aula 03',
         icone: 'book-open',
-        link: '/aulas/Aula_03'
+        link: '/aula_03'
       },
       {
         id: '4',
         nome: 'Referências',
         icone: 'book',
-        link: '/aulas/Referências'
+        link: '/Referências'
       },
     ]
   },

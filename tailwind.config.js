@@ -24,7 +24,12 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['active'],
+      scale: ['active'],
+      translateX: ['active'],
+      translateY: ['active'],
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),

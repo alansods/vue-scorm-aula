@@ -5,7 +5,7 @@
       class="
         bg-video-apresentacao bg-cover
         h-1/4
-        px-3
+        px-4
         xl:px-0
         mx-auto
         text-white
@@ -13,7 +13,7 @@
     >
       <div
         id="container-all-content-bg-video"
-        class="w-full xl:max-w-screen-lg mx-auto flex items-center pt-7 pb-5"
+        class="w-full xl:max-w-screen-lg mx-auto flex flex-col xl:flex-row xl:items-center pt-12 xl:pt-7  xl:pb-5"
       >
         <div id="titulo-curso" class="xl:w-3/4 text-left">
           <h2 class="text-3xl xl:text-4xl font-bold shadow-sm">
@@ -60,7 +60,6 @@
         />
       </div>
     </div>
-    <FixedNav />
   </div>
 </template>
 
@@ -68,6 +67,7 @@
 import Aula01ListaTopicos from "@/components/Aula01ListaTopicos.vue";
 
 export default {
+  title: 'Aula 01',
   components: { Aula01ListaTopicos },
 };
 </script>

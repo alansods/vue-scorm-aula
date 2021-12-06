@@ -13,12 +13,12 @@ const routes = [
     component: Apresentacao,
   },
   {
-    path: "/aulas/aula-01/Aula01Introducao",
+    path: "/aula-01",
     name: "Aula01Introducao",
     component: Aula01Introducao,
   },
   {
-    path: "/aulas/aula-01/Aula01Topico01",
+    path: "/aula-01/topico-01",
     name: "Aula01Topico01",
     component: Aula01Topico01,
   },

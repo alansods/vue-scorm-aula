@@ -16,6 +16,10 @@ html {
   overflow-x: hidden;
 }
 
+p:not(:first-of-type):not(:last-of-type) {
+  margin: 1rem 0 !important
+}
+
 .v-enter,
 .v-leave-to {
   transform: translate3d(0, -20px, 0);
