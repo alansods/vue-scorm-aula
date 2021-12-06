@@ -75,7 +75,7 @@
       <div class="bg-white p-8 rounded-lg shadow my-5">
         
         <div class="max-h-xs max-w-xs float-left mr-5">
-          <img class="object-cover" src="@/assets/img/dog.jpg" />
+          <img class="object-cover rounded-md" src="@/assets/img/dog.jpg" />
         </div>
 
         <p>

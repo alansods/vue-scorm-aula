@@ -17,7 +17,7 @@ html {
 }
 
 p:not(:first-of-type):not(:last-of-type) {
-  margin: 1rem 0 !important
+  margin: .9rem 0 !important
 }
 
 .v-enter,

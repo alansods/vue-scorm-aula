@@ -11,7 +11,7 @@
       transform
       transition-all
     "
-    @click="toggleAccordion"
+    @click="clicou = !clicou"
   >
     <div class="flex items-center font-bold text-2xl">
       <v-icon name="question-circle" class="mr-2" scale="1.5" />
