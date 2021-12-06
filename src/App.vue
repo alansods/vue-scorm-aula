@@ -16,8 +16,16 @@ html {
   overflow-x: hidden;
 }
 
-p:not(:first-of-type):not(:last-of-type) {
-  margin: .9rem 0 !important
+p {
+  margin: .8rem 0 !important
+}
+
+p:first-of-type {
+  margin-top: 0 !important;
+}
+
+p:last-of-type {
+  margin-bottom: 0 !important;
 }
 
 .v-enter,

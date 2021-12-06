@@ -74,9 +74,12 @@
 
       <div class="bg-white p-8 rounded-lg shadow my-5">
         
-        <div class="max-h-xs max-w-xs float-left mr-5">
-          <img class="object-cover rounded-md" src="@/assets/img/dog.jpg" />
-        </div>
+        <figure class="max-h-xs max-w-xs xl:float-left xl:mr-5 xl:mb-0 mb-5">
+          <img class="object-cover rounded-md" src="@/assets/img/dog.jpg" alt="Cachorro Feliz" />
+          <figcaption class="text-xs text-gray-300 mt-1">
+            Figura 1: Cachorro Feliz
+          </figcaption>
+        </figure>
 
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam

@@ -16,9 +16,13 @@
     <div class="flex items-center font-bold text-2xl">
       <v-icon name="question-circle" class="mr-2" scale="1.5" />
       <h3>Saiba Mais</h3>
-      <small class="text-xs font-light ml-1">(clique aqui)</small>
+      <small class="text-xs font-light ml-2">(clique aqui)</small>
     </div>
     <div class="mt-3 transition-all" :class="clicou ? 'is-open' : 'is-closed'">
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, .
+      </p>
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
         eirmod tempor invidunt ut labore et dolore magna aliquyam erat, .
