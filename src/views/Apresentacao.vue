@@ -76,10 +76,11 @@
           <CustomModal />
         </div>
         <p class="text-center mt-5 mx-auto">
-          Olá <span class="font-bold">{{ $store.state.aluno }}</span>. Seja bem-vindo ao Curso Básico de Segurança em Instalações e Serviços
-          em Eletricidade – NR 10, modalidade à distância – EAD. Este curso
-          inicia uma nova etapa de formação profissional oferecida pelo SENAI
-          para a sociedade a qual pertence.
+          Olá <span class="font-bold">{{ $store.state.aluno }}</span
+          >. Seja bem-vindo ao Curso Básico de Segurança em Instalações e
+          Serviços em Eletricidade – NR 10, modalidade à distância – EAD. Este
+          curso inicia uma nova etapa de formação profissional oferecida pelo
+          SENAI para a sociedade a qual pertence.
         </p>
       </div>
 
@@ -98,9 +99,11 @@ export default {
   methods: {
     goto(refName) {
       let element = this.$refs[refName];
-      let top = element.offsetTop - 100;
-
-      window.scrollTo(0, top);
+      let top = element.offsetTop - 80;
+      window.scrollTo({
+        top,
+        behavior: "smooth"
+      });
     },
   },
 };
