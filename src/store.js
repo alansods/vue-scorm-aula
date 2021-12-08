@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     menuShow: false,
     nomeDoCurso: "NR - 10 Segurança em Instalações e Serviços em Eletricidade",
-    user: "Lobo",
+    aluno: "",
     aulas: [
       {
         id: "1",

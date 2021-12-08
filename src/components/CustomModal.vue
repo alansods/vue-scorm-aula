@@ -1,12 +1,25 @@
 <template>
   <div>
-    <button @click="CustomModalAtivo = !CustomModalAtivo"><slot name="nomeBotao"></slot></button>
-
     <transition name="CustomModal">
-      <div class="CustomModal-wrapper" v-show="CustomModalAtivo" @click="cliqueFora">
-        <div class="CustomModal">
-          <slot name="conteudo"></slot>
-          <a class="fechar" @click="CustomModalAtivo = !CustomModalAtivo">x</a>
+      <div
+        class="CustomModal-wrapper"
+        v-show="CustomModalAtivo"
+        @click="cliqueFora"
+      >
+        <div class="CustomModal flex flex-col items-center justify-center rounded-lg">
+          <lottie-player
+            src="https://assets9.lottiefiles.com/packages/lf20_ymogg1nq.json"
+            background="transparent"
+            speed="1"
+            style="width: 200px; height: 200px; margin: 0 auto"
+            loop
+            autoplay
+          ></lottie-player>
+          <h3>Como deseja ser chamado?</h3>
+          <input class="mt-4 rounded" v-model="$store.state.aluno" type="text" />
+          <button class="rounded bg-primary-color px-5 py-2 text-white mt-5" @click="CustomModalAtivo = !CustomModalAtivo">
+            Confirmar
+          </button>
         </div>
       </div>
     </transition>
@@ -18,7 +31,7 @@ export default {
   name: "CustomModal",
   data() {
     return {
-      CustomModalAtivo: false,
+      CustomModalAtivo: true,
     };
   },
   methods: {
@@ -30,75 +43,6 @@ export default {
 </script>
 
 <style scoped>
-* {
-  box-sizing: border-box;
-}
-
-h1 {
-  margin: 0 0 20px 0;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input,
-button {
-  width: 100%;
-  border: 2px solid rgb(0, 0, 0, 0.2);
-  border-radius: 2px;
-  padding: 15px 10px;
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-input[type="submit"],
-button {
-  width: 200px;
-  background: #84e;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-input[type="submit"]:active,
-button:active {
-  background: #94e;
-}
-
-input[type="submit"]:hover,
-button:hover {
-  transform: scale(1.05);
-}
-
-button {
-  margin: 20px auto;
-  display: block;
-}
-
-a.fechar {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  background: #aaa;
-  color: #333;
-  padding: 3px 9px;
-  cursor: pointer;
-  border-radius: 2px;
-}
-
-a.fechar:hover {
-  transform: scale(1.1);
-}
-
-a.fechar:active {
-  background: rgb(187, 187, 187);
-}
 
 .CustomModal-wrapper {
   position: fixed;
@@ -114,7 +58,6 @@ a.fechar:active {
   position: relative;
   background: #e5e5e5;
   padding: 50px;
-  border-radius: 4px;
   max-width: 400px;
   margin: 120px auto 0 auto;
   z-index: 10;

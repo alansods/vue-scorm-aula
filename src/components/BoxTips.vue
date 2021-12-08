@@ -19,6 +19,7 @@
       <small class="text-xs font-light ml-2">(clique aqui)</small>
     </div>
     <div class="mt-3 transition-all" :class="clicou ? 'is-open' : 'is-closed'">
+      <p>Preste atenção {{ $store.state.aluno }}</p>
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
         eirmod tempor invidunt ut labore et dolore magna aliquyam erat, .

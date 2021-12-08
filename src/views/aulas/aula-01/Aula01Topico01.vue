@@ -47,6 +47,37 @@
         <h3 class="font-bold text-primary-color text-xl mb-5">
           1.1 Nome do Tópico
         </h3>
+
+        <p class="text-lg">
+          Olá <span class="font-bold">{{ $store.state.aluno }}</span
+          >!
+        </p>
+
+        <Modal>
+          <template v-slot:nomeBotao>Clique aqui</template>
+          <template v-slot:conteudo>
+
+            <h3 class="text-2xl font-bold mb-5">Esse é o titulo</h3>
+
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, .
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, .
+            </p>
+          </template>
+        </Modal>
+
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -73,9 +104,12 @@
       <BoxTips />
 
       <div class="bg-white p-8 rounded-lg shadow my-5">
-        
         <figure class="max-h-xs max-w-xs xl:float-left xl:mr-5 xl:mb-0 mb-5">
-          <img class="object-cover rounded-md" src="@/assets/img/dog.jpg" alt="Cachorro Feliz" />
+          <img
+            class="object-cover rounded-md"
+            src="@/assets/img/dog.jpg"
+            alt="Cachorro Feliz"
+          />
           <figcaption class="text-xs text-gray-300 mt-1">
             Figura 1: Cachorro Feliz
           </figcaption>
