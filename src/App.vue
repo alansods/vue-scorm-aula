@@ -7,6 +7,9 @@
       </transition>
     </div>
     <Footer />
+        <button @click="clicou" class="text-2xl text-gray-800">CLIQUE</button>
+        <p>{{alunos}}</p>
+
   </div>
 </template>
 
@@ -17,7 +20,7 @@ html {
 }
 
 p {
-  margin: .8rem 0 !important
+  margin: 0.8rem 0 !important;
 }
 
 p:first-of-type {
@@ -67,6 +70,27 @@ p:last-of-type {
 
 <script>
 export default {
-
-}
+  data() {
+    return {
+      alunos: ""
+    }
+  },
+  methods: {
+    clicou() {
+      this.alunos = "Alan"
+    },
+    checarLocalStorage() {
+      if(window.localStorage.alunos)
+      this.alunos = JSON.parse(window.localStorage.alunos)
+    }
+  },
+  watch: {
+    alunos(valor) {
+      window.localStorage.alunos = JSON.stringify(valor);
+    }
+  },
+  created() {
+    this.checarLocalStorage();
+  }
+};
 </script>

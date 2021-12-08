@@ -6,18 +6,34 @@
         v-show="CustomModalAtivo"
         @click="cliqueFora"
       >
-        <div class="CustomModal flex flex-col items-center justify-center rounded-lg">
+        <div
+          class="
+            CustomModal
+            flex flex-col
+            items-center
+            justify-center
+            rounded-lg
+          "
+        >
           <lottie-player
-            src="https://assets9.lottiefiles.com/packages/lf20_ymogg1nq.json"
+            src="https://assets8.lottiefiles.com/packages/lf20_34RWGs.json"
             background="transparent"
             speed="1"
-            style="width: 200px; height: 200px; margin: 0 auto"
+            style="width: 200px; height: 200px"
             loop
             autoplay
           ></lottie-player>
-          <h3>Como deseja ser chamado?</h3>
-          <input class="mt-4 rounded" v-model="$store.state.aluno" type="text" />
-          <button class="rounded bg-primary-color px-5 py-2 text-white mt-5" @click="CustomModalAtivo = !CustomModalAtivo">
+
+          <h3>Olá! Como deseja ser chamado?</h3>
+          <input
+            class="mt-4 rounded text-center"
+            v-model="$store.state.aluno"
+            type="text"
+          />
+          <button
+            class="rounded bg-primary-color px-5 py-2 text-white mt-5"
+            @click="salvarNome"
+          >
             Confirmar
           </button>
         </div>
@@ -38,12 +54,14 @@ export default {
     cliqueFora({ currentTarget, target }) {
       if (currentTarget === target) this.CustomModalAtivo = false;
     },
+    salvarNome() {
+      this.CustomModalAtivo = !this.CustomModalAtivo;;
+    },
   },
 };
 </script>
 
 <style scoped>
-
 .CustomModal-wrapper {
   position: fixed;
   width: 100vw;
@@ -56,7 +74,7 @@ export default {
 
 .CustomModal {
   position: relative;
-  background: #e5e5e5;
+  background: #fff;
   padding: 50px;
   max-width: 400px;
   margin: 120px auto 0 auto;
