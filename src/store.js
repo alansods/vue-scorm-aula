@@ -5,6 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    modalNome: true,
     menuShow: false,
     nomeDoCurso: "NR - 10 Segurança em Instalações e Serviços em Eletricidade",
     aluno: "",
@@ -87,11 +88,9 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
-
     clicou(state) {
       localStorage.setItem('store', JSON.stringify(state));
     },
-
 		initialiseStore(state) {
 			// Check if the ID exists
 			if(localStorage.getItem('store')) {
@@ -102,6 +101,12 @@ export default new Vuex.Store({
 			}
 		}
 	},
+  actions: {
+    abrirModalNome({commit, state}) {
+      state.modalNome = !state.modalNome
+      commit('clicou')
+    },
+  },
   getters: {
     nomeEscolhido(state) {
       return localStorage.setItem('store', JSON.stringify(state));

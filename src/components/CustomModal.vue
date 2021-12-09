@@ -3,7 +3,7 @@
     <transition name="CustomModal">
       <div
         class="CustomModal-wrapper"
-        v-if="CustomModalAtivo"
+        v-if="$store.state.modalNome"
       >
         <div
           class="
@@ -28,6 +28,7 @@
             class="mt-4 rounded text-center"
             v-model="$store.state.aluno"
             type="text"
+            @keyup.enter="salvarNome"
           />
           <button
             class="rounded bg-primary-color px-5 py-2 text-white mt-5"
@@ -46,12 +47,11 @@ export default {
   name: "CustomModal",
   data() {
     return {
-      CustomModalAtivo: true,
     };
   },
   methods: {
     salvarNome() {
-      this.CustomModalAtivo = !this.CustomModalAtivo;
+      this.$store.state.modalNome = !this.$store.state.modalNome;
       this.$store.commit('clicou')
     },
   },

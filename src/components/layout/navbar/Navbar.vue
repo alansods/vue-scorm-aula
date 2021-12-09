@@ -50,6 +50,7 @@
       >
         <nav class="mt-14">
           <h2 class="font-bold text-2xl mb-5">Menu</h2>
+          <button class="bg-primary-color rounded px-5 py-2 text-white" @click="$store.dispatch('abrirModalNome')">Editar Nome</button>
           <ul>
             <NavbarItems
               v-for="navbarItem in $store.state.navbarItems"
