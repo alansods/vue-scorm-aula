@@ -4,7 +4,6 @@
       <div
         class="CustomModal-wrapper"
         v-show="CustomModalAtivo"
-        @click="cliqueFora"
       >
         <div
           class="
@@ -24,7 +23,7 @@
             autoplay
           ></lottie-player>
 
-          <h3>Olá! Como deseja ser chamado?</h3>
+          <h3 class="text-center">Olá! <br />Como deseja ser chamado?</h3>
           <input
             class="mt-4 rounded text-center"
             v-model="$store.state.aluno"
@@ -55,7 +54,8 @@ export default {
       if (currentTarget === target) this.CustomModalAtivo = false;
     },
     salvarNome() {
-      this.CustomModalAtivo = !this.CustomModalAtivo;;
+      this.CustomModalAtivo = !this.CustomModalAtivo;
+      this.$store.commit('clicou')
     },
   },
 };
@@ -68,8 +68,9 @@ export default {
   height: 100vh;
   top: 0;
   left: 0;
-  background: rgb(0, 0, 0, 0.4);
+  background: rgb(0, 0, 0, 0.8);
   overflow-y: scroll;
+  z-index: 50;
 }
 
 .CustomModal {
@@ -78,7 +79,7 @@ export default {
   padding: 50px;
   max-width: 400px;
   margin: 120px auto 0 auto;
-  z-index: 10;
+  z-index: 60;
 }
 
 .CustomModal-enter,

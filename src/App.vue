@@ -1,15 +1,14 @@
 <template>
   <div id="app" class="bg-gray-200 font-poppins pb-10 text-dark-color">
     <Navbar />
+    <CustomModal />
+
     <div class="pt-10">
       <transition mode="out-in">
         <router-view />
       </transition>
     </div>
     <Footer />
-        <button @click="clicou" class="text-2xl text-gray-800">CLIQUE</button>
-        <p>{{alunos}}</p>
-
   </div>
 </template>
 
@@ -70,27 +69,8 @@ p:last-of-type {
 
 <script>
 export default {
-  data() {
-    return {
-      alunos: ""
-    }
+  beforeCreate() {
+    this.$store.commit("initialiseStore");
   },
-  methods: {
-    clicou() {
-      this.alunos = "Alan"
-    },
-    checarLocalStorage() {
-      if(window.localStorage.alunos)
-      this.alunos = JSON.parse(window.localStorage.alunos)
-    }
-  },
-  watch: {
-    alunos(valor) {
-      window.localStorage.alunos = JSON.stringify(valor);
-    }
-  },
-  created() {
-    this.checarLocalStorage();
-  }
 };
 </script>

@@ -63,11 +63,11 @@
           <p class="text-center">
             Você concluiu a aula {{ $store.state.aulas[0].nomeAula }}.
             <br />Deseja
-            avançar para a próxima aula?
+            avançar para a próxima aula ou voltar e revisar o conteúdo?
           </p>
 
           <div class="flex justify-evenly mt-10">
-            <button class="bg-gray-400 px-5 py-2 rounded-lg text-gray-200 mx-2 transform hover:-translate-y-1 shadow transition-all">Não</button>
+            <button class="bg-gray-400 px-5 py-2 rounded-lg text-gray-200 mx-2 transform hover:-translate-y-1 shadow transition-all">Voltar</button>
             <button class="bg-primary-color px-5 py-2 rounded-lg text-white mx-2 transform hover:-translate-y-1 shadow transition-all">Sim</button>
           </div>
         </div>

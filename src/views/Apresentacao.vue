@@ -73,7 +73,6 @@
           <h2 class="text-center text-3xl font-bold text-primary-color my-5">
             Apresentação
           </h2>
-          <CustomModal />
         </div>
         <p class="text-center mt-5 mx-auto">
           Olá <span class="font-bold">{{ $store.state.aluno }}</span

@@ -88,5 +88,21 @@ export default new Vuex.Store({
   },
   mutations: {
 
+    clicou(state) {
+      localStorage.setItem('store', JSON.stringify(state));
+    },
+
+		initialiseStore(state) {
+			// Check if the ID exists
+			if(localStorage.getItem('store')) {
+				// Replace the state object with the stored item
+				this.replaceState(
+					Object.assign(state, JSON.parse(localStorage.getItem('store')))
+				);
+			}
+		}
+	},
+  getters: {
+
   }
 })
