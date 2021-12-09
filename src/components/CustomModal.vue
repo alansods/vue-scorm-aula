@@ -3,7 +3,7 @@
     <transition name="CustomModal">
       <div
         class="CustomModal-wrapper"
-        v-show="CustomModalAtivo"
+        v-if="CustomModalAtivo"
       >
         <div
           class="
@@ -23,7 +23,7 @@
             autoplay
           ></lottie-player>
 
-          <h3 class="text-center">Olá! <br />Como deseja ser chamado?</h3>
+          <h3 class="text-center">Olá! <br />Qual é seu nome?</h3>
           <input
             class="mt-4 rounded text-center"
             v-model="$store.state.aluno"
@@ -50,9 +50,6 @@ export default {
     };
   },
   methods: {
-    cliqueFora({ currentTarget, target }) {
-      if (currentTarget === target) this.CustomModalAtivo = false;
-    },
     salvarNome() {
       this.CustomModalAtivo = !this.CustomModalAtivo;
       this.$store.commit('clicou')

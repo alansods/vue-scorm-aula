@@ -103,6 +103,8 @@ export default new Vuex.Store({
 		}
 	},
   getters: {
-
+    nomeEscolhido(state) {
+      return localStorage.setItem('store', JSON.stringify(state));
+    }
   }
 })
