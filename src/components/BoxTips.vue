@@ -18,7 +18,7 @@
       <h3>Saiba Mais</h3>
       <small class="text-xs font-light ml-2">(clique aqui)</small>
     </div>
-    <div class="mt-3 transition-all" :class="clicou ? 'is-open' : 'is-closed'">
+    <div class="transition-all" :class="clicou ? 'is-open' : 'is-closed'">
       <p>Preste atenção {{ $store.state.aluno }}</p>
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
@@ -50,12 +50,15 @@ export default {
 <style scoped>
 .is-closed {
   max-height: 0;
+  overflow: hidden;
   opacity: 0;
-  margin: 0;
+
 }
 
 .is-open {
   max-height: 300px;
   opacity: 1;
+  margin-top: 1rem;
+
 }
 </style>

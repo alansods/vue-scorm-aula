@@ -49,7 +49,7 @@ export default new Vuex.Store({
         link: '/aula-01/topico-02'
       },
       {
-        id: '2',
+        id: '3',
         numeroTopico: '03',
         nome: 'Gasolina e Petróleo',
         link: '/aula-01/topico-03'
@@ -69,18 +69,19 @@ export default new Vuex.Store({
         link: '/aula-01'
       },
       {
+        id: '3',
         nome: 'Aula 02',
         icone: 'book-open',
         link: '/aula_02'
       },
       {
-        id: '3',
+        id: '4',
         nome: 'Aula 03',
         icone: 'book-open',
         link: '/aula_03'
       },
       {
-        id: '4',
+        id: '5',
         nome: 'Referências',
         icone: 'book',
         link: '/Referências'

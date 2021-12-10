@@ -19,7 +19,7 @@ html {
 }
 
 p {
-  margin: 0.8rem 0 !important;
+  margin: 0.7rem 0 !important;
 }
 
 p:first-of-type {
