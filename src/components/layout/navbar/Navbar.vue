@@ -17,7 +17,7 @@
       "
     >
       <div class="text-white cursor-pointer">
-        <v-icon scale="1.2" @click="clicouMenu()" :name="iconeMenu" />
+        <v-icon scale="1.2" @click="clicouMenu" :name="iconeMenu" />
       </div>
 
       <div class="text-white font-light text-right text-xs xl:pr-5 w-2/3">
@@ -25,7 +25,7 @@
       </div>
     </nav>
 
-    <div id="menu" v-show="menuShow">
+    <div v-if="menuShow" :class="menuShow ? 'menu ativo' : 'menu'">
       <div
         id="overlay"
         @click="cliqueFora"
@@ -107,6 +107,22 @@ export default {
 
 <style scoped>
 
+.menu {
+  display: none;
+}
 
+.menu.ativo {
+  display: block;
+  animation: menu 0.3s ease;
+}
+
+@keyframes menu {
+  from {
+    transform: translate3d(-300px, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
 
 </style>

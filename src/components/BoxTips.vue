@@ -14,7 +14,7 @@
     @click="clicou = !clicou"
   >
     <div class="flex items-center font-bold text-2xl">
-      <v-icon name="question-circle" class="mr-2" scale="1.5" />
+      <v-icon name="question-circle" class="mr-2" scale="1.8" />
       <h3>Saiba Mais</h3>
       <small class="text-xs font-light ml-2">(clique aqui)</small>
     </div>
