@@ -16,7 +16,8 @@ export default new Vuex.Store({
         nomeAula: "Introdução ao Assunto",
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-1.jpg",
-        link: "/aula-01"
+        link: "/aula-01",
+        progresso: 0
       },
       {
         id: "2",
