@@ -10,7 +10,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Apresentação",
+    name: "Apresentacao",
     component: Apresentacao,
   },
   {
@@ -37,5 +37,31 @@ const router = new VueRouter({
     return { x: 0, y: 0 };
   },
 });
+
+//salvar ultima pagina visitada ai reabrir o site
+router.afterEach(to => {
+  localStorage.setItem(router.name, to.name)
+})
+
+let isFirstTransition = true
+router.beforeEach((to, from, next) => {
+   const lastRouteName = localStorage.getItem(router.name)         
+   const shouldRedirect = Boolean(
+     to.name === "Apresentacao"
+     && lastRouteName
+     && isFirstTransition
+   )
+   
+   if (shouldRedirect) {
+     next({ name: lastRouteName })
+   } else {
+    next()
+   }
+   
+   isFirstTransition = false
+})
+
+
+
 
 export default router;

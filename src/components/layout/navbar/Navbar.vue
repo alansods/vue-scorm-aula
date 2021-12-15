@@ -17,7 +17,7 @@
       "
     >
       <div class="text-white cursor-pointer">
-        <v-icon scale="1.2" @click="clicouMenu" :name="iconeMenu" />
+        <v-icon scale="1.2" @click="clicouMenu" :name="$store.state.iconeMenu" />
       </div>
 
       <div class="text-white font-light text-right text-xs xl:pr-5 w-2/3">
@@ -25,7 +25,7 @@
       </div>
     </nav>
 
-    <div v-if="menuShow" :class="menuShow ? 'menu ativo' : 'menu'">
+    <div v-if="$store.state.menuShow" class="menu" :class="{ativo: $store.state.menuShow}">
       <div
         id="overlay"
         @click="cliqueFora"
@@ -71,22 +71,20 @@ export default {
   components: { NavbarItems },
   data() {
     return {
-      menuShow: false,
-      iconeMenu: "bars",
     }
   },
   methods: {
     cliqueFora({ currentTarget, target }) {
-      if (currentTarget === target) this.menuShow = false;
-      this.iconeMenu = "bars";
+      if (currentTarget === target) this.$store.state.menuShow = false;
+      this.$store.state.iconeMenu = "bars";
     },
     clicouMenu() {
-      this.menuShow = !this.menuShow;
-      if (this.menuShow) {
-        this.iconeMenu = "times";
+      this.$store.state.menuShow = !this.$store.state.menuShow;
+      if (this.$store.state.menuShow) {
+        this.$store.state.iconeMenu = "times";
       }
-      if (!this.menuShow) {
-        this.iconeMenu = "bars";
+      if (!this.$store.state.menuShow) {
+        this.$store.state.iconeMenu = "bars";
       }
     },
     // goToAbout() {
@@ -96,9 +94,9 @@ export default {
   //quando muda rota fecha o menu
   watch: {
     $route() {
-      if (this.menuShow) {
-        this.menuShow = !this.menuShow;
-        this.iconeMenu = "bars";
+      if (this.$store.state.menuShow) {
+        this.$store.state.menuShow = !this.$store.state.menuShow;
+        this.$store.state.iconeMenu = "bars";
       }
     },
   },
@@ -108,12 +106,11 @@ export default {
 <style scoped>
 
 .menu {
-  display: none;
+  opacity: 0;
 }
 
 .menu.ativo {
-  display: block;
-  animation: menu 0.3s ease;
+  opacity: 1;
 }
 
 @keyframes menu {

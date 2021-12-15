@@ -5,8 +5,9 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    modalNome: true,
     menuShow: false,
+    iconeMenu: "bars",
+    modalNome: true,
     nomeDoCurso: "NR - 10 Segurança em Instalações e Serviços em Eletricidade",
     aluno: "",
     aulas: [
@@ -17,7 +18,7 @@ export default new Vuex.Store({
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-1.jpg",
         link: "/aula-01",
-        progresso: 0
+        progresso: "0"
       },
       {
         id: "2",
@@ -91,7 +92,7 @@ export default new Vuex.Store({
   },
   mutations: {
     clicou(state) {
-      localStorage.setItem('store', JSON.stringify(state));
+      localStorage.setItem('store', JSON.stringify(state))
     },
 		initialiseStore(state) {
 			// Check if the ID exists
@@ -111,7 +112,7 @@ export default new Vuex.Store({
   },
   getters: {
     nomeEscolhido(state) {
-      return localStorage.setItem('store', JSON.stringify(state));
+      return localStorage.setItem('store', JSON.stringify(state))
     }
   }
 })

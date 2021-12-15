@@ -45,8 +45,6 @@
 
       <div class="bg-white p-8 rounded-lg shadow my-5">
         <div class="flex justify-center items-center flex-col">
-          
-
           <lottie-player
             src="https://assets7.lottiefiles.com/private_files/lf30_yo2zavgg.json"
             background="transparent"
@@ -55,20 +53,69 @@
             autoplay
           ></lottie-player>
 
-          <h3 class="font-bold  text-primary-color text-2xl mb-5">
+          <h3 class="font-bold text-primary-color text-2xl mb-5">
             Parabéns, <span class="font-bold">{{ $store.state.aluno }}</span
             >!
           </h3>
 
           <p class="text-center">
-            Você concluiu a aula {{ $store.state.aulas[0].nomeAula }}.
-            <br />Deseja
-            avançar para a próxima aula ou voltar e revisar o conteúdo?
+            Você concluiu a
+            <span class="font-bold"
+              >aula {{ $store.state.aulas[0].numeroAula }} -
+              {{ $store.state.aulas[0].nomeAula }}</span
+            >.
           </p>
 
           <div class="flex justify-evenly mt-10">
-            <button class="bg-gray-400 px-5 py-2 rounded-lg text-gray-200 mx-2 transform hover:-translate-y-1 shadow transition-all">Voltar</button>
-            <button class="bg-primary-color px-5 py-2 rounded-lg text-white mx-2 transform hover:-translate-y-1 shadow transition-all">Sim</button>
+            <button
+              class="
+                bg-gray-400
+                px-5
+                py-2
+                rounded-lg
+                text-gray-200
+                mx-2
+                transform
+                hover:-translate-y-1
+                shadow
+                transition-all
+              "
+            >
+              <v-icon name="home" class="mr-1" />
+              Início
+            </button>
+            <button
+              class="
+                bg-primary-color
+                px-5
+                py-2
+                rounded-lg
+                text-white
+                mx-2
+                transform
+                hover:-translate-y-1
+                shadow
+                transition-all
+              "
+            >
+              <v-icon name="arrow-left" class="mr-1" />
+            </button>
+            <button
+              class="
+                bg-primary-color
+                px-5
+                py-2
+                rounded-lg
+                text-white
+                mx-2
+                transform
+                hover:-translate-y-1
+                shadow
+                transition-all
+              "
+            >
+              <v-icon name="arrow-right" class="ml-1" />
+            </button>
           </div>
         </div>
       </div>

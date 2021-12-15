@@ -32,6 +32,8 @@ Vue.component("FixedNav", FixedNav);
 
 Vue.config.productionTip = false;
 
+
+
 new Vue({
   store,
   router,
