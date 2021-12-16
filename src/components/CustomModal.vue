@@ -1,10 +1,7 @@
 <template>
   <div>
     <transition name="CustomModal">
-      <div
-        class="CustomModal-wrapper"
-        v-if="$store.state.modalNome"
-      >
+      <div class="CustomModal-wrapper" v-if="$store.state.modalNome">
         <div
           class="
             CustomModal
@@ -47,18 +44,22 @@
 export default {
   name: "CustomModal",
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     salvarNome() {
       this.$store.state.modalNome = !this.$store.state.modalNome;
-      this.$store.commit('clicou')
+      this.$store.commit("clicou");
     },
   },
+  updated() {
+    const labelInputRef = this.$refs.nameInput;
+    labelInputRef.focus();
+  },
   mounted() {
-    this.$refs.nameInput.$el.focus()
-  }
+    const labelInputRef = this.$refs.nameInput;
+    labelInputRef.focus();
+  },
 };
 </script>
 
@@ -77,7 +78,7 @@ export default {
 .CustomModal {
   position: relative;
   background: #fff;
-  padding: 50px;
+  padding: 25px 50px;
   max-width: 400px;
   margin: 120px auto 0 auto;
   z-index: 60;
