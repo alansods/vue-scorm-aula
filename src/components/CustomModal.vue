@@ -25,6 +25,7 @@
 
           <h3 class="text-center">Olá! <br />Qual é seu nome?</h3>
           <input
+            ref="nameInput"
             class="mt-4 rounded text-center"
             v-model="$store.state.aluno"
             type="text"
@@ -55,6 +56,9 @@ export default {
       this.$store.commit('clicou')
     },
   },
+  mounted() {
+    this.$refs.nameInput.$el.focus()
+  }
 };
 </script>
 

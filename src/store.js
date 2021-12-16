@@ -107,6 +107,8 @@ export default new Vuex.Store({
   actions: {
     abrirModalNome({commit, state}) {
       state.modalNome = !state.modalNome
+      state.iconeMenu = "bars"
+      state.menuShow = !state.menuShow
       commit('clicou')
     },
   },
