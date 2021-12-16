@@ -31,34 +31,34 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  //mode: "history",
+  mode: "history",
   routes,
   scrollBehavior() {
     return { x: 0, y: 0 };
   },
 });
 
-//salvar ultima pagina visitada ai reabrir o site
+//salvar ultima pagina visitada ao reabrir o site
 router.afterEach(to => {
-  localStorage.setItem(router.name, to.name)
+  localStorage.setItem('router', to.name)
 })
 
 let isFirstTransition = true
 router.beforeEach((to, from, next) => {
-   const lastRouteName = localStorage.getItem(router.name)         
-   const shouldRedirect = Boolean(
-     to.name === "Apresentacao"
-     && lastRouteName
-     && isFirstTransition
-   )
+  
+   const lastRouteName = localStorage.getItem('router')         
+   const shouldRedirect = Boolean( to.name === "Apresentacao" && lastRouteName && isFirstTransition)
    
    if (shouldRedirect) {
+    isFirstTransition = false
      next({ name: lastRouteName })
+     console.log("pega o localstorage")
    } else {
-    next()
+      next()
+      console.log("Navegou normal sem reabrir a aba")
    }
-   
-   isFirstTransition = false
+
+
 })
 
 
