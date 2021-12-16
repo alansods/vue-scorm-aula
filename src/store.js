@@ -91,6 +91,15 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
+    modalNomeOposto(state) {
+      state.modalNome = !state.modalNome
+    },
+    iconeMenuOposto(state) {
+      state.iconeMenu = "bars"
+    },
+    menuShowOposto(state) {
+      state.menuShow = !state.menuShow
+    },
     clicou(state) {
       localStorage.setItem('store', JSON.stringify(state))
     },
@@ -105,10 +114,10 @@ export default new Vuex.Store({
 		}
 	},
   actions: {
-    abrirModalNome({commit, state}) {
-      state.modalNome = !state.modalNome
-      state.iconeMenu = "bars"
-      state.menuShow = !state.menuShow
+    abrirModalNome({commit}) {
+      commit('modalNomeOposto')
+      commit('iconeMenuOposto')
+      commit('menuShowOposto')
       commit('clicou')
     },
   },
