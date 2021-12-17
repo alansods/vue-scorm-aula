@@ -93,7 +93,7 @@
 <script>
 import ListaAulas from "@/components/cards-aulas/ListaAulas.vue";
 export default {
-  title: "NR - 10 Segurança em Instalações e Serviços em Eletricidade",
+  //title: "NR - 10 Segurança em Instalações e Serviços em Eletricidade",
   components: { ListaAulas },
   methods: {
     goto(refName) {
@@ -105,5 +105,8 @@ export default {
       });
     },
   },
+  created() {
+    document.title = "NR - 10 Segurança em Instalações e Serviços em Eletricidade"
+  }
 };
 </script>
