@@ -20,16 +20,16 @@
             autoplay
           ></lottie-player>
 
-          <h3 class="text-center">Olá! <br />Qual é seu nome?</h3>
+          <h3 class="text-center"><span class="font-bold text-lg">Olá!</span> <br />Qual é seu nome?</h3>
           <input
             ref="nameInput"
-            class="mt-4 rounded text-center"
+            class="my-6 rounded text-center shadow-lg w-full"
             v-model="$store.state.aluno"
             type="text"
             @keyup.enter="salvarNome"
           />
           <button
-            class="rounded bg-primary-color px-5 py-2 text-white mt-5"
+            class="rounded bg-primary-color px-5 py-3 w-full text-white"
             @click="salvarNome"
           >
             Confirmar
