@@ -17,15 +17,15 @@ import "@/assets/css/styles.css";
 
 import Navbar from "@/components/layout/navbar/Navbar.vue"; //Importando como global
 import Footer from "@/components/layout/Footer.vue"; //Importando como global
-import FixedNav from "@/components/layout/FixedNav.vue"; //Importando como global
-import CustomModal from "@/components/CustomModal.vue"; //Importando como global
+import FixedNav from "@/components/layout/fixed-nav/FixedNav.vue"; //Importando como global
+import ModalName from "@/components/ModalName.vue"; //Importando como global
 import Modal from "@/components/Modal.vue"; //Importando como global
 import PageLoading from "@/components/PageLoading.vue"; //Importando como global
 
 // Registrando componentes globais
 Vue.component("Navbar", Navbar);
 Vue.component("Footer", Footer);
-Vue.component("CustomModal", CustomModal);
+Vue.component("ModalName", ModalName);
 Vue.component("Modal", Modal);
 Vue.component("PageLoading", PageLoading);
 Vue.component("FixedNav", FixedNav);

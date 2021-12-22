@@ -5,9 +5,13 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    fixedMenuShow: false,
     menuShow: false,
+    temNome: false,
     iconeMenu: "bars",
     modalNome: true,
+    modalAulaCompleta: false,
+    progresso: Number("30"),
     nomeDoCurso: "NR - 10 Segurança em Instalações e Serviços em Eletricidade",
     aluno: "",
     aulas: [
@@ -91,6 +95,9 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
+    mostrarFixedMenu(state, payload) {
+      state.fixedMenuShow = payload
+    },
     modalNomeOposto(state) {
       state.modalNome = !state.modalNome
     },
@@ -100,8 +107,13 @@ export default new Vuex.Store({
     menuShowOposto(state) {
       state.menuShow = !state.menuShow
     },
-    clicou(state) {
+    SALVAR_NOME(state) {
+      state.temNome = true
       localStorage.setItem('store', JSON.stringify(state))
+    },
+    COMPLETAR_AULA(state) {
+      state.progresso = state.progresso + 20
+      state.modalAulaCompleta = !state.modalAulaCompleta
     },
 		initialiseStore(state) {
 			// Check if the ID exists
@@ -118,7 +130,7 @@ export default new Vuex.Store({
       commit('modalNomeOposto')
       commit('iconeMenuOposto')
       commit('menuShowOposto')
-      commit('clicou')
+      commit('SALVAR_NOME')
     },
   },
   getters: {

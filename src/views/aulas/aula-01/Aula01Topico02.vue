@@ -150,7 +150,6 @@
       </div>
       <button class="bg-primary-color p-3" @click="$store.commit('COMPLETAR_AULA')">Clique</button>
     </div>
-    
   </div>
 </template>
 
@@ -161,9 +160,6 @@ import ModalAulaCompleta from '../../../components/ModalAulaCompleta.vue';
 export default {
   title: "Aula 01 - Tópico 01",
   components: { BoxTips, ModalAulaCompleta },
-  created() {
-    this.$store.commit("mostrarFixedMenu", true)
-  }
 };
 </script>
 

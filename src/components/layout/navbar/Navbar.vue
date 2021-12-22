@@ -17,7 +17,7 @@
       "
     >
       <div class="text-white">
-        <router-link to="/"> <v-icon class="mr-2 cursor-pointer active:scale-75 transform transition" scale="1.3" name="home" /></router-link>
+        <router-link to="/"><v-icon class="mr-2 cursor-pointer active:scale-75 transform transition" scale="1.3" name="home" /></router-link>
         |
         <v-icon class="ml-2 cursor-pointer active:scale-75 transform transition" scale="1.2" @click="clicouMenu" :name="$store.state.iconeMenu" />
         
@@ -26,8 +26,8 @@
       <div class="text-white font-light text-right text-xs xl:pr-5 w-2/3">
         <!-- <router-link to="/">{{ $store.state.nomeDoCurso }}</router-link> -->
         <div id="progress-bar">
-          <div class="progress-text">67%</div>
-          <div id="green"></div>
+          <div class="progress-text">{{ this.$store.state.progresso }}</div>
+          <div id="green" :style="{width:this.$store.state.progresso + '%'}"></div>
         </div>
       </div>
     </nav>
@@ -78,6 +78,7 @@ export default {
   components: { NavbarItems },
   data() {
     return {
+      progresso: 50,
     }
   },
   methods: {
@@ -145,7 +146,6 @@ export default {
   top: 0;
   left: 0;
   background: greenyellow;
-  width: 67%;
   height: inherit;
 }
 

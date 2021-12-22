@@ -20,7 +20,10 @@
             autoplay
           ></lottie-player>
 
-          <h3 class="text-center"><span class="font-bold text-lg">Olá!</span> <br />Qual é seu nome?</h3>
+          <h3 v-if="!$store.state.temNome" class="text-center"><span class="font-bold text-lg">Olá!</span> <br />Qual é seu nome?</h3>
+          
+          <h3 v-if="$store.state.temNome" class="text-center"><span class="font-bold text-lg">Olá!</span> <br />Deseja alterar seu nome?</h3>
+
           <input
             ref="nameInput"
             class="my-6 rounded text-center shadow-lg w-full"
@@ -42,14 +45,14 @@
 
 <script>
 export default {
-  name: "CustomModal",
+  name: "ModalName",
   data() {
     return {};
   },
   methods: {
     salvarNome() {
       this.$store.state.modalNome = !this.$store.state.modalNome;
-      this.$store.commit("clicou");
+      this.$store.commit("SALVAR_NOME");
     },
   },
   updated() {

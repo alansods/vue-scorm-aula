@@ -76,7 +76,7 @@
         </div>
         <p class="text-center mt-5 mx-auto">
           Olá <span class="font-bold">{{ $store.state.aluno }}</span
-          >. Seja bem-vindo ao Curso Básico de Segurança em Instalações e
+          >! Seja bem-vindo ao Curso Básico de Segurança em Instalações e
           Serviços em Eletricidade – NR 10, modalidade à distância – EAD. Este
           curso inicia uma nova etapa de formação profissional oferecida pelo
           SENAI para a sociedade a qual pertence.

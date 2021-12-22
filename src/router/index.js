@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Apresentacao from "@/views/Apresentacao.vue";
 import Aula01Introducao from "@/views/aulas/aula-01/Aula01Introducao.vue";
 import Aula01Topico01 from "@/views/aulas/aula-01/Aula01Topico01.vue";
-import Aula01Finalizada from "@/views/aulas/aula-01/Aula01Finalizada.vue";
+import Aula01Topico02 from "@/views/aulas/aula-01/Aula01Topico02.vue";
 
 Vue.use(VueRouter);
 
@@ -24,9 +24,9 @@ const routes = [
     component: Aula01Topico01,
   },
   {
-    path: "/aula-01/aula-01-conclusao",
-    name: "Aula01Finalizada",
-    component: Aula01Finalizada,
+    path: "/aula-01/topico-02",
+    name: "Aula01Topico02",
+    component: Aula01Topico02,
   },
 ];
 
