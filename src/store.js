@@ -5,6 +5,9 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    anterior: "",
+    proximo: "",
+    topico: "",
     fixedMenuShow: false,
     menuShow: false,
     temNome: false,
@@ -95,6 +98,15 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
+    ATUALIZAR_PROXIMO(state, payload) {
+      state.proximo = payload
+    },
+    ATUALIZAR_ANTERIOR(state, payload) {
+      state.anterior = payload
+    },
+    ATUALIZAR_TOPICO(state, payload) {
+      state.topico = payload
+    },
     mostrarFixedMenu(state, payload) {
       state.fixedMenuShow = payload
     },

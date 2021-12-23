@@ -39,8 +39,8 @@
             text-primary-color
           "
         >
-          Tópico {{ $store.state.topicosAula_01[0].numeroTopico }} -
-          {{ $store.state.topicosAula_01[0].nome }}
+          Tópico {{ $store.state.topicosAula_01[1].numeroTopico }} -
+          {{ $store.state.topicosAula_01[1].nome }}
         </div>
       </div>
 
@@ -160,6 +160,13 @@ import ModalAulaCompleta from '../../../components/ModalAulaCompleta.vue';
 export default {
   title: "Aula 01 - Tópico 01",
   components: { BoxTips, ModalAulaCompleta },
+
+  created() {
+    this.$store.commit("mostrarFixedMenu", true)
+    this.$store.commit("ATUALIZAR_ANTERIOR", "/aula-01/topico-01")
+    this.$store.commit("ATUALIZAR_PROXIMO", "/aula-01/topico-03")
+    this.$store.commit("ATUALIZAR_TOPICO", "2/4")
+  }
 };
 </script>
 

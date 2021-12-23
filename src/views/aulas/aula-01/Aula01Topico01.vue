@@ -161,8 +161,12 @@ import ModalAulaCompleta from '../../../components/ModalAulaCompleta.vue';
 export default {
   title: "Aula 01 - Tópico 01",
   components: { BoxTips, ModalAulaCompleta },
+
   created() {
     this.$store.commit("mostrarFixedMenu", true)
+    this.$store.commit("ATUALIZAR_ANTERIOR", "/aula-01")
+    this.$store.commit("ATUALIZAR_PROXIMO", "/aula-01/topico-02")
+    this.$store.commit("ATUALIZAR_TOPICO", "1/4")
   }
 };
 </script>

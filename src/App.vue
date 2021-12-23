@@ -2,7 +2,7 @@
   <div id="app" class="bg-gray-200 font-poppins pb-10 text-dark-color">
     <Navbar />
     <ModalName />
-    <FixedNav v-if="$store.state.fixedMenuShow" class="z-40" :anterior="'/aula-01'" :proximo="'/aula-01/topico-02'"/>
+    <FixedNav v-if="$store.state.fixedMenuShow" class="z-40"/>
 
     <div class="pt-10">
       <transition mode="out-in">
@@ -74,7 +74,7 @@ export default {
     this.$store.commit("initialiseStore");
   },
   updated() {
-    if(this.$route.path === '/') {
+    if(this.$route.path === '/' || this.$route.path === '/aula-01') {
       this.$store.commit("mostrarFixedMenu", false)
     }
   }

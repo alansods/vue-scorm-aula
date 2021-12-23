@@ -14,6 +14,7 @@
         px-5
         justify-between
         items-center
+        select-none
       "
     >
       <div class="text-white">
