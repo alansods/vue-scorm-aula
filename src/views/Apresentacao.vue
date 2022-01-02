@@ -66,7 +66,7 @@
 
     <div
       id="corpo"
-      class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
+      class="w-full px-7 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
       <div id="container-descricao-curso">
         <div ref="div1">

@@ -76,6 +76,7 @@ export default {
   background: rgb(0, 0, 0, 0.8);
   overflow-y: scroll;
   z-index: 50;
+  padding: 0 30px
 }
 
 .CustomModal {
