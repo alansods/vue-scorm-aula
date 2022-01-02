@@ -1,7 +1,7 @@
 <template>
   <div>
     <transition name="CustomModal">
-      <div class="CustomModal-wrapper" v-if="$store.state.modalNome">
+      <div class="CustomModal-wrapper" v-show="$store.state.modalNome">
         <div
           class="
             CustomModal
