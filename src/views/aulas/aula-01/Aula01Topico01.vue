@@ -148,7 +148,10 @@
           nonumy eirmod tempor invidunt ut labore.
         </p>
       </div>
-      <button class="bg-primary-color p-3" @click="$store.commit('COMPLETAR_AULA')">Clique</button>
+      <button class="bg-primary-color p-3"
+      @click="$store.commit('SHOW_MODAL_COMPLETAR_AULA_1', true)"
+      @click.once="$store.commit('COMPLETAR_AULA_1')"
+      >Clique</button>
     </div>
     
   </div>

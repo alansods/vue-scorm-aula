@@ -84,7 +84,7 @@ export default {
   background: #fff;
   padding: 25px 50px;
   max-width: 400px;
-  margin: 120px auto 0 auto;
+  margin: 70px auto 0 auto;
   z-index: 60;
 }
 

@@ -15,7 +15,7 @@ export default new Vuex.Store({
     iconeMenu: "bars",
     modalNome: true,
     modalAulaCompleta: false,
-    progresso: Number("30"),
+    progresso: Number("0"),
     nomeDoCurso: "NR - 10 Segurança em Instalações e Serviços em Eletricidade",
     aluno: "",
     aulas: [
@@ -26,7 +26,7 @@ export default new Vuex.Store({
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-1.jpg",
         link: "/aula-01",
-        progresso: "0",
+        completa: false,
       },
       {
         id: "2",
@@ -141,9 +141,16 @@ export default new Vuex.Store({
     SALVAR_LOCAL_STORAGE(state) {
       localStorage.setItem('store', JSON.stringify(state))
     },
-    COMPLETAR_AULA(state) {
-      state.progresso = state.progresso + 20
-      state.modalAulaCompleta = !state.modalAulaCompleta
+    COMPLETAR_AULA_1(state) {
+      if (!state.aulas[0].completa) {
+        state.progresso = state.progresso + 10
+      }
+      state.aulas[0].completa = true
+      localStorage.setItem('store', JSON.stringify(state))
+    },
+    SHOW_MODAL_COMPLETAR_AULA_1(state, payload) {
+      state.modalAulaCompleta = payload
+      localStorage.setItem('store', JSON.stringify(state))
     },
 		initialiseStore(state) {
 			// Check if the ID exists

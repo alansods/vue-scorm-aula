@@ -27,7 +27,7 @@
       <div class="text-white font-light text-right text-xs xl:pr-5 w-2/3">
         <!-- <router-link to="/">{{ $store.state.nomeDoCurso }}</router-link> -->
         <div id="progress-bar">
-          <div class="progress-text">{{ this.$store.state.progresso }}</div>
+          <div class="progress-text">{{ this.$store.state.progresso + '%' }}</div>
           <div id="green" :style="{width:this.$store.state.progresso + '%'}"></div>
         </div>
       </div>
@@ -58,7 +58,7 @@
       >
         <nav class="mt-14">
           <h2 class="font-bold text-2xl mb-5">Menu</h2>
-          <button class="bg-primary-color rounded px-5 py-2 text-white" @click="$store.dispatch('abrirModalNome')">Editar Nome</button>
+          <div class="px-5 py-2 my-1 hover:bg-gray-200 rounded flex items-center cursor-pointer" @click.prevent="$store.dispatch('abrirModalNome')"><v-icon name="edit" class="mr-2" />Editar Nome</div>
           <ul>
             <NavbarItems
               v-for="navbarItem in $store.state.navbarItems"
@@ -143,11 +143,8 @@ export default {
 
 #green {
   border-radius: inherit;
-  position: absolute;
-  top: 0;
-  left: 0;
   background: greenyellow;
-  height: inherit;
+  height: 100%;
 }
 
 .progress-text {
@@ -157,6 +154,6 @@ export default {
   color: #333;
   z-index: 1;
   left: 50%;
-  top: -4px;
+  top: -2px;
 }
 </style>

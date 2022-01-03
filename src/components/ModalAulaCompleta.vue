@@ -79,7 +79,7 @@
             </button>
           </div>
         </div>
-          <a class="absolute -top-3 -right-3 rounded-full cursor-pointer bg-red-500 px-4 py-2 text-white font-bold" @click="$store.commit('COMPLETAR_AULA')">X</a>
+          <a class="absolute -top-3 -right-3 rounded-full cursor-pointer bg-red-500 px-4 py-2 text-white font-bold" @click="$store.commit('SHOW_MODAL_COMPLETAR_AULA_1', false)">X</a>
         </div>
       </div>
     </transition>
@@ -91,13 +91,12 @@ export default {
   name: "ModalAulaCompleta",
   data() {
     return {
-      modalAtivo: false,
     };
   },
   methods: {
     cliqueFora({ currentTarget, target }) {
       if (currentTarget === target) {
-        this.$store.commit('COMPLETAR_AULA')
+        this.$store.commit('SHOW_MODAL_COMPLETAR_AULA_1', false)
       };
     },
   },
