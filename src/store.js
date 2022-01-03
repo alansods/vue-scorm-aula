@@ -7,7 +7,8 @@ export default new Vuex.Store({
   state: {
     anterior: "",
     proximo: "",
-    topico: "",
+    topicoAtual: "",
+    aulaAtual: "",
     fixedMenuShow: false,
     menuShow: false,
     temNome: false,
@@ -25,7 +26,7 @@ export default new Vuex.Store({
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-1.jpg",
         link: "/aula-01",
-        progresso: "0"
+        progresso: "0",
       },
       {
         id: "2",
@@ -69,31 +70,36 @@ export default new Vuex.Store({
         id: '1',
         nome: 'Apresentação',
         icone: 'home',
-        link: '/'
+        link: '/',
+        estaNaAula: false
       },
       {
         id: '2',
         nome: 'Aula 01',
         icone: 'book-open',
-        link: '/aula-01'
+        link: '/aula-01',
+        estaNaAula: false
       },
       {
         id: '3',
         nome: 'Aula 02',
         icone: 'book-open',
-        link: '/aula_02'
+        link: '/aula_02',
+        estaNaAula: false
       },
       {
         id: '4',
         nome: 'Aula 03',
         icone: 'book-open',
-        link: '/aula_03'
+        link: '/aula_03',
+        estaNaAula: false
       },
       {
         id: '5',
         nome: 'Referências',
         icone: 'book',
-        link: '/Referências'
+        link: '/Referências',
+        estaNaAula: false
       },
     ]
   },
@@ -104,8 +110,17 @@ export default new Vuex.Store({
     ATUALIZAR_ANTERIOR(state, payload) {
       state.anterior = payload
     },
-    ATUALIZAR_TOPICO(state, payload) {
-      state.topico = payload
+    ATUALIZAR_TOPICO_ATUAL(state, payload) {
+      state.topicoAtual = payload
+    },
+    ATUALIZAR_AULA_ATUAL(state, payload) {
+      state.aulaAtual = payload
+    },
+    ESTA_NA_AULA_APRESENTACAO(state, payload) {
+      state.navbarItems[0].estaNaAula = payload
+    },
+    ESTA_NA_AULA_1(state, payload) {
+      state.navbarItems[1].estaNaAula = payload
     },
     mostrarFixedMenu(state, payload) {
       state.fixedMenuShow = payload
@@ -121,6 +136,9 @@ export default new Vuex.Store({
     },
     SALVAR_NOME(state) {
       state.temNome = true
+      localStorage.setItem('store', JSON.stringify(state))
+    },
+    SALVAR_LOCAL_STORAGE(state) {
       localStorage.setItem('store', JSON.stringify(state))
     },
     COMPLETAR_AULA(state) {
@@ -146,8 +164,8 @@ export default new Vuex.Store({
     },
   },
   getters: {
-    nomeEscolhido(state) {
+/*     nomeEscolhido(state) {
       return localStorage.setItem('store', JSON.stringify(state))
-    }
+    } */
   }
 })

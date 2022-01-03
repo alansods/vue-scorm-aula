@@ -2,7 +2,7 @@
   <div>
     <transition name="modal">
       <div v-if="$store.state.modalAulaCompleta" class="bg-black bg-opacity-70 fixed w-screen h-screen top-0 left-0 overflow-y-scroll z-40" @click="cliqueFora">
-        <div class="modal p-10 bg-white rounded-xl w-2/5 relative z-50 mx-auto mt-32">
+        <div class="modal p-10 bg-white rounded-xl w-2/5 relative z-50 mx-auto mt-16">
 
 
         <div class="flex justify-center items-center flex-col">

@@ -93,7 +93,7 @@
 <script>
 import ListaAulas from "@/components/cards-aulas/ListaAulas.vue";
 export default {
-  //title: "NR - 10 Segurança em Instalações e Serviços em Eletricidade",
+  title: "NR - 10 Segurança em Instalações e Serviços em Eletricidade",
   components: { ListaAulas },
   methods: {
     goto(refName) {
@@ -106,7 +106,10 @@ export default {
     },
   },
   created() {
-    document.title = "NR - 10 Segurança em Instalações e Serviços em Eletricidade"
+    //document.title = "NR - 10 Segurança em Instalações e Serviços em Eletricidade"
+    this.$store.commit("ESTA_NA_AULA_APRESENTACAO", true)
+    this.$store.commit("ESTA_NA_AULA_1", false)
+    this.$store.commit("SALVAR_LOCAL_STORAGE");
   }
 };
 </script>

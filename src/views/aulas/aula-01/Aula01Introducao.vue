@@ -13,7 +13,15 @@
     >
       <div
         id="container-all-content-bg-video"
-        class="w-full xl:max-w-screen-lg mx-auto flex flex-col xl:flex-row xl:items-center pt-12 xl:pt-7  xl:pb-5"
+        class="
+          w-full
+          xl:max-w-screen-lg
+          mx-auto
+          flex flex-col
+          xl:flex-row xl:items-center
+          pt-12
+          xl:pt-7 xl:pb-5
+        "
       >
         <div id="titulo-curso" class="xl:w-3/4 text-left">
           <h2 class="text-3xl xl:text-4xl font-bold shadow-sm">
@@ -48,15 +56,11 @@
       id="corpo"
       class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
-      <div
-        id="container-principal"
-        
-      >
+      <div id="container-principal">
         <Aula01ListaTopicos
           v-for="topico in $store.state.topicosAula_01"
           :key="topico.id"
           :topico="topico"
-          
         />
       </div>
     </div>
@@ -67,8 +71,13 @@
 import Aula01ListaTopicos from "@/components/Aula01ListaTopicos.vue";
 
 export default {
-  title: 'Aula 01',
+  title: "Aula 01",
   components: { Aula01ListaTopicos },
+  created() {
+    this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
+    this.$store.commit("ESTA_NA_AULA_1", true);
+    this.$store.commit("SALVAR_LOCAL_STORAGE");
+  },
 };
 </script>
 

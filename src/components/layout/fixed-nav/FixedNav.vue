@@ -25,8 +25,9 @@
       ></router-link>
     </div>
     <div id="title" class="text-center">
+      <div class="font-bold text-sm">Aula {{ $store.state.aulaAtual }}</div>
       <div class="font-medium">Tópico</div>
-      <div>{{ $store.state.topico }}</div>
+      <div>{{ $store.state.topicoAtual }}</div>
     </div>
     <div id="next">
       <router-link :to="$store.state.proximo"

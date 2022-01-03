@@ -1,11 +1,11 @@
 <template>
   <div id="aula-01-topico-01">
-    <modal-aula-completa></modal-aula-completa>
+    <ModalAulaCompleta />
     <div
       id="corpo"
-      class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
+      class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-10"
     >
-      <div class="xl:flex bg-white mb-10 items-center rounded-lg shadow">
+      <div class="xl:flex bg-white mb-5 items-center rounded-lg shadow">
         <div
           class="
             bg-primary-color
@@ -156,7 +156,7 @@
 
 <script>
 import BoxTips from "@/components/BoxTips.vue";
-import ModalAulaCompleta from '../../../components/ModalAulaCompleta.vue';
+import ModalAulaCompleta from '@/components/ModalAulaCompleta.vue';
 
 export default {
   title: "Aula 01 - Tópico 01",
@@ -166,8 +166,10 @@ export default {
     this.$store.commit("mostrarFixedMenu", true)
     this.$store.commit("ATUALIZAR_ANTERIOR", "/aula-01")
     this.$store.commit("ATUALIZAR_PROXIMO", "/aula-01/topico-02")
-    this.$store.commit("ATUALIZAR_TOPICO", "1/4")
-  }
+    this.$store.commit("ATUALIZAR_TOPICO_ATUAL", "1/4")
+    this.$store.commit("ATUALIZAR_AULA_ATUAL", "1")
+  },
+
 };
 </script>
 
