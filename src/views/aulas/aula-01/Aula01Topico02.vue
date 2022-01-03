@@ -1,0 +1,173 @@
+<template>
+  <div id="aula-01-topico-01">
+    <modal-aula-completa></modal-aula-completa>
+    <div
+      id="corpo"
+      class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
+    >
+      <div class="xl:flex bg-white mb-10 items-center rounded-lg shadow">
+        <div
+          class="
+            bg-primary-color
+            flex
+            justify-center
+            xl:justify-start
+            items-center
+            text-xl
+            uppercase
+            px-6
+            py-2
+            xl:py-4
+            text-white
+            font-bold
+            rounded-t-lg
+            xl:rounded-tr-none xl:rounded-l-lg
+          "
+        >
+          <v-icon class="mr-2" scale="1.5" name="book-open" />
+          Aula {{ $store.state.aulas[0].numeroAula }}
+        </div>
+        <div
+          class="
+            flex-1
+            px-3
+            text-center
+            xl:text-left xl:pl-5
+            py-2
+            text-xl
+            font-bold
+            text-primary-color
+          "
+        >
+          Tópico {{ $store.state.topicosAula_01[1].numeroTopico }} -
+          {{ $store.state.topicosAula_01[1].nome }}
+        </div>
+      </div>
+
+      <div class="bg-white p-8 rounded-lg shadow my-5">
+        <h3 class="font-bold text-primary-color text-xl mb-5">
+          1.1 Nome do Tópico
+        </h3>
+
+        <p class="text-lg">
+          Olá <span class="font-bold">{{ $store.state.aluno }}</span
+          >!
+        </p>
+
+        <Modal>
+          <template v-slot:nomeBotao>Clique aqui</template>
+          <template v-slot:conteudo>
+
+            <h3 class="text-2xl font-bold mb-5">Esse é o titulo</h3>
+
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, .
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, .
+            </p>
+          </template>
+        </Modal>
+
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          .
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          .
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore.
+        </p>
+      </div>
+
+      <BoxTips />
+
+      <div class="bg-white p-8 rounded-lg shadow my-5">
+        <figure class="max-h-xs max-w-xs xl:float-left xl:mr-5 xl:mb-0 mb-5">
+          <img
+            class="object-cover rounded-md"
+            src="@/assets/img/dog.jpg"
+            alt="Cachorro Feliz"
+          />
+          <figcaption class="text-xs text-gray-300 mt-1">
+            Figura 1: Cachorro Feliz
+          </figcaption>
+        </figure>
+
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          .
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          .
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore.
+        </p>
+      </div>
+      <button class="bg-primary-color p-3" @click="$store.commit('COMPLETAR_AULA')">Clique</button>
+    </div>
+  </div>
+</template>
+
+<script>
+import BoxTips from "@/components/BoxTips.vue";
+import ModalAulaCompleta from '../../../components/ModalAulaCompleta.vue';
+
+export default {
+  title: "Aula 01 - Tópico 01",
+  components: { BoxTips, ModalAulaCompleta },
+
+  created() {
+    this.$store.commit("mostrarFixedMenu", true)
+    this.$store.commit("ATUALIZAR_ANTERIOR", "/aula-01/topico-01")
+    this.$store.commit("ATUALIZAR_PROXIMO", "/aula-01/topico-03")
+    this.$store.commit("ATUALIZAR_TOPICO", "2/4")
+  }
+};
+</script>
+
+<style>

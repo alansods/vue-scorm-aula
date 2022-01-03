@@ -2,6 +2,10 @@ import Vue from "vue";;
 import App from "@/App.vue";
 import router from "@/router";
 import store from "./store.js";
+import titleMixin from './mixins/titleMixin'
+
+Vue.mixin(titleMixin)
+
 
 //Importing vue-awesome
 import 'vue-awesome/icons'
@@ -11,16 +15,24 @@ Vue.component('v-icon', Icon)
 //Importing the global css file
 import "@/assets/css/styles.css";
 
-import HeaderPrincipal from "@/components/HeaderPrincipal.vue"; //Importando como global
-import CustomModal from "@/components/CustomModal.vue"; //Importando como global
+import Navbar from "@/components/layout/navbar/Navbar.vue"; //Importando como global
+import Footer from "@/components/layout/Footer.vue"; //Importando como global
+import FixedNav from "@/components/layout/fixed-nav/FixedNav.vue"; //Importando como global
+import ModalName from "@/components/ModalName.vue"; //Importando como global
+import Modal from "@/components/Modal.vue"; //Importando como global
 import PageLoading from "@/components/PageLoading.vue"; //Importando como global
 
 // Registrando componentes globais
-Vue.component("HeaderPrincipal", HeaderPrincipal);
-Vue.component("CustomModal", CustomModal);
+Vue.component("Navbar", Navbar);
+Vue.component("Footer", Footer);
+Vue.component("ModalName", ModalName);
+Vue.component("Modal", Modal);
 Vue.component("PageLoading", PageLoading);
+Vue.component("FixedNav", FixedNav);
 
 Vue.config.productionTip = false;
+
+
 
 new Vue({
   store,
