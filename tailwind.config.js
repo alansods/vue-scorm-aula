@@ -16,7 +16,7 @@ module.exports = {
         'dark-color': '#464555',
       },
       backgroundImage: theme => ({
-        'video-apresentacao': 'url(../img/padrao/bg-apresentacao.png)'
+        'video-apresentacao': 'url(../img/padrao/bg-apresentacao-1.png)'
       }),
       height: {
         'bg-apresentacao': 'calc(100vh - 2.5rem)'

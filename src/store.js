@@ -16,7 +16,7 @@ export default new Vuex.Store({
     modalNome: true,
     modalAulaCompleta: false,
     progresso: Number("0"),
-    nomeDoCurso: "NR - 10 Segurança em Instalações e Serviços em Eletricidade",
+    nomeDoCurso: "Doces Regionais",
     aluno: "",
     aulas: [
       {

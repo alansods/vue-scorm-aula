@@ -3,7 +3,7 @@
     <div
       id="container-bg-video"
       class="
-        bg-video-apresentacao bg-cover
+        img-fundo
         h-bg-apresentacao
         px-3
         xl:px-0
@@ -74,12 +74,12 @@
             Apresentação
           </h2>
         </div>
+        <p class="text-center mt-5 mx-auto text-2xl">
+          Olá <NomeAluno />!
+        </p>
+
         <p class="text-center mt-5 mx-auto">
-          Olá <span class="font-bold">{{ $store.state.aluno }}</span
-          >! Seja bem-vindo ao Curso Básico de Segurança em Instalações e
-          Serviços em Eletricidade – NR 10, modalidade à distância – EAD. Este
-          curso inicia uma nova etapa de formação profissional oferecida pelo
-          SENAI para a sociedade a qual pertence.
+          Boas vindas ao nosso curso, nele você desenvolverá habilidades e conhecimentos para a produção de doces regionais que vai desde canjicas, brigadeiro, o delicioso pé de moleque e munguzá entre outras receitas, seguindo as boas práticas na manipulação de alimentos, além de conhecer os utensílios que serão utilizados. Então vem com a gente.
         </p>
       </div>
 
@@ -113,3 +113,12 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.img-fundo {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../assets/img/padrao/bg-apresentacao-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+</style>

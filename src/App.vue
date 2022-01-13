@@ -2,7 +2,7 @@
   <div id="app" class="bg-gray-200 font-poppins pb-10 text-dark-color">
     <Navbar />
     <ModalName />
-    <FixedNav v-if="$store.state.fixedMenuShow" class="z-40"/>
+    <FixedNav v-if="$store.state.fixedMenuShow" class="z-40" />
 
     <div class="pt-10">
       <transition mode="out-in">
@@ -70,13 +70,27 @@ p:last-of-type {
 
 <script>
 export default {
+  data() {
+    return {};
+  },
   beforeCreate() {
     this.$store.commit("initialiseStore");
   },
   updated() {
-    if(this.$route.path === '/' || this.$route.path === '/aula-01') {
-      this.$store.commit("mostrarFixedMenu", false)
+    if (this.$route.path === "/" || this.$route.path === "/aula-01") {
+      this.$store.commit("mostrarFixedMenu", false);
     }
-  }
+  },
+  computed: {
+    nome() {
+      return this.$store.state.aluno; 
+    }
+  },
+  watch: {
+    '$store.state.progresso': function () {
+      console.log(this.$store.state.progresso);
+      this.$store.commit("SALVAR_LOCAL_STORAGE");
+    },
+  },
 };
 </script>
