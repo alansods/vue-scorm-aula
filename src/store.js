@@ -29,7 +29,7 @@ export default new Vuex.Store({
         nomeAula: "Conhecendo os utensílios",
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-2.jpg",
-        link: "/Aula-02"
+        link: "/aula-02"
       },
       {
         id: "3",
@@ -37,7 +37,7 @@ export default new Vuex.Store({
         nomeAula: "Receitas",
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-3.jpg",
-        link: "/Aula-03"
+        link: "/aula-03"
       },
     ],
     topicosAula_01: [
@@ -85,14 +85,14 @@ export default new Vuex.Store({
         id: '3',
         nome: 'Aula 02',
         icone: 'book-open',
-        link: '/aula_02',
+        link: '/aula-02',
         estaNaAula: false
       },
       {
         id: '4',
         nome: 'Aula 03',
         icone: 'book-open',
-        link: '/aula_03',
+        link: '/aula-03',
         estaNaAula: false
       },
       {
@@ -137,9 +137,8 @@ export default new Vuex.Store({
       state.aulas[0].completa = true
       localStorage.setItem('store', JSON.stringify(state))
     },
-    SHOW_MODAL_COMPLETAR_AULA_1(state, payload) {
-      state.modalAulaCompleta = payload
-      localStorage.setItem('store', JSON.stringify(state))
+    SHOW_MODAL_COMPLETAR_AULA_1(state) {
+      state.modalAulaCompleta = true
     },
 		initialiseStore(state) {
 			// Check if the ID exists
@@ -158,6 +157,10 @@ export default new Vuex.Store({
       commit('menuShowOposto')
       commit('SALVAR_NOME')
     },
+    finalizarAula01({commit}) {
+      commit('SHOW_MODAL_COMPLETAR_AULA_1')
+      commit('COMPLETAR_AULA_1')
+    }
   },
   getters: {
 /*     nomeEscolhido(state) {

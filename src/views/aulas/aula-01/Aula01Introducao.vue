@@ -1,5 +1,6 @@
 <template>
   <div id="aula-01">
+        <ModalAula01Completa />
     <div
       id="container-bg-video"
       class="
@@ -57,7 +58,7 @@
       class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
       <div class="bg-white p-8 rounded-lg shadow my-5">
-        <h3 class="font-bold text-primary-color text-xl mb-5">Objetivos</h3>
+        <h3 class="font-semibold text-primary-color text-xl mb-5">Objetivos</h3>
 
         <ul class="lista-check">
           <div class="ml-0 md:ml-7">
@@ -75,7 +76,7 @@
       </div>
 
       <div class="bg-white p-8 rounded-lg shadow my-5">
-        <h3 class="font-medium text-primary-color text-xl mb-5">
+        <h3 class="font-semibold text-primary-color text-xl mb-5">
           1.1 Boas práticas na fabricação de alimentos (BPF)
         </h3>
 
@@ -115,7 +116,7 @@
       </div>
 
       <div class="bg-white p-8 rounded-lg shadow my-5">
-        <h3 class="font-medium text-primary-color text-xl mb-5">
+        <h3 class="font-semibold text-primary-color text-xl mb-5">
           1.2 Contaminação Química, física e biológica
         </h3>
 
@@ -174,7 +175,7 @@
 
       <div class="bg-white p-8 rounded-lg shadow my-5">
 
-        <h3 class="font-medium text-primary-color text-xl mb-5">1.3 Higiene do manipulador de alimentos</h3>
+        <h3 class="font-semibold text-primary-color text-xl mb-5">1.3 Higiene do manipulador de alimentos</h3>
 
         <p>
           Para um alimento seguro é preciso que o manipulador de alimentos tenha certos cuidados com sua higiene pessoal. Mas, o que deve ser feito?
@@ -215,7 +216,7 @@
 
       <div class="bg-white p-8 rounded-lg shadow my-5">
 
-        <h3 class="font-medium text-primary-color text-xl mb-5">1.4 Como lavar as mãos?</h3>
+        <h3 class="font-semibold text-primary-color text-xl mb-5">1.4 Como lavar as mãos?</h3>
 
         <p>
           Alguns passos devem ser seguidos para garantir que as mãos sejam lavadas de forma correta.
@@ -256,9 +257,9 @@
           <NavButton :icone="'arrow-left'"></NavButton>
         </router-link>
 
-        <router-link to="/aula-01/topico-01">
+        <div @click="$store.dispatch('finalizarAula01')">
           <NavButton :icone="'arrow-right'"></NavButton>
-        </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -269,13 +270,15 @@ import NavButton from "@/components/NavButton";
 import Accordion from "@/components/accordion/Accordion.vue";
 import AccordionItem from "@/components/accordion/AccordionItem.vue";
 import BoxTips from "@/components/BoxTips.vue";
+import ModalAula01Completa from "@/components/ModalAula01Completa.vue";
 
 export default {
   title: "Aula 01",
-  components: { NavButton, Accordion, AccordionItem, BoxTips },
+  components: { NavButton, Accordion, AccordionItem, BoxTips, ModalAula01Completa },
   created() {
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
     this.$store.commit("ESTA_NA_AULA_1", true);
+    this.$store.commit("ESTA_NA_AULA_2", false);
     this.$store.commit("SALVAR_LOCAL_STORAGE");
   },
 };

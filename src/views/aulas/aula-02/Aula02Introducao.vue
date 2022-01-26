@@ -57,7 +57,7 @@
       class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
       <div class="bg-white p-8 rounded-lg shadow my-5">
-        <h3 class="font-bold text-primary-color text-xl mb-5">Objetivos</h3>
+        <h3 class="font-semibold text-primary-color text-xl mb-5">Objetivos</h3>
 
         <ul class="lista-check">
           <div class="ml-0 md:ml-7">
@@ -69,7 +69,7 @@
       </div>
 
       <div class="bg-white p-8 rounded-lg shadow my-5">
-        <h3 class="font-medium text-primary-color text-xl mb-5">
+        <h3 class="font-semibold text-primary-color text-xl mb-5">
           Conhecendo os utensílios
         </h3>
 
@@ -84,14 +84,14 @@
         </p>
       </div>
 
-      <div class="grid">
-        <div class="item">
+      <div class="grid flex-col md:flex-row">
+        <div class="item shadow">
           <a href="#0" aria-labelledby="person1"></a>
           <img
             src="@/assets/img/fouet.jpg"
           />
           <div class="item__overlay">
-            <h3 id="person1" aria-hidden="true">fouet</h3>
+            <h3 id="person1" aria-hidden="true">Fouet</h3>
             <div class="item__body">
               <p>
                 Utilizado para mexer molhos e cremes também ajuda a dissolver
@@ -100,34 +100,44 @@
             </div>
           </div>
         </div>
-        <div class="item">
+        <div class="item shadow">
           <a href="#0" aria-labelledby="person2"></a>
           <img
-            src="https://images.unsplash.com/photo-1590424744257-fdb03ed78ae0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-            alt=""
+            src="@/assets/img/espatula-de-silicone-pao-duro.jpg"
           />
           <div class="item__overlay">
-            <h3 id="person2" aria-hidden="true">Person 2</h3>
+            <h3 id="person2" aria-hidden="true">Espátula de silicone</h3>
             <div class="item__body">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Serve para mexer cremes e tirar bem todo o alimento contido em uma panela ou vasilha.
               </p>
             </div>
           </div>
         </div>
-        <div class="item">
+        <div class="item shadow">
           <a href="#0" aria-labelledby="person3"></a>
           <img
-            src="https://images.unsplash.com/photo-1590424744257-fdb03ed78ae0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-            alt=""
+            src="@/assets/img/peneira.jpg"
           />
           <div class="item__overlay">
-            <h3 id="person3" aria-hidden="true">Person 3</h3>
+            <h3 id="person3" aria-hidden="true">Peneira</h3>
             <div class="item__body">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Utilizada para peneirar os alimentos secos, tais como: farinha, fermento, açúcar, chocolate.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item shadow">
+          <a href="#0" aria-labelledby="person3"></a>
+          <img
+            src="@/assets/img/liquidificador.jpg"
+          />
+          <div class="item__overlay">
+            <h3 id="person3" aria-hidden="true">Liquidificador</h3>
+            <div class="item__body">
+              <p>
+                Auxilia no preparo de algumas receitas misturando ou triturando o alimento.
               </p>
             </div>
           </div>
@@ -135,11 +145,11 @@
       </div>
 
       <div class="flex justify-around mt-12">
-        <router-link to="/">
+        <router-link to="/aula-01">
           <NavButton :icone="'arrow-left'"></NavButton>
         </router-link>
 
-        <router-link to="/aula-01/topico-01">
+        <router-link to="/aula-03">
           <NavButton :icone="'arrow-right'"></NavButton>
         </router-link>
       </div>
@@ -155,6 +165,7 @@ export default {
   components: { NavButton },
   created() {
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
+    this.$store.commit("ESTA_NA_AULA_1", false);
     this.$store.commit("ESTA_NA_AULA_2", true);
     this.$store.commit("SALVAR_LOCAL_STORAGE");
   },
@@ -163,25 +174,29 @@ export default {
 
 <style scoped>
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 17rem);
-  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 .item {
   position: relative;
-  height: 19rem;
-  background-color: lightGrey;
+  height: 15rem;
+  background-color: #fff;
   overflow-y: hidden;
-  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 240px;
 }
 
 .item h3 {
   margin: 0;
   display: block;
-  background-color: #3F51B5;
-  color: white;
-  padding: 1rem;
+  background-color: #eee;
+  color: #444;
+  padding: 1rem 1.5rem;
+  font-weight: 500;
+  text-align: center;
 }
 
 .item a {
@@ -202,7 +217,7 @@ img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .item__overlay {
@@ -213,14 +228,14 @@ img {
   position: absolute;
   width: 100%;
   top: 0;
-  transition: transform 300ms;
-  background-color: #ddd;
+  transition: transform ease 400ms;
+  background-color: #fff;
   transform: translate3d(0, calc(100% - 3.5rem), 0);
 }
 
 .item__body {
   flex-grow: 1;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 }
 .item__body p {
   margin: 0;

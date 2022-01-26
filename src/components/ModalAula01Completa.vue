@@ -96,7 +96,7 @@ export default {
   methods: {
     cliqueFora({ currentTarget, target }) {
       if (currentTarget === target) {
-        this.$store.commit('SHOW_MODAL_COMPLETAR_AULA_1', false)
+        this.$store.state.modalAulaCompleta = false
       };
     },
   },
