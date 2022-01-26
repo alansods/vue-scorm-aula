@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import NavButton from "./NavButton.vue";
+import NavButton from "./NavButton-back.vue";
 export default {
   components: { NavButton },
   data() {

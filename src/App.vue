@@ -2,8 +2,6 @@
   <div id="app" class="bg-gray-200 font-poppins pb-10 text-dark-color">
     <Navbar />
     <ModalName />
-    <FixedNav v-if="$store.state.fixedMenuShow" class="z-40" />
-
     <div class="pt-10">
       <transition mode="out-in">
         <router-view />
@@ -66,6 +64,32 @@ p:last-of-type {
 ::-webkit-scrollbar-thumb:hover {
   background: #a0aec0;
 }
+
+/* LISTA-CHECK */
+
+.lista-check {
+  margin: 2rem 0;
+}
+
+.lista-check li {
+  margin: 2rem 0;
+  margin: .6rem 0;
+  list-style: none;
+}
+
+.lista-check li:last-of-type {
+  margin: 0;
+}
+
+.lista-check li::before {
+  content: url('./assets/img/padrao/check.svg');
+  display: inline-block;
+  margin-left: -1.7rem;
+  width: 1.05rem;
+  margin-right: .4rem;
+}
+
+
 </style>
 
 <script>
@@ -76,15 +100,8 @@ export default {
   beforeCreate() {
     this.$store.commit("initialiseStore");
   },
-  updated() {
-    if (this.$route.path === "/" || this.$route.path === "/aula-01") {
-      this.$store.commit("mostrarFixedMenu", false);
-    }
-  },
   computed: {
-    nome() {
-      return this.$store.state.aluno; 
-    }
+
   },
   watch: {
     '$store.state.progresso': function () {

@@ -5,11 +5,6 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    anterior: "",
-    proximo: "",
-    topicoAtual: "",
-    aulaAtual: "",
-    fixedMenuShow: false,
     menuShow: false,
     temNome: false,
     iconeMenu: "bars",
@@ -22,7 +17,7 @@ export default new Vuex.Store({
       {
         id: "1",
         numeroAula: "01",
-        nomeAula: "Introdução ao Assunto",
+        nomeAula: "Boas práticas na fabricação de alimentos (BPF)",
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-1.jpg",
         link: "/aula-01",
@@ -31,7 +26,7 @@ export default new Vuex.Store({
       {
         id: "2",
         numeroAula: "02",
-        nomeAula: "Energia Elétrica",
+        nomeAula: "Conhecendo os utensílios",
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-2.jpg",
         link: "/Aula-02"
@@ -39,7 +34,7 @@ export default new Vuex.Store({
       {
         id: "3",
         numeroAula: "03",
-        nomeAula: "Produtos de Energia",
+        nomeAula: "Receitas",
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-3.jpg",
         link: "/Aula-03"
@@ -49,19 +44,25 @@ export default new Vuex.Store({
       {
         id: '1',
         numeroTopico: '01',
-        nome: 'Eletricidade na Vida',
+        nome: 'Boas práticas na fabricação de alimentos (BPF)',
         link: '/aula-01/topico-01'
       },
       {
         id: '2',
         numeroTopico: '02',
-        nome: 'Moinhos de Vento',
+        nome: 'Contaminação Química, física e biológica',
         link: '/aula-01/topico-02'
       },
       {
         id: '3',
         numeroTopico: '03',
-        nome: 'Gasolina e Petróleo',
+        nome: 'Higiene do manipulador de alimentos',
+        link: '/aula-01/topico-03'
+      },
+      {
+        id: '4',
+        numeroTopico: '04',
+        nome: 'Como lavar as mãos?',
         link: '/aula-01/topico-03'
       },
     ],
@@ -104,26 +105,14 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
-    ATUALIZAR_PROXIMO(state, payload) {
-      state.proximo = payload
-    },
-    ATUALIZAR_ANTERIOR(state, payload) {
-      state.anterior = payload
-    },
-    ATUALIZAR_TOPICO_ATUAL(state, payload) {
-      state.topicoAtual = payload
-    },
-    ATUALIZAR_AULA_ATUAL(state, payload) {
-      state.aulaAtual = payload
-    },
     ESTA_NA_AULA_APRESENTACAO(state, payload) {
       state.navbarItems[0].estaNaAula = payload
     },
     ESTA_NA_AULA_1(state, payload) {
       state.navbarItems[1].estaNaAula = payload
     },
-    mostrarFixedMenu(state, payload) {
-      state.fixedMenuShow = payload
+    ESTA_NA_AULA_2(state, payload) {
+      state.navbarItems[2].estaNaAula = payload
     },
     modalNomeOposto(state) {
       state.modalNome = !state.modalNome

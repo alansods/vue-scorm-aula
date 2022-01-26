@@ -46,60 +46,18 @@
 
       <div class="bg-white p-8 rounded-lg shadow my-5">
         <h3 class="font-bold text-primary-color text-xl mb-5">
-          1.1 Nome do Tópico
+          1.2 Contaminação Química, física e biológica
         </h3>
 
-        <p class="text-lg">
-          Olá <span class="font-bold">{{ $store.state.aluno }}</span
-          >!
-        </p>
-
-        <Modal>
-          <template v-slot:nomeBotao>Clique aqui</template>
-          <template v-slot:conteudo>
-
-            <h3 class="text-2xl font-bold mb-5">Esse é o titulo</h3>
-
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, .
-            </p>
-
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore.
-            </p>
-
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, .
-            </p>
-          </template>
-        </Modal>
-
         <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          .
+          Ao manipular o alimento é necessário muita atenção, pois por descuido ou por não seguir as boas práticas de forma correta pode acarretar em alguma contaminação.
         </p>
 
         <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore.
-        </p>
+          A contaminação dos alimentos se dá por vários fatores, iremos abordar aqui alguns deles.
 
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          .
         </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore.
-        </p>
+        
       </div>
 
       <BoxTips />
@@ -122,31 +80,6 @@
           .
         </p>
 
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          .
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore.
-        </p>
       </div>
       <button class="bg-primary-color p-3" @click="$store.commit('COMPLETAR_AULA')">Clique</button>
     </div>
@@ -155,23 +88,16 @@
 </template>
 
 <script>
-import BoxTips from "@/components/BoxTips.vue";
 import ModalAulaCompleta from '@/components/ModalAulaCompleta.vue';
 
 export default {
-  title: "Aula 01 - Tópico 01",
-  components: { BoxTips, ModalAulaCompleta },
+  title: "Aula 01 - Tópico 02",
+  components: { ModalAulaCompleta },
 
   created() {
-    this.$store.commit("mostrarFixedMenu", true)
-    this.$store.commit("ATUALIZAR_ANTERIOR", "/aula-01/topico-01")
-    this.$store.commit("ATUALIZAR_PROXIMO", "/aula-01/topico-03")
-    this.$store.commit("ATUALIZAR_TOPICO_ATUAL", "2/4")
-    this.$store.commit("ATUALIZAR_AULA_ATUAL", "1")
 
   },
 
 };
 </script>
 
-<style>

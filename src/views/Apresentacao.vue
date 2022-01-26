@@ -68,20 +68,25 @@
       id="corpo"
       class="w-full px-7 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
-      <div id="container-descricao-curso">
+      <div id="container-descricao-curso text-center mt-5 mx-auto">
         <div ref="div1">
           <h2 class="text-center text-3xl font-bold text-primary-color my-5">
             Apresentação
           </h2>
         </div>
-        <p class="text-center mt-5 mx-auto text-2xl">
+        <p class="mt-5 text-2xl">
           Olá <NomeAluno />!
         </p>
 
-        <p class="text-center mt-5 mx-auto">
-          Boas vindas ao nosso curso, nele você desenvolverá habilidades e conhecimentos para a produção de doces regionais que vai desde canjicas, brigadeiro, o delicioso pé de moleque e munguzá entre outras receitas, seguindo as boas práticas na manipulação de alimentos, além de conhecer os utensílios que serão utilizados. Então vem com a gente.
+        <p class="mt-5">
+          Boas vindas ao nosso curso, nele você desenvolverá habilidades e conhecimentos para a produção de doces regionais que vai desde canjicas, brigadeiro, o delicioso pé de moleque e munguzá entre outras receitas, seguindo as boas práticas na manipulação de alimentos, além de conhecer os utensílios que serão utilizados.
+        </p>
+        <p>
+          Então vem com a gente!
         </p>
       </div>
+
+      
 
       <div id="container-cards-aulas" class="mt-16">
         <ListaAulas />
@@ -93,7 +98,7 @@
 <script>
 import ListaAulas from "@/components/cards-aulas/ListaAulas.vue";
 export default {
-  title: "NR - 10 Segurança em Instalações e Serviços em Eletricidade",
+  title: "Doces Regionais",
   components: { ListaAulas },
   methods: {
     goto(refName) {
@@ -116,7 +121,7 @@ export default {
 
 <style scoped>
 .img-fundo {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../assets/img/padrao/bg-apresentacao-2.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(../assets/img/padrao/bg-apresentacao-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
