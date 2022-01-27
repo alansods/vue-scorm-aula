@@ -132,7 +132,7 @@ export default new Vuex.Store({
     },
     COMPLETAR_AULA_1(state) {
       if (!state.aulas[0].completa) {
-        state.progresso = state.progresso + 10
+        state.progresso = state.progresso + 30
       }
       state.aulas[0].completa = true
       localStorage.setItem('store', JSON.stringify(state))
