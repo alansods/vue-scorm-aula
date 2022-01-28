@@ -114,6 +114,9 @@ export default new Vuex.Store({
     ESTA_NA_AULA_2(state, payload) {
       state.navbarItems[2].estaNaAula = payload
     },
+    ESTA_NA_AULA_3(state, payload) {
+      state.navbarItems[3].estaNaAula = payload
+    },
     modalNomeOposto(state) {
       state.modalNome = !state.modalNome
     },

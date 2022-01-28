@@ -25,13 +25,13 @@
       >
         <div id="titulo-curso" class="xl:w-3/4 text-left">
           <h2 class="text-3xl xl:text-4xl font-bold shadow-sm">
-            Aula {{ $store.state.aulas[1].numeroAula }}
+            Aula {{ $store.state.aulas[2].numeroAula }}
           </h2>
           <h3 class="text-2xl xl:text-3xl font-medium shadow-sm">
-            {{ $store.state.aulas[1].nomeAula }}
+            {{ $store.state.aulas[2].nomeAula }}
           </h3>
           <p class="mt-2 2xl:w-2/3 font-light">
-            {{ $store.state.aulas[1].descricaoAula }}
+            {{ $store.state.aulas[2].descricaoAula }}
           </p>
         </div>
 
@@ -57,7 +57,7 @@
       class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
       <div class="bg-white p-8 rounded-lg shadow my-5">
-        <h3 class="font-semibold text-primary-color text-xl mb-5">Objetivos</h3>
+        <h3 class="font-semibold text-primary-color text-xl mb-5">Receitas</h3>
 
         <ul class="lista-check">
           <div class="ml-0 md:ml-7">
@@ -145,7 +145,7 @@
       </div>
 
       <div class="flex justify-around mt-12">
-        <router-link to="/aula-01">
+        <router-link to="/aula-02">
           <NavButton :icone="'arrow-left'"></NavButton>
         </router-link>
 
@@ -166,8 +166,8 @@ export default {
   created() {
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
     this.$store.commit("ESTA_NA_AULA_1", false);
-    this.$store.commit("ESTA_NA_AULA_2", true);
-    this.$store.commit("ESTA_NA_AULA_3", false);
+    this.$store.commit("ESTA_NA_AULA_2", false);
+    this.$store.commit("ESTA_NA_AULA_3", true);
     this.$store.commit("SALVAR_LOCAL_STORAGE");
   },
 };

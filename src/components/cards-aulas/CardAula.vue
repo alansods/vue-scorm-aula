@@ -10,6 +10,7 @@
           w-full
           h-52
           xl:h-full
+          xl:w-64
           object-cover
           rounded-t-lg rounded-b-none
           xl:rounded-tr-none xl:rounded-bl-lg
@@ -27,7 +28,7 @@
           w-full
           xl:w-auto
           text-sm
-          px-5
+          px-8
           py-2
           mt-5
           text-white

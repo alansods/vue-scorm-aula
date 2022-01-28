@@ -279,6 +279,7 @@ export default {
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
     this.$store.commit("ESTA_NA_AULA_1", true);
     this.$store.commit("ESTA_NA_AULA_2", false);
+    this.$store.commit("ESTA_NA_AULA_3", false);
     this.$store.commit("SALVAR_LOCAL_STORAGE");
   },
 };
