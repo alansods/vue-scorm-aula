@@ -57,92 +57,10 @@
       class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
       <div class="bg-white p-8 rounded-lg shadow my-5">
-        <h3 class="font-semibold text-primary-color text-xl mb-5">Receitas</h3>
-
-        <ul class="lista-check">
-          <div class="ml-0 md:ml-7">
-            <li>Conhecer os utensílios.</li>
-
-            <li>Entender sua aplicabilidade nas receitas.</li>
-          </div>
-        </ul>
+        Neste tópico iremos aprender receitas de doces tradicionais, tais como: canjica com milho verde e também milho em conserva, arroz doce saborizado com casca de laranja e especiarias, cocada baiana de colher entre outras receitas que você poderá aplicar de forma fácil e vender.
       </div>
 
-      <div class="bg-white p-8 rounded-lg shadow my-5">
-        <h3 class="font-semibold text-primary-color text-xl mb-5">
-          Conhecendo os utensílios
-        </h3>
-
-        <p>
-          Os utensílios são de extrema importância na hora da produção, pois
-          eles irão auxiliar no processo de fabricação dos doces.
-        </p>
-
-        <p>
-          Para que seja feita a produção dos doces será necessário o uso de
-          alguns utensílios que iremos apresentar:
-        </p>
-      </div>
-
-      <div class="grid flex-col md:flex-row">
-        <div class="item shadow">
-          <a href="#0" aria-labelledby="person1"></a>
-          <img
-            src="@/assets/img/fouet.jpg"
-          />
-          <div class="item__overlay">
-            <h3 id="person1" aria-hidden="true">Fouet</h3>
-            <div class="item__body">
-              <p>
-                Utilizado para mexer molhos e cremes também ajuda a dissolver
-                pelotas indesejadas.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="item shadow">
-          <a href="#0" aria-labelledby="person2"></a>
-          <img
-            src="@/assets/img/espatula-de-silicone-pao-duro.jpg"
-          />
-          <div class="item__overlay">
-            <h3 id="person2" aria-hidden="true">Espátula de silicone</h3>
-            <div class="item__body">
-              <p>
-                Serve para mexer cremes e tirar bem todo o alimento contido em uma panela ou vasilha.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="item shadow">
-          <a href="#0" aria-labelledby="person3"></a>
-          <img
-            src="@/assets/img/peneira.jpg"
-          />
-          <div class="item__overlay">
-            <h3 id="person3" aria-hidden="true">Peneira</h3>
-            <div class="item__body">
-              <p>
-                Utilizada para peneirar os alimentos secos, tais como: farinha, fermento, açúcar, chocolate.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="item shadow">
-          <a href="#0" aria-labelledby="person3"></a>
-          <img
-            src="@/assets/img/liquidificador.jpg"
-          />
-          <div class="item__overlay">
-            <h3 id="person3" aria-hidden="true">Liquidificador</h3>
-            <div class="item__body">
-              <p>
-                Auxilia no preparo de algumas receitas misturando ou triturando o alimento.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       <div class="flex justify-around mt-12">
         <router-link to="/aula-02">

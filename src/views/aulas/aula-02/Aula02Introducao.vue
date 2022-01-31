@@ -142,6 +142,66 @@
             </div>
           </div>
         </div>
+
+        <div class="item shadow">
+          <a href="#0" aria-labelledby="person3"></a>
+          <img
+            src="@/assets/img/panelas.jpg"
+          />
+          <div class="item__overlay">
+            <h3 id="person3" aria-hidden="true">Panelas</h3>
+            <div class="item__body">
+              <p>
+                Utilizada para o cozimento dos alimentos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item shadow">
+          <a href="#0" aria-labelledby="person3"></a>
+          <img
+            src="@/assets/img/balanca.jpg"
+          />
+          <div class="item__overlay">
+            <h3 id="person3" aria-hidden="true">Balança</h3>
+            <div class="item__body">
+              <p>
+                Serve para pesar os alimentos, deixando a receita padronizada.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item shadow">
+          <a href="#0" aria-labelledby="person3"></a>
+          <img
+            src="@/assets/img/bowls-vasilha.jpg"
+          />
+          <div class="item__overlay">
+            <h3 id="person3" aria-hidden="true">Bowls (vasilha)</h3>
+            <div class="item__body">
+              <p>
+                Utilizados para o preparo das receitas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item shadow">
+          <a href="#0" aria-labelledby="person3"></a>
+          <img
+            src="@/assets/img/colher-de-polietileno.jpg"
+          />
+          <div class="item__overlay">
+            <h3 id="person3" aria-hidden="true">Colher de polietinelo</h3>
+            <div class="item__body">
+              <p>
+                Utilizado para mexer os alimentos.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="flex justify-around mt-12">
@@ -179,15 +239,24 @@ export default {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .item {
   position: relative;
   height: 15rem;
+  width: 240px;
   background-color: #fff;
   overflow-y: hidden;
   border-radius: 8px;
-  max-width: 100%;
+}
+
+@media (max-width: 600px)
+{
+  .item
+   {
+    width: 100%;
+   }
 }
 
 .item h3 {
