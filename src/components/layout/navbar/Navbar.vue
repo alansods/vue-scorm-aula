@@ -18,9 +18,11 @@
       "
     >
       <div class="text-white flex">
-        <router-link to="/"><v-icon class="mr-2 cursor-pointer active:scale-75 transform transition flex fill-current" scale="1.3" name="home" /></router-link>
+        <router-link class="mr-2 cursor-pointer active:scale-75 transform transition" to="/"><v-icon class="fill-current" scale="1.3" name="home" /></router-link>
         |
-        <v-icon class="ml-2 cursor-pointer active:scale-75 transform transition flex fill-current" scale="1.2" @click="clicouMenu" :name="$store.state.iconeMenu" />
+        <button class="ml-2 cursor-pointer active:scale-75 transform transition" @click.prevent>
+          <v-icon class="fill-current" scale="1.2" @click="clicouMenu" :name="$store.state.iconeMenu" />
+        </button>
         
       </div>
 

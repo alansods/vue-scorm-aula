@@ -60,7 +60,12 @@
       class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
       <div class="bg-white p-8 rounded-lg shadow my-5">
-        <h3 class="font-semibold text-primary-color text-xl mb-5">Objetivos</h3>
+        <div class="flex items-center">
+          <IconeObjetivos />
+          <h3 class="font-bold text-primary-color text-2xl">
+            Objetivos
+          </h3>
+        </div>
 
         <ul class="lista-check">
           <div class="ml-0 md:ml-7">
@@ -286,7 +291,7 @@ a:focus ~.item__overlay {
   transform: translate3d(0, 0, 0);
 }
 
-img {
+.item img {
   width: 100%;
   height: 100%;
   display: block;
