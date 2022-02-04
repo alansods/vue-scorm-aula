@@ -13,7 +13,7 @@
     "
     @click="clicou = !clicou"
   >
-    <div class="flex items-center font-semibold text-2xl">
+    <div class="flex items-center font-semibold text-2xl text-white">
       <v-icon :name="icone" class="mr-2" scale="1.8" />
       <h3><slot name="titulo"></slot></h3>
       <small class="text-xs font-light ml-2">(clique aqui)</small>
