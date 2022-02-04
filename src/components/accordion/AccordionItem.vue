@@ -7,7 +7,7 @@
 
       <!-- This slot will handle the title/header of the accordion and is the part you click on -->
       <slot name="accordion-trigger"></slot>
-      <v-icon class="fill-{#333}" :class="{'arrowOpened': visible}" name="chevron-down" />
+      <v-icon class="fill-current" :class="{'arrowOpened': visible}" name="chevron-down" />
     </div>
 
     <transition 

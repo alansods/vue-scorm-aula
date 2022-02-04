@@ -26,7 +26,7 @@
       >
         <div id="titulo-curso" class="xl:w-3/4 text-left">
           <div class="flex items-center">
-            <v-icon name="book-open" class="mr-2 text-xl xl:text-xl" />
+            <v-icon name="book-open" class="mr-2 text-xl xl:text-xl fill-current" />
             <h2 class="text-xl xl:text-xl font-light shadow-sm">
               Aula {{ $store.state.aulas[0].numeroAula }}
             </h2>
