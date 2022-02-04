@@ -12,7 +12,7 @@
       text-white
     "
   >
-    <v-icon class="fill-current" :name="icone" />
+    <v-icon class="icone-setas" :name="icone" />
   </button>
 </template>
 
@@ -26,4 +26,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.icone-setas{
+  fill: #fff;
+}
+</style>
