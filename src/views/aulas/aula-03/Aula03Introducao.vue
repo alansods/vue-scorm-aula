@@ -24,10 +24,13 @@
         "
       >
         <div id="titulo-curso" class="xl:w-3/4 text-left">
-          <h2 class="text-3xl xl:text-4xl font-bold shadow-sm">
-            Aula {{ $store.state.aulas[2].numeroAula }}
-          </h2>
-          <h3 class="text-2xl xl:text-3xl font-medium shadow-sm">
+          <div class="flex items-center">
+            <v-icon name="book-open" class="mr-2 text-xl xl:text-xl" />
+            <h2 class="text-xl xl:text-xl font-light shadow-sm">
+              Aula {{ $store.state.aulas[2].numeroAula }}
+            </h2>
+          </div>
+          <h3 class="text-3xl xl:text-4xl font-bold shadow-sm mb-4">
             {{ $store.state.aulas[2].nomeAula }}
           </h3>
           <p class="mt-2 2xl:w-2/3 font-light">
@@ -64,12 +67,15 @@
       </div>
 
       <div class="container-receitas">
-        <div class="receita-item shadow" v-for="receita in receitas" :key="receita.id">
-
+        <div
+          class="receita-item shadow"
+          v-for="receita in receitas"
+          :key="receita.id"
+        >
           <div class="container-img">
             <img :src="require(`@/assets/img/receitas/${receita.imagem}`)" />
             <div class="bg-titulo-receita"></div>
-            <h2>{{receita.nome}}</h2>
+            <h2>{{ receita.nome }}</h2>
           </div>
 
           <div class="container-icones">
@@ -77,7 +83,7 @@
               <img
                 src="../../../assets/img/icones-receitas/tempo-de-preparo.png"
               />
-              <span>{{receita.tempo}}</span>
+              <span>{{ receita.tempo }}</span>
             </div>
 
             <div class="icone">
@@ -96,7 +102,6 @@
             </div>
           </div>
         </div>
-
       </div>
 
       <div class="flex justify-around mt-12">
@@ -118,8 +123,8 @@ import NavButton from "@/components/NavButton";
 export default {
   title: "Aula 01",
   components: { NavButton },
-  data(){
-    return{
+  data() {
+    return {
       receitas: [
         {
           id: 1,
@@ -128,7 +133,7 @@ export default {
           tempo: "25min",
           porcoes: "2",
           calorias: "300kcal",
-          dificuldade: "fácil"
+          dificuldade: "fácil",
         },
         {
           id: 2,
@@ -137,7 +142,7 @@ export default {
           tempo: "25min",
           porcoes: "2",
           calorias: "300kcal",
-          dificuldade: "fácil"
+          dificuldade: "fácil",
         },
         {
           id: 3,
@@ -146,10 +151,10 @@ export default {
           tempo: "25min",
           porcoes: "2",
           calorias: "300kcal",
-          dificuldade: "fácil"
+          dificuldade: "fácil",
         },
-      ]
-    }
+      ],
+    };
   },
   created() {
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
@@ -162,9 +167,9 @@ export default {
 </script>
 
 <style scoped>
-.container-receitas{
+.container-receitas {
   display: flex;
-  gap: 30px 15px; 
+  gap: 30px 15px;
   flex-wrap: wrap;
 }
 
@@ -177,11 +182,11 @@ export default {
   transition: transform 150ms ease-in-out;
 }
 
-.receita-item:hover{
+.receita-item:hover {
   transform: scale(1.05);
 }
 
-.container-img{
+.container-img {
   background: rgba(0, 0, 0, 0.329);
   width: 100%;
   position: relative;
@@ -204,7 +209,7 @@ export default {
   left: 15px;
 }
 
-.bg-titulo-receita{
+.bg-titulo-receita {
   background: rgba(0, 0, 0, 0.473);
   width: 100%;
   height: 40px;
@@ -225,7 +230,7 @@ export default {
   justify-content: center;
 }
 
-.icone span{
+.icone span {
   font-size: 0.8rem;
 }
 

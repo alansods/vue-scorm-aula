@@ -24,10 +24,13 @@
         "
       >
         <div id="titulo-curso" class="xl:w-3/4 text-left">
-          <h2 class="text-3xl xl:text-4xl font-bold shadow-sm">
-            Aula {{ $store.state.aulas[1].numeroAula }}
-          </h2>
-          <h3 class="text-2xl xl:text-3xl font-medium shadow-sm">
+          <div class="flex items-center">
+            <v-icon name="book-open" class="mr-2 text-xl xl:text-xl" />
+            <h2 class="text-xl xl:text-xl font-light shadow-sm">
+              Aula {{ $store.state.aulas[1].numeroAula }}
+            </h2>
+          </div>
+          <h3 class="text-3xl xl:text-4xl font-bold shadow-sm mb-4">
             {{ $store.state.aulas[1].nomeAula }}
           </h3>
           <p class="mt-2 2xl:w-2/3 font-light">
