@@ -108,6 +108,10 @@ export default {
       console.log(this.$store.state.progresso);
       this.$store.commit("SALVAR_LOCAL_STORAGE");
     },
+    '$store.state.modalAulaCompleta': function () {
+      console.log(this.$store.state.modalAulaCompleta);
+      this.$store.commit("SALVAR_LOCAL_STORAGE");
+    },
   },
 };
 </script>

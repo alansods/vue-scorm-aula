@@ -21,6 +21,7 @@ import ModalName from "@/components/ModalName.vue"; //Importando como global
 import NomeAluno from "@/components/NomeAluno.vue"; //Importando como global
 import Modal from "@/components/Modal.vue"; //Importando como global
 import IconeObjetivos from "@/components/IconeObjetivos.vue"; //Importando como global
+import ModalAula01Completa from "@/components/ModalAula01Completa.vue"; //Importando como global
 
 // Registrando componentes globais
 Vue.component("Navbar", Navbar);
@@ -29,6 +30,7 @@ Vue.component("ModalName", ModalName);
 Vue.component("NomeAluno", NomeAluno);
 Vue.component("Modal", Modal);
 Vue.component("IconeObjetivos", IconeObjetivos);
+Vue.component("ModalAula01Completa", ModalAula01Completa);
 
 Vue.config.productionTip = false;
 

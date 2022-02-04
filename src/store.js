@@ -29,7 +29,8 @@ export default new Vuex.Store({
         nomeAula: "Conhecendo os utensílios",
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-2.jpg",
-        link: "/aula-02"
+        link: "/aula-02",
+        completa: false,
       },
       {
         id: "3",
@@ -37,7 +38,8 @@ export default new Vuex.Store({
         nomeAula: "Receitas",
         descricaoAula: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
         img: "aula-3.jpg",
-        link: "/aula-03"
+        link: "/aula-03",
+        completa: false,
       },
     ],
     topicosAula_01: [
@@ -45,7 +47,7 @@ export default new Vuex.Store({
         id: '1',
         numeroTopico: '01',
         nome: 'Boas práticas na fabricação de alimentos (BPF)',
-        link: '/aula-01/topico-01'
+        link: '/aula-01/topico-01',
       },
       {
         id: '2',
@@ -135,9 +137,16 @@ export default new Vuex.Store({
     },
     COMPLETAR_AULA_1(state) {
       if (!state.aulas[0].completa) {
-        state.progresso = state.progresso + 30
+        state.progresso = state.progresso + 10
       }
       state.aulas[0].completa = true
+      localStorage.setItem('store', JSON.stringify(state))
+    },
+    COMPLETAR_AULA_2(state) {
+      if (!state.aulas[1].completa) {
+        state.progresso = state.progresso + 10
+      }
+      state.aulas[1].completa = true
       localStorage.setItem('store', JSON.stringify(state))
     },
     SHOW_MODAL_COMPLETAR_AULA_1(state) {
@@ -163,7 +172,11 @@ export default new Vuex.Store({
     finalizarAula01({commit}) {
       commit('SHOW_MODAL_COMPLETAR_AULA_1')
       commit('COMPLETAR_AULA_1')
-    }
+    },
+    finalizarAula02({commit}) {
+      commit('SHOW_MODAL_COMPLETAR_AULA_1')
+      commit('COMPLETAR_AULA_2')
+    },
   },
   getters: {
 /*     nomeEscolhido(state) {

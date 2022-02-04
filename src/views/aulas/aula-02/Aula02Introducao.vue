@@ -1,5 +1,12 @@
 <template>
   <div id="aula-01">
+
+    <ModalAula01Completa
+      :numeroAula="$store.state.aulas[1].numeroAula"
+      :nomeAula="$store.state.aulas[1].nomeAula"
+      :linkContinuar="$store.state.aulas[2].link"
+    />
+
     <div
       id="container-bg-video"
       class="
@@ -25,7 +32,10 @@
       >
         <div id="titulo-curso" class="xl:w-3/4 text-left">
           <div class="flex items-center">
-            <v-icon name="book-open" class="mr-2 text-xl xl:text-xl fill-current" />
+            <v-icon
+              name="book-open"
+              class="mr-2 text-xl xl:text-xl fill-current"
+            />
             <h2 class="text-xl xl:text-xl font-light shadow-sm">
               Aula {{ $store.state.aulas[1].numeroAula }}
             </h2>
@@ -62,9 +72,7 @@
       <div class="bg-white p-8 rounded-lg shadow my-5">
         <div class="flex items-center">
           <IconeObjetivos />
-          <h3 class="font-bold text-primary-color text-2xl">
-            Objetivos
-          </h3>
+          <h3 class="font-bold text-primary-color text-2xl">Objetivos</h3>
         </div>
 
         <ul class="lista-check">
@@ -95,9 +103,7 @@
       <div class="grid flex-col md:flex-row">
         <div class="item shadow">
           <a href="#0" aria-labelledby="person1"></a>
-          <img
-            src="@/assets/img/fouet.jpg"
-          />
+          <img src="@/assets/img/fouet.jpg" />
           <div class="item__overlay">
             <h3 id="person1" aria-hidden="true">Fouet</h3>
             <div class="item__body">
@@ -110,42 +116,39 @@
         </div>
         <div class="item shadow">
           <a href="#0" aria-labelledby="person2"></a>
-          <img
-            src="@/assets/img/espatula-de-silicone-pao-duro.jpg"
-          />
+          <img src="@/assets/img/espatula-de-silicone-pao-duro.jpg" />
           <div class="item__overlay">
             <h3 id="person2" aria-hidden="true">Espátula de silicone</h3>
             <div class="item__body">
               <p>
-                Serve para mexer cremes e tirar bem todo o alimento contido em uma panela ou vasilha.
+                Serve para mexer cremes e tirar bem todo o alimento contido em
+                uma panela ou vasilha.
               </p>
             </div>
           </div>
         </div>
         <div class="item shadow">
           <a href="#0" aria-labelledby="person3"></a>
-          <img
-            src="@/assets/img/peneira.jpg"
-          />
+          <img src="@/assets/img/peneira.jpg" />
           <div class="item__overlay">
             <h3 id="person3" aria-hidden="true">Peneira</h3>
             <div class="item__body">
               <p>
-                Utilizada para peneirar os alimentos secos, tais como: farinha, fermento, açúcar, chocolate.
+                Utilizada para peneirar os alimentos secos, tais como: farinha,
+                fermento, açúcar, chocolate.
               </p>
             </div>
           </div>
         </div>
         <div class="item shadow">
           <a href="#0" aria-labelledby="person3"></a>
-          <img
-            src="@/assets/img/liquidificador.jpg"
-          />
+          <img src="@/assets/img/liquidificador.jpg" />
           <div class="item__overlay">
             <h3 id="person3" aria-hidden="true">Liquidificador</h3>
             <div class="item__body">
               <p>
-                Auxilia no preparo de algumas receitas misturando ou triturando o alimento.
+                Auxilia no preparo de algumas receitas misturando ou triturando
+                o alimento.
               </p>
             </div>
           </div>
@@ -153,24 +156,18 @@
 
         <div class="item shadow">
           <a href="#0" aria-labelledby="person3"></a>
-          <img
-            src="@/assets/img/panelas.jpg"
-          />
+          <img src="@/assets/img/panelas.jpg" />
           <div class="item__overlay">
             <h3 id="person3" aria-hidden="true">Panelas</h3>
             <div class="item__body">
-              <p>
-                Utilizada para o cozimento dos alimentos.
-              </p>
+              <p>Utilizada para o cozimento dos alimentos.</p>
             </div>
           </div>
         </div>
 
         <div class="item shadow">
           <a href="#0" aria-labelledby="person3"></a>
-          <img
-            src="@/assets/img/balanca.jpg"
-          />
+          <img src="@/assets/img/balanca.jpg" />
           <div class="item__overlay">
             <h3 id="person3" aria-hidden="true">Balança</h3>
             <div class="item__body">
@@ -183,30 +180,22 @@
 
         <div class="item shadow">
           <a href="#0" aria-labelledby="person3"></a>
-          <img
-            src="@/assets/img/bowls-vasilha.jpg"
-          />
+          <img src="@/assets/img/bowls-vasilha.jpg" />
           <div class="item__overlay">
             <h3 id="person3" aria-hidden="true">Bowls (vasilha)</h3>
             <div class="item__body">
-              <p>
-                Utilizados para o preparo das receitas.
-              </p>
+              <p>Utilizados para o preparo das receitas.</p>
             </div>
           </div>
         </div>
 
         <div class="item shadow">
           <a href="#0" aria-labelledby="person3"></a>
-          <img
-            src="@/assets/img/colher-de-polietileno.jpg"
-          />
+          <img src="@/assets/img/colher-de-polietileno.jpg" />
           <div class="item__overlay">
             <h3 id="person3" aria-hidden="true">Colher de polietinelo</h3>
             <div class="item__body">
-              <p>
-                Utilizado para mexer os alimentos.
-              </p>
+              <p>Utilizado para mexer os alimentos.</p>
             </div>
           </div>
         </div>
@@ -217,9 +206,10 @@
           <NavButton :icone="'arrow-left'"></NavButton>
         </router-link>
 
-        <router-link to="/aula-03">
-          <NavButton :icone="'arrow-right'"></NavButton>
-        </router-link>
+      <div @click="$store.dispatch('finalizarAula02')">
+        <NavButton :icone="'arrow-right'"></NavButton>
+      </div>
+        
       </div>
     </div>
   </div>
@@ -237,6 +227,7 @@ export default {
     this.$store.commit("ESTA_NA_AULA_2", true);
     this.$store.commit("ESTA_NA_AULA_3", false);
     this.$store.commit("SALVAR_LOCAL_STORAGE");
+    this.$store.state.modalAulaCompleta = false;
   },
 };
 </script>
@@ -259,12 +250,10 @@ export default {
   border-radius: 8px;
 }
 
-@media (max-width: 600px)
-{
-  .item
-   {
+@media (max-width: 600px) {
+  .item {
     width: 100%;
-   }
+  }
 }
 
 .item h3 {
@@ -286,8 +275,8 @@ export default {
   z-index: 1;
 }
 
-.item a:hover ~.item__overlay,
-a:focus ~.item__overlay {
+.item a:hover ~ .item__overlay,
+a:focus ~ .item__overlay {
   transform: translate3d(0, 0, 0);
 }
 

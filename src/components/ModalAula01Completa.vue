@@ -14,21 +14,18 @@
             autoplay
           ></lottie-player>
 
-          <h3 class="font-bold text-primary-color text-2xl mb-5 text-center">
-            Parabéns, <span class="font-bold">{{ $store.state.aluno }}</span
-            >!
+          <h3 class="text-2xl mb-5 text-center">
+            Parabéns, <NomeAluno/>!
           </h3>
 
           <p class="text-center">
-            Você concluiu a
-            <span class="font-bold"
-              >aula {{ $store.state.aulas[0].numeroAula }} -
-              {{ $store.state.aulas[0].nomeAula }}</span
+            Você concluiu a Aula {{ numeroAula }} - <span class="font-bold">{{ nomeAula }}</span
             >.
           </p>
 
-          <div class="flex justify-evenly mt-10">
-            
+          <div class="flex justify-center mt-10">
+      
+            <router-link :to="linkContinuar">
             <button
               class="
                 bg-primary-color
@@ -43,29 +40,12 @@
                 transition-all
               "
             >
-              <v-icon name="arrow-left" class="mr-1" />
-            </button>
-            <router-link to="/aula-02">
-            <button
-              class="
-                bg-primary-color
-                px-5
-                py-2
-                rounded-lg
-                text-white
-                mx-2
-                transform
-                hover:-translate-y-1
-                shadow
-                transition-all
-              "
-            >
-              <v-icon name="arrow-right" class="ml-1" />
+              Continuar
             </button>
             </router-link>
           </div>
         </div>
-          <a class="absolute -top-3 -right-3 rounded-full cursor-pointer bg-red-500 px-4 py-2 text-white font-bold" @click="$store.state.modalAulaCompleta = false">X</a>
+          <a class="absolute -top-3 -right-3 rounded-full cursor-pointer bg-red-500 px-4 py-2 text-white font-bold" @click="cliqueFora">X</a>
         </div>
       </div>
     </transition>
@@ -75,6 +55,7 @@
 <script>
 export default {
   name: "ModalAulaCompleta",
+  props: [ 'numeroAula', 'nomeAula', 'linkContinuar' ],
   data() {
     return {
     };

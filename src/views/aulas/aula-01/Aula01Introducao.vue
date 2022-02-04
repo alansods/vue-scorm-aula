@@ -1,6 +1,12 @@
 <template>
   <div id="aula-01">
-    <ModalAula01Completa />
+
+    <ModalAula01Completa
+    :numeroAula="$store.state.aulas[0].numeroAula"
+    :nomeAula="$store.state.aulas[0].nomeAula"
+    :linkContinuar="$store.state.aulas[1].link"
+    />
+
     <div
       id="container-bg-video"
       class="
@@ -282,7 +288,6 @@ import NavButton from "@/components/NavButton";
 import Accordion from "@/components/accordion/Accordion.vue";
 import AccordionItem from "@/components/accordion/AccordionItem.vue";
 import BoxTips from "@/components/BoxTips.vue";
-import ModalAula01Completa from "@/components/ModalAula01Completa.vue";
 
 export default {
   title: "Aula 01",
@@ -291,7 +296,6 @@ export default {
     Accordion,
     AccordionItem,
     BoxTips,
-    ModalAula01Completa,
   },
   created() {
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
@@ -299,6 +303,8 @@ export default {
     this.$store.commit("ESTA_NA_AULA_2", false);
     this.$store.commit("ESTA_NA_AULA_3", false);
     this.$store.commit("SALVAR_LOCAL_STORAGE");
+    this.$store.state.modalAulaCompleta = false;
+    
   },
 };
 </script>
