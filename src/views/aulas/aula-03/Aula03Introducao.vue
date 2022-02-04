@@ -60,7 +60,7 @@
 
     <div
       id="corpo"
-      class="w-full px-6 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
+      class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
       <div class="bg-white p-8 rounded-lg shadow my-5">
         Neste tópico iremos aprender receitas de doces tradicionais, tais como:
