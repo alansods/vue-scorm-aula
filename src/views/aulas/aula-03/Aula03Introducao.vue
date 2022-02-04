@@ -25,7 +25,10 @@
       >
         <div id="titulo-curso" class="xl:w-3/4 text-left">
           <div class="flex items-center">
-            <v-icon name="book-open" class="mr-2 text-xl xl:text-xl fill-current" />
+            <v-icon
+              name="book-open"
+              class="mr-2 text-xl xl:text-xl fill-current"
+            />
             <h2 class="text-xl xl:text-xl font-light shadow-sm">
               Aula {{ $store.state.aulas[2].numeroAula }}
             </h2>
@@ -109,9 +112,18 @@
           <NavButton :icone="'arrow-left'"></NavButton>
         </router-link>
 
-        <router-link to="/aula-03">
-          <NavButton :icone="'arrow-right'"></NavButton>
-        </router-link>
+        <button
+          class="
+            bg-gray-300
+            py-3
+            px-4
+            rounded-lg
+            text-white
+            cursor-not-allowed
+          "
+        >
+          <v-icon class="icone-setas" name="arrow-right" />
+        </button>
       </div>
     </div>
   </div>
