@@ -60,7 +60,7 @@
 
     <div
       id="corpo"
-      class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
+      class="w-full px-6 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
       <div class="bg-white p-8 rounded-lg shadow my-5">
         Neste tópico iremos aprender receitas de doces tradicionais, tais como:
@@ -176,6 +176,7 @@ export default {
   display: flex;
   gap: 30px 15px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .receita-item {
@@ -246,8 +247,28 @@ export default {
 }
 
 @media (max-width: 600px) {
+  .container-receitas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
   .receita-item {
     width: 100%;
+  }
+
+  .container-icones {
+    justify-content: center;
+  }
+
+  .container-img h2 {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
   }
 }
 </style>
