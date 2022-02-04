@@ -18,8 +18,11 @@
       />
     </div>
     <div id="card-content" class="py-5 px-8 text-dark-color">
-      <div class="font-bold text-xl">Aula {{ aula.numeroAula }}</div>
-      <div class="text-lg font-medium">{{ aula.nomeAula }}</div>
+      <div class="flex items-center">
+        <v-icon name="book-open" class="mr-2 text-xl xl:text-xl fill-current" />
+        <div class="font-regular text-lg">Aula {{ aula.numeroAula }}</div>
+      </div>
+      <div class="text-2xl font-bold">{{ aula.nomeAula }}</div>
       <div class="text-sm">{{ aula.descricaoAula }}</div>
       <router-link :to="aula.link">
       <button

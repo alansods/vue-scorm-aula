@@ -59,7 +59,7 @@
           id="seta-descer"
           class="text-center cursor-pointer"
         >
-          <v-icon scale="2" name="chevron-down" class="animate-bounce" />
+          <v-icon scale="2" name="chevron-down" class="animate-bounce fill-current" />
         </div>
       </div>
     </div>
