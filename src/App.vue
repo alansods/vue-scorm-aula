@@ -89,9 +89,6 @@ p:last-of-type {
   margin-right: .4rem;
 }
 
-svg{
-  fill: #fff;
-}
 
 </style>
 

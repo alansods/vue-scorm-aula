@@ -12,7 +12,7 @@
       text-white
     "
   >
-    <v-icon :name="icone" />
+    <v-icon class="fill-{#fff}" :name="icone" />
   </button>
 </template>
 
