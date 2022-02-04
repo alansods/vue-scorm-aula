@@ -2,7 +2,7 @@
   <div>
     <transition name="modal">
       <div v-if="$store.state.modalAulaCompleta" class="bg-black bg-opacity-70 fixed w-screen h-screen top-0 left-0 overflow-y-scroll z-40" @click="cliqueFora">
-        <div class="modal p-10 bg-white rounded-xl w-2/5 relative z-50 mx-auto mt-16">
+        <div class="modal p-10 bg-white rounded-xl w-4/5 md:w-2/5 relative z-50 mx-auto mt-16">
 
 
         <div class="flex justify-center items-center flex-col">
@@ -14,7 +14,7 @@
             autoplay
           ></lottie-player>
 
-          <h3 class="font-bold text-primary-color text-2xl mb-5">
+          <h3 class="font-bold text-primary-color text-2xl mb-5 text-center">
             Parabéns, <span class="font-bold">{{ $store.state.aluno }}</span
             >!
           </h3>
@@ -28,23 +28,7 @@
           </p>
 
           <div class="flex justify-evenly mt-10">
-            <button
-              class="
-                bg-gray-400
-                px-5
-                py-2
-                rounded-lg
-                text-gray-200
-                mx-2
-                transform
-                hover:-translate-y-1
-                shadow
-                transition-all
-              "
-            >
-              <v-icon name="home" class="mr-1" />
-              Início
-            </button>
+            
             <button
               class="
                 bg-primary-color
@@ -61,6 +45,7 @@
             >
               <v-icon name="arrow-left" class="mr-1" />
             </button>
+            <router-link to="/aula-02">
             <button
               class="
                 bg-primary-color
@@ -77,9 +62,10 @@
             >
               <v-icon name="arrow-right" class="ml-1" />
             </button>
+            </router-link>
           </div>
         </div>
-          <a class="absolute -top-3 -right-3 rounded-full cursor-pointer bg-red-500 px-4 py-2 text-white font-bold" @click="$store.commit('SHOW_MODAL_COMPLETAR_AULA_1', false)">X</a>
+          <a class="absolute -top-3 -right-3 rounded-full cursor-pointer bg-red-500 px-4 py-2 text-white font-bold" @click="$store.state.modalAulaCompleta = false">X</a>
         </div>
       </div>
     </transition>

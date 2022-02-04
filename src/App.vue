@@ -68,7 +68,7 @@ p:last-of-type {
 /* LISTA-CHECK */
 
 .lista-check {
-  margin: 2rem 0;
+  margin: 2rem 25px;
 }
 
 .lista-check li {
@@ -85,7 +85,7 @@ p:last-of-type {
   content: url('./assets/img/padrao/check.svg');
   display: inline-block;
   margin-left: -1.7rem;
-  width: 1.05rem;
+  width: 1.2rem;
   margin-right: .4rem;
 }
 

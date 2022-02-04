@@ -57,10 +57,47 @@
       class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
       <div class="bg-white p-8 rounded-lg shadow my-5">
-        Neste tópico iremos aprender receitas de doces tradicionais, tais como: canjica com milho verde e também milho em conserva, arroz doce saborizado com casca de laranja e especiarias, cocada baiana de colher entre outras receitas que você poderá aplicar de forma fácil e vender.
+        Neste tópico iremos aprender receitas de doces tradicionais, tais como:
+        canjica com milho verde e também milho em conserva, arroz doce
+        saborizado com casca de laranja e especiarias, cocada baiana de colher
+        entre outras receitas que você poderá aplicar de forma fácil e vender.
       </div>
 
-      
+      <div class="container-receitas">
+        <div class="receita-item shadow" v-for="receita in receitas" :key="receita.id">
+
+          <div class="container-img">
+            <img :src="require(`@/assets/img/receitas/${receita.imagem}`)" />
+            <div class="bg-titulo-receita"></div>
+            <h2>{{receita.nome}}</h2>
+          </div>
+
+          <div class="container-icones">
+            <div class="icone">
+              <img
+                src="../../../assets/img/icones-receitas/tempo-de-preparo.png"
+              />
+              <span>{{receita.tempo}}</span>
+            </div>
+
+            <div class="icone">
+              <img src="../../../assets/img/icones-receitas/porcoes.png" />
+              <span>2 porções</span>
+            </div>
+
+            <div class="icone">
+              <img src="../../../assets/img/icones-receitas/calorias.png" />
+              <span>300Kcal</span>
+            </div>
+
+            <div class="icone">
+              <img src="../../../assets/img/icones-receitas/dificuldade.png" />
+              <span>Fácil</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
       <div class="flex justify-around mt-12">
         <router-link to="/aula-02">
@@ -81,6 +118,39 @@ import NavButton from "@/components/NavButton";
 export default {
   title: "Aula 01",
   components: { NavButton },
+  data(){
+    return{
+      receitas: [
+        {
+          id: 1,
+          nome: "Arroz Doce",
+          imagem: "receita1.jpg",
+          tempo: "25min",
+          porcoes: "2",
+          calorias: "300kcal",
+          dificuldade: "fácil"
+        },
+        {
+          id: 2,
+          nome: "Mungunzá doce",
+          imagem: "receita2.jpg",
+          tempo: "25min",
+          porcoes: "2",
+          calorias: "300kcal",
+          dificuldade: "fácil"
+        },
+        {
+          id: 3,
+          nome: "Canjica de milho verde",
+          imagem: "receita3.jpg",
+          tempo: "25min",
+          porcoes: "2",
+          calorias: "300kcal",
+          dificuldade: "fácil"
+        },
+      ]
+    }
+  },
   created() {
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
     this.$store.commit("ESTA_NA_AULA_1", false);
@@ -92,71 +162,76 @@ export default {
 </script>
 
 <style scoped>
-.grid {
+.container-receitas{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
+  gap: 30px 15px; 
+  flex-wrap: wrap;
 }
 
-.item {
+.receita-item {
+  background: #fff;
+  border-radius: 10px;
+  width: 330px;
   position: relative;
-  height: 15rem;
-  background-color: #fff;
-  overflow-y: hidden;
-  border-radius: 8px;
-  max-width: 100%;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
 }
 
-.item h3 {
-  margin: 0;
-  display: block;
-  background-color: #eee;
-  color: #444;
-  padding: 1rem 1.5rem;
-  font-weight: 500;
-  text-align: center;
+.receita-item:hover{
+  transform: scale(1.05);
 }
 
-.item a {
+.container-img{
+  background: rgba(0, 0, 0, 0.329);
+  width: 100%;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.container-img img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.container-img h2 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
   position: absolute;
-  top: 0;
+  bottom: 5px;
+  left: 15px;
+}
+
+.bg-titulo-receita{
+  background: rgba(0, 0, 0, 0.473);
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
 }
 
-.item a:hover ~.item__overlay,
-a:focus ~.item__overlay {
-  transform: translate3d(0, 0, 0);
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: contain;
-}
-
-.item__overlay {
+.container-icones {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  transition: transform 300ms ease-in-out;
-  background-color: #fff;
-  transform: translate3d(0, calc(100% - 3.5rem), 0);
+  gap: 10px;
+  padding: 12px;
+  justify-content: flex-start;
 }
 
-.item__body {
-  flex-grow: 1;
-  padding: 1rem 1.5rem;
+.icone {
+  display: flex;
+  justify-content: center;
 }
-.item__body p {
-  margin: 0;
+
+.icone span{
+  font-size: 0.8rem;
+}
+
+.icone img {
+  width: auto;
+  height: 17px;
+  margin-right: 5px;
 }
 </style>
