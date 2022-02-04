@@ -113,14 +113,7 @@
         </router-link>
 
         <button
-          class="
-            bg-gray-300
-            py-3
-            px-4
-            rounded-lg
-            text-white
-            cursor-not-allowed
-          "
+          class="bg-gray-300 py-3 px-4 rounded-lg text-white cursor-not-allowed"
         >
           <v-icon class="icone-setas" name="arrow-right" />
         </button>
@@ -250,5 +243,11 @@ export default {
   width: auto;
   height: 17px;
   margin-right: 5px;
+}
+
+@media (max-width: 600px) {
+  .receita-item {
+    width: 100%;
+  }
 }
 </style>
