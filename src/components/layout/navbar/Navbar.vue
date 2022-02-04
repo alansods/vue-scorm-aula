@@ -17,7 +17,7 @@
         select-none
       "
     >
-      <div class="text-white flex">
+      <div class="text-white flex justify-center items-center">
         <router-link class="mr-2 cursor-pointer active:scale-75 transform transition" to="/"><v-icon class="fill-current" scale="1.3" name="home" /></router-link>
         |
         <button class="ml-2 cursor-pointer active:scale-75 transform transition" @click.prevent>
