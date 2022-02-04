@@ -7,7 +7,7 @@
 
       <!-- This slot will handle the title/header of the accordion and is the part you click on -->
       <slot name="accordion-trigger"></slot>
-      <v-icon :class="{'arrowOpened': visible}" name="chevron-down" />
+      <v-icon class="fill-{#333}" :class="{'arrowOpened': visible}" name="chevron-down" />
     </div>
 
     <transition 
@@ -87,6 +87,7 @@ export default {
 
 .arrowOpened {
   transform: rotateZ(90deg);
+  fill: #fff;
 }
 
 .accordion__trigger_active {
