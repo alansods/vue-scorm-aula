@@ -114,6 +114,8 @@ export default {
     //document.title = "NR - 10 Segurança em Instalações e Serviços em Eletricidade"
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", true)
     this.$store.commit("ESTA_NA_AULA_1", false)
+    this.$store.commit("ESTA_NA_AULA_2", false);
+    this.$store.commit("ESTA_NA_AULA_3", false);
     this.$store.commit("SALVAR_LOCAL_STORAGE");
   }
 };
