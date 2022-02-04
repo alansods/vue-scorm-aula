@@ -12,7 +12,7 @@
       text-white
     "
   >
-    <v-icon :name="icone" />
+    <v-icon class="text-white" :name="icone" />
   </button>
 </template>
 

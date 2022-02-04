@@ -17,7 +17,7 @@
         select-none
       "
     >
-      <div class="text-white">
+      <div class="text-white flex">
         <router-link to="/"><v-icon class="mr-2 cursor-pointer active:scale-75 transform transition text-white flex" scale="1.3" name="home" /></router-link>
         |
         <v-icon class="ml-2 cursor-pointer active:scale-75 transform transition text-white flex" scale="1.2" @click="clicouMenu" :name="$store.state.iconeMenu" />
