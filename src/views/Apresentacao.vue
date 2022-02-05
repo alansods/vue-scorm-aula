@@ -106,8 +106,8 @@ export default {
       let top = element.offsetTop - 80;
       window.scrollTo({
         top,
-        behavior: "smooth"
-      });
+        behavior: "smooth",
+      },);
     },
   },
   created() {

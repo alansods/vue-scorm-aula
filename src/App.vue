@@ -15,6 +15,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 p {
