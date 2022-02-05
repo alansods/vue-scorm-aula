@@ -106,9 +106,7 @@
           alimentício e em todas as fases do processo, desde a produção primária
           até a comercialização.
         </p>
-      </div>
 
-      <div class="bg-white p-8 rounded-lg shadow my-5">
         <p>
           O objetivo das BPF é assegurar que o produto esteja a salvo do risco
           de contaminação e seja preparado, manipulado e embalado sob condições

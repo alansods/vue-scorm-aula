@@ -91,17 +91,17 @@
 
             <div class="icone">
               <img src="../../../assets/img/icones-receitas/porcoes.png" />
-              <span>2 porções</span>
+              <span>{{ receita.porcoes }}</span>
             </div>
 
             <div class="icone">
               <img src="../../../assets/img/icones-receitas/calorias.png" />
-              <span>300Kcal</span>
+              <span>{{ receita.calorias }}</span>
             </div>
 
             <div class="icone">
               <img src="../../../assets/img/icones-receitas/dificuldade.png" />
-              <span>Fácil</span>
+              <span>{{ receita.dificuldade }}</span>
             </div>
           </div>
         </div>
@@ -136,7 +136,7 @@ export default {
           nome: "Arroz Doce",
           imagem: "receita1.jpg",
           tempo: "25min",
-          porcoes: "2",
+          porcoes: "2 porções",
           calorias: "300kcal",
           dificuldade: "fácil",
         },
@@ -144,18 +144,18 @@ export default {
           id: 2,
           nome: "Mungunzá doce",
           imagem: "receita2.jpg",
-          tempo: "25min",
-          porcoes: "2",
-          calorias: "300kcal",
-          dificuldade: "fácil",
+          tempo: "10min",
+          porcoes: "5 porções",
+          calorias: "100kcal",
+          dificuldade: "médio",
         },
         {
           id: 3,
           nome: "Canjica de milho verde",
           imagem: "receita3.jpg",
-          tempo: "25min",
-          porcoes: "2",
-          calorias: "300kcal",
+          tempo: "45min",
+          porcoes: "3 porções",
+          calorias: "200kcal",
           dificuldade: "fácil",
         },
       ],
@@ -212,8 +212,10 @@ export default {
   font-size: 1.2rem;
   position: absolute;
   bottom: 5px;
-  left: 15px;
-}
+  left: 0;
+  right: 0;
+  text-align: center;
+  }
 
 .bg-titulo-receita {
   background: rgba(0, 0, 0, 0.473);
@@ -228,7 +230,7 @@ export default {
   display: flex;
   gap: 10px;
   padding: 12px;
-  justify-content: flex-start;
+  justify-content: space-around;
 }
 
 .icone {
@@ -257,18 +259,6 @@ export default {
 
   .receita-item {
     width: 100%;
-  }
-
-  .container-icones {
-    justify-content: center;
-  }
-
-  .container-img h2 {
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: table;
   }
 }
 </style>

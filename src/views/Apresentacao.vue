@@ -69,19 +69,19 @@
       class="w-full px-7 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
       <div id="container-descricao-curso text-center mt-5 mx-auto">
-        <div ref="div1">
-          <h2 class="text-center text-3xl font-bold text-primary-color my-5">
+        <div ref="div1" class="mb-12">
+          <h2 class="text-center text-3xl font-bold text-primary-color">
             Apresentação
           </h2>
         </div>
-        <p class="mt-5 text-2xl">
+        <p class="text-2xl text-center md:text-left">
           Olá <NomeAluno />!
         </p>
 
-        <p class="mt-5">
+        <p class="text-center md:text-left">
           Boas vindas ao nosso curso, nele você desenvolverá habilidades e conhecimentos para a produção de doces regionais que vai desde canjicas, brigadeiro, o delicioso pé de moleque e munguzá entre outras receitas, seguindo as boas práticas na manipulação de alimentos, além de conhecer os utensílios que serão utilizados.
         </p>
-        <p>
+        <p class="text-center md:text-left">
           Então vem com a gente!
         </p>
       </div>

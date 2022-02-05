@@ -17,12 +17,17 @@
         select-none
       "
     >
-      <div class="text-white flex justify-center items-center">
-        <router-link class="mr-2 cursor-pointer active:scale-75 transform transition" to="/"><v-icon class="fill-current" scale="1.3" name="home" /></router-link>
-        |
-        <button class="ml-2 cursor-pointer active:scale-75 transform transition" @click.prevent>
+      <div class="text-white flex justify-center items-center leading-none">
+        
+        <router-link class="cursor-pointer active:scale-75 transform transition" to="/">
+          <v-icon class="fill-current" scale="1.3" name="home" />
+        </router-link>
+
+        <span class="mx-3">|</span>
+
+        <a class="cursor-pointer active:scale-75 transform transition" @click.prevent>
           <v-icon class="fill-current" scale="1.2" @click="clicouMenu" :name="$store.state.iconeMenu" />
-        </button>
+        </a>
         
       </div>
 

@@ -1,51 +1,92 @@
 <template>
   <div>
     <transition name="modal">
-      <div v-if="$store.state.modalAulaCompleta" class="bg-black bg-opacity-70 fixed w-screen h-screen top-0 left-0 overflow-y-scroll z-40" @click="cliqueFora">
-        <div class="modal p-10 bg-white rounded-xl w-4/5 md:w-2/5 relative z-50 mx-auto mt-16">
+      <div
+        v-if="$store.state.modalAulaCompleta"
+        class="
+          bg-black bg-opacity-70
+          fixed
+          w-screen
+          h-full
+          overflow-y-scroll
+          z-40
+          flex flex-col
+          items-center
+          justify-center
+        "
+        @click="cliqueFora"
+      >
+        <div
+          class="
+            modal
+            px-5
+            py-8
+            bg-white
+            rounded-xl
+            w-11/12
+            md:w-2/6
+            relative
+            z-50
+            mx-auto
+            mb-16
+          "
+        >
+          <div class="text-center">
+            <lottie-player
+            class="mx-auto"
+              src="https://assets7.lottiefiles.com/private_files/lf30_yo2zavgg.json"
+              background="transparent"
+              speed="1"
+              style="width: 200px; height: 160px"
+              autoplay
+            ></lottie-player>
 
+            <h3 class="text-3xl mb-4 text-center">Parabéns, <NomeAluno />!</h3>
 
-        <div class="flex justify-center items-center flex-col">
-          <lottie-player
-            src="https://assets7.lottiefiles.com/private_files/lf30_yo2zavgg.json"
-            background="transparent"
-            speed="1"
-            style="width: 200px; height: 200px"
-            autoplay
-          ></lottie-player>
+            <p class="text-center text-lg">
+              Você concluiu a
+              <span class="font-bold"
+                >Aula {{ numeroAula }} - {{ nomeAula }}</span
+              >.
+            </p>
 
-          <h3 class="text-2xl mb-5 text-center">
-            Parabéns, <NomeAluno/>!
-          </h3>
-
-          <p class="text-center">
-            Você concluiu a Aula {{ numeroAula }} - <span class="font-bold">{{ nomeAula }}</span
-            >.
-          </p>
-
-          <div class="flex justify-center mt-10">
-      
             <router-link :to="linkContinuar">
-            <button
-              class="
-                bg-primary-color
-                px-5
-                py-2
-                rounded-lg
-                text-white
-                mx-2
-                transform
-                hover:-translate-y-1
-                shadow
-                transition-all
-              "
-            >
-              Continuar
-            </button>
+              <button
+                class="
+                  bg-primary-color
+                  w-full
+                  md:w-52
+                  h-14
+                  rounded-lg
+                  text-white
+                  transform
+                  hover:-translate-y-1
+                  transition-all
+                  shadow
+                  mx-auto
+                  mt-12
+                "
+              >
+                Continuar
+              </button>
             </router-link>
           </div>
-        </div>
-          <a class="absolute -top-3 -right-3 rounded-full cursor-pointer bg-red-500 px-4 py-2 text-white font-bold" @click="cliqueFora">X</a>
+          <a
+            class="
+              absolute
+              -top-3
+              -right-3
+              rounded-full
+              cursor-pointer
+              bg-red-500
+              px-4
+              py-2
+              text-white
+              font-bold
+            "
+            @click="cliqueFora"
+            >X</a
+          >
         </div>
       </div>
     </transition>
@@ -55,23 +96,21 @@
 <script>
 export default {
   name: "ModalAulaCompleta",
-  props: [ 'numeroAula', 'nomeAula', 'linkContinuar' ],
+  props: ["numeroAula", "nomeAula", "linkContinuar"],
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     cliqueFora({ currentTarget, target }) {
       if (currentTarget === target) {
-        this.$store.state.modalAulaCompleta = false
-      };
+        this.$store.state.modalAulaCompleta = false;
+      }
     },
   },
 };
 </script>
 
 <style scoped>
-
 .modal-enter,
 .modal-leave-to {
   opacity: 0;
