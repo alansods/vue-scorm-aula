@@ -12,7 +12,7 @@
       text-white
     "
   >
-    <v-icon class="icone-setas" :name="icone" />
+    <v-icon scale="1.5" class="icone-setas" :name="icone" />
   </button>
 </template>
 

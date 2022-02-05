@@ -127,9 +127,10 @@ export default {
 
 .menu.ativo {
   opacity: 1;
+  animation: slideMenu .4s ease;
 }
 
-@keyframes menu {
+@keyframes slideMenu {
   from {
     transform: translate3d(-300px, 0, 0);
   }
