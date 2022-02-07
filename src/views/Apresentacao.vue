@@ -74,14 +74,14 @@
             Apresentação
           </h2>
         </div>
-        <p class="text-2xl text-center md:text-left">
+        <p class="text-2xl text-left">
           Olá <NomeAluno />!
         </p>
 
-        <p class="text-center md:text-left">
+        <p class="text-left">
           Boas vindas ao nosso curso, nele você desenvolverá habilidades e conhecimentos para a produção de doces regionais que vai desde canjicas, brigadeiro, o delicioso pé de moleque e munguzá entre outras receitas, seguindo as boas práticas na manipulação de alimentos, além de conhecer os utensílios que serão utilizados.
         </p>
-        <p class="text-center md:text-left">
+        <p class="text-left">
           Então vem com a gente!
         </p>
       </div>

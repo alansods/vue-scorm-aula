@@ -12,8 +12,9 @@
       class="
         img-fundo bg-cover
         h-1/4
-        px-4
-        py-8
+        px-5
+        pb-10
+        md:py-8
         xl:px-0
         mx-auto
         text-white
