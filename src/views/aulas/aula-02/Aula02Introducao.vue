@@ -10,9 +10,10 @@
     <div
       id="container-bg-video"
       class="
-        bg-video-apresentacao bg-cover
+        img-fundo bg-cover
         h-1/4
         px-4
+        py-8
         xl:px-0
         mx-auto
         text-white
@@ -48,7 +49,7 @@
           </p>
         </div>
 
-        <div
+        <!-- <div
           id="container-video-apresentacao"
           class="w-full md:w-2/4 2xl:w-2/5 mx-auto my-12 xl:my-4"
         >
@@ -61,7 +62,7 @@
               allowfullscreen
             ></iframe>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -84,21 +85,6 @@
         </ul>
       </div>
 
-      <div class="bg-white p-8 rounded-lg shadow my-5">
-        <h3 class="font-semibold text-primary-color text-xl mb-5">
-          Conhecendo os utensílios
-        </h3>
-
-        <p>
-          Os utensílios são de extrema importância na hora da produção, pois
-          eles irão auxiliar no processo de fabricação dos doces.
-        </p>
-
-        <p>
-          Para que seja feita a produção dos doces será necessário o uso de
-          alguns utensílios que iremos apresentar:
-        </p>
-      </div>
 
       <div class="grid flex-col md:flex-row">
         <div class="item shadow">
@@ -219,7 +205,7 @@
 import NavButton from "@/components/NavButton";
 
 export default {
-  title: "Aula 01",
+  title: "Aula 02 - Conhecendo os utensílios",
   components: { NavButton },
   created() {
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);

@@ -127,7 +127,7 @@ export default {
 
 .menu.ativo {
   opacity: 1;
-  animation: slideMenu .4s ease;
+  /* animation: slideMenu .4s ease; */
 }
 
 @keyframes slideMenu {

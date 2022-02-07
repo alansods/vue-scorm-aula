@@ -3,10 +3,9 @@
     <div
       id="container-bg-video"
       class="
-        img-fundo bg-cover
+        bg-video-apresentacao bg-cover
         h-1/4
         px-4
-        py-8
         xl:px-0
         mx-auto
         text-white
@@ -42,7 +41,7 @@
           </p>
         </div>
 
-        <!-- <div
+        <div
           id="container-video-apresentacao"
           class="w-full md:w-2/4 2xl:w-2/5 mx-auto my-12 xl:my-4"
         >
@@ -55,7 +54,7 @@
               allowfullscreen
             ></iframe>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
 
@@ -63,6 +62,13 @@
       id="corpo"
       class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
+      <div class="bg-white p-8 rounded-lg shadow my-5">
+        <h3>Arroz Doce</h3>
+        Neste tópico iremos aprender receitas de doces tradicionais, tais como:
+        canjica com milho verde e também milho em conserva, arroz doce
+        saborizado com casca de laranja e especiarias, cocada baiana de colher
+        entre outras receitas que você poderá aplicar de forma fácil e vender.
+      </div>
 
       <div class="container-receitas">
         <div
@@ -87,6 +93,11 @@
             <div class="icone">
               <img src="../../../assets/img/icones-receitas/porcoes.png" />
               <span>{{ receita.porcoes }}</span>
+            </div>
+
+            <div class="icone">
+              <img src="../../../assets/img/icones-receitas/calorias.png" />
+              <span>{{ receita.calorias }}</span>
             </div>
 
             <div class="icone">
@@ -116,84 +127,11 @@
 import NavButton from "@/components/NavButton";
 
 export default {
-  title: "Aula 03 - Receitas",
+  title: "Aula 03 - Receitas: Arroz Doce",
   components: { NavButton },
   data() {
     return {
-      receitas: [
-        {
-          id: 1,
-          nome: "Arroz Doce",
-          imagem: "receita1.jpg",
-          tempo: "25min",
-          porcoes: "2 porções",
-          calorias: "300kcal",
-          dificuldade: "fácil",
-        },
-        {
-          id: 2,
-          nome: "Mungunzá doce",
-          imagem: "receita2.jpg",
-          tempo: "10min",
-          porcoes: "5 porções",
-          calorias: "100kcal",
-          dificuldade: "médio",
-        },
-        {
-          id: 3,
-          nome: "Canjica de milho verde",
-          imagem: "receita3.jpg",
-          tempo: "45min",
-          porcoes: "3 porções",
-          calorias: "200kcal",
-          dificuldade: "fácil",
-        },
-        {
-          id: 4,
-          nome: "Canjica de milho em conserva",
-          imagem: "receita3.jpg",
-          tempo: "45min",
-          porcoes: "3 porções",
-          calorias: "200kcal",
-          dificuldade: "fácil",
-        },
-        {
-          id: 5,
-          nome: "Cocada baiana de colher",
-          imagem: "receita3.jpg",
-          tempo: "45min",
-          porcoes: "3 porções",
-          calorias: "200kcal",
-          dificuldade: "fácil",
-        },
-        {
-          id: 6,
-          nome: "Pé de moleque",
-          imagem: "receita3.jpg",
-          tempo: "45min",
-          porcoes: "3 porções",
-          calorias: "200kcal",
-          dificuldade: "fácil",
-        },
-        {
-          id: 7,
-          nome: "Brigadeiro de milho",
-          imagem: "receita3.jpg",
-          tempo: "45min",
-          porcoes: "3 porções",
-          calorias: "200kcal",
-          dificuldade: "fácil",
-        },
-        {
-          id: 8,
-          nome: "Queijadinha",
-          imagem: "receita3.jpg",
-          tempo: "45min",
-          porcoes: "3 porções",
-          calorias: "200kcal",
-          dificuldade: "fácil",
-        },
-      ],
+      
     };
   },
   created() {
@@ -209,7 +147,7 @@ export default {
 <style scoped>
 .container-receitas {
   display: flex;
-  gap: 30px 25px;
+  gap: 30px 16px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -218,7 +156,6 @@ export default {
   background: #fff;
   border-radius: 10px;
   flex-grow: 1;
-  max-width: 320px;
   position: relative;
   cursor: pointer;
   transition: transform 150ms ease-in-out;
@@ -266,7 +203,7 @@ export default {
   display: flex;
   gap: 10px;
   padding: 12px;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .icone {

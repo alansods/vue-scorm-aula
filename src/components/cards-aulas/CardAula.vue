@@ -1,22 +1,19 @@
 <template>
   <div
     id="card-aula"
-    class="xl:flex xl:items-center shadow rounded-lg bg-white my-8"
+    class="xl:flex xl:items-center h-auto shadow rounded-lg bg-white my-10"
   >
-    <div id="card-img">
+    <div id="card-img" class="imagem-container">
       <img
         :src="require(`@/assets/img/${aula.img}`)"
         class="
-          w-full
-          h-52
-          xl:h-full xl:w-64
           object-cover
           rounded-t-lg rounded-b-none
           xl:rounded-tr-none xl:rounded-bl-lg
         "
       />
     </div>
-    <div id="card-content" class="py-5 px-6 md:px-8 text-dark-color">
+    <div id="card-content" class="py-7 px-6 md:px-9 text-dark-color">
       <div class="flex items-center">
         <v-icon name="book-open" class="mr-2 text-xl xl:text-xl fill-current" />
         <div class="font-regular text-lg">Aula {{ aula.numeroAula }}</div>
@@ -52,4 +49,18 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+
+  .imagem-container img{
+    height: 200px;
+    width: 100%;
+  }
+
+@media (min-width: 600px) {
+  .imagem-container img{
+    display: block;
+    height: 100%;
+    min-width: 200px;
+  }
+}
+</style>

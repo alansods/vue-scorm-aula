@@ -10,9 +10,10 @@
     <div
       id="container-bg-video"
       class="
-        bg-video-apresentacao bg-cover
+        img-fundo bg-cover
         h-1/4
         px-4
+        py-8
         xl:px-0
         mx-auto
         text-white
@@ -48,7 +49,7 @@
           </p>
         </div>
 
-        <div
+        <!-- <div
           id="container-video-apresentacao"
           class="w-full md:w-2/4 2xl:w-2/5 mx-auto my-12 xl:my-4"
         >
@@ -61,7 +62,7 @@
               allowfullscreen
             ></iframe>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -94,10 +95,8 @@
 
       <div class="bg-white p-8 rounded-lg shadow my-5">
         <h3 class="font-semibold text-primary-color text-xl mb-5">
-          1.1 Boas práticas na fabricação de alimentos (BPF)
+          1.1 O que são boas práticas na manipulação de alimentos?
         </h3>
-
-        <p>O que são boas práticas na manipulação de alimentos?</p>
 
         <p>
           As BPF’s são procedimentos obrigatórios, necessários para garantir a
@@ -288,7 +287,7 @@ import AccordionItem from "@/components/accordion/AccordionItem.vue";
 import BoxTips from "@/components/BoxTips.vue";
 
 export default {
-  title: "Aula 01",
+  title: "Aula 01 - Boas práticas na fabricação de alimentos (BPF)",
   components: {
     NavButton,
     Accordion,
