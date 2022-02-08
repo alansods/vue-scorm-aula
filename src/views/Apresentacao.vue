@@ -2,14 +2,7 @@
   <div id="apresentação">
     <div
       id="container-bg-video"
-      class="
-        img-fundo
-        h-bg-apresentacao
-        px-3
-        xl:px-0
-        mx-auto
-        text-white
-      "
+      class="img-fundo h-bg-apresentacao px-3 xl:px-0 mx-auto text-white"
     >
       <div
         id="container-all-content-bg-video"
@@ -27,9 +20,12 @@
         <div id="titulo-curso" class="xl:w-2/3 2xl:w-auto">
           <h1
             class="
-              text-center text-3xl
+              text-center
+              text-4xl
+              md:text-3xl
               xl:text-4xl
               2xl:text-5xl
+              3xl:text-6xl
               font-bold
               shadow-sm
               2xl:leading-tight
@@ -41,7 +37,7 @@
 
         <div
           id="container-video-apresentacao"
-          class="w-full md:w-2/4 2xl:w-3/5 mx-auto my-12"
+          class="w-full md:w-2/4 xl:w-3/5 3xl:w-4/5 mx-auto my-12 3xl:my-14"
         >
           <div id="video-apresentacao" class="aspect-w-16 aspect-h-9">
             <iframe
@@ -59,7 +55,11 @@
           id="seta-descer"
           class="text-center cursor-pointer"
         >
-          <v-icon scale="2" name="chevron-down" class="animate-bounce fill-current" />
+          <v-icon
+            scale="2"
+            name="chevron-down"
+            class="animate-bounce fill-current"
+          />
         </div>
       </div>
     </div>
@@ -70,23 +70,29 @@
     >
       <div id="container-descricao-curso text-center mt-5 mx-auto">
         <div ref="div1" class="mb-12">
-          <h2 class="text-left md:text-center text-3xl font-bold text-primary-color">
+          <h2
+            class="
+              text-left
+              md:text-center
+              text-3xl
+              font-bold
+              text-primary-color
+            "
+          >
             Apresentação
           </h2>
         </div>
-        <p class="text-2xl text-left">
-          Olá <NomeAluno />!
-        </p>
+        <p class="text-2xl text-left">Olá <NomeAluno />!</p>
 
         <p class="text-left">
-          Boas vindas ao nosso curso, nele você desenvolverá habilidades e conhecimentos para a produção de doces regionais que vai desde canjicas, brigadeiro, o delicioso pé de moleque e munguzá entre outras receitas, seguindo as boas práticas na manipulação de alimentos, além de conhecer os utensílios que serão utilizados.
+          Boas vindas ao nosso curso, nele você desenvolverá habilidades e
+          conhecimentos para a produção de doces regionais que vai desde
+          canjicas, brigadeiro, o delicioso pé de moleque e munguzá entre outras
+          receitas, seguindo as boas práticas na manipulação de alimentos, além
+          de conhecer os utensílios que serão utilizados.
         </p>
-        <p class="text-left">
-          Então vem com a gente!
-        </p>
+        <p class="text-left">Então vem com a gente!</p>
       </div>
-
-      
 
       <div id="container-cards-aulas" class="mt-16">
         <ListaAulas />
@@ -107,26 +113,41 @@ export default {
       window.scrollTo({
         top,
         behavior: "smooth",
-      },);
+      });
     },
   },
   created() {
     //document.title = "NR - 10 Segurança em Instalações e Serviços em Eletricidade"
-    this.$store.commit("ESTA_NA_AULA_APRESENTACAO", true)
-    this.$store.commit("ESTA_NA_AULA_1", false)
+    this.$store.commit("ESTA_NA_AULA_APRESENTACAO", true);
+    this.$store.commit("ESTA_NA_AULA_1", false);
     this.$store.commit("ESTA_NA_AULA_2", false);
     this.$store.commit("ESTA_NA_AULA_3", false);
     this.$store.commit("SALVAR_LOCAL_STORAGE");
-  }
+  },
 };
 </script>
 
-<style>
-.img-fundo {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(../assets/img/padrao/bg-apresentacao-2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+<style scoped>
+#container-all-content-bg-video {
+  padding-bottom: 110px;
 }
 
+@media (min-width: 600px) {
+  #container-all-content-bg-video {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  #container-video-apresentacao{
+    width: 80%;
+  }
+
+  #titulo-curso h1{
+    font-size: 4rem;
+  }
+  #seta-descer{
+    transform: scale(1.3);
+  }
+}
 </style>

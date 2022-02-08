@@ -90,6 +90,13 @@ p:last-of-type {
   margin-right: .4rem;
 }
 
+.img-fundo {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(./assets/img/padrao/bg-apresentacao-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 
 </style>
 
