@@ -70,7 +70,7 @@
     >
       <div id="container-descricao-curso text-center mt-5 mx-auto">
         <div ref="div1" class="mb-12">
-          <h2 class="text-center text-3xl font-bold text-primary-color">
+          <h2 class="text-left md:text-center text-3xl font-bold text-primary-color">
             Apresentação
           </h2>
         </div>

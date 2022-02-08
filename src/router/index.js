@@ -4,7 +4,8 @@ import Apresentacao from "@/views/Apresentacao.vue";
 import Aula01Introducao from "@/views/aulas/aula-01/Aula01Introducao.vue";
 import Aula02Introducao from "@/views/aulas/aula-02/Aula02Introducao.vue";
 import Aula03Introducao from "@/views/aulas/aula-03/Aula03Introducao.vue";
-
+import ArrozDoce from "@/views/aulas/aula-03/receitas/ArrozDoce.vue";
+import Receitas from "@/views/aulas/aula-03/Receitas.vue";
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,18 @@ const routes = [
     path: "/aula-03",
     name: "Aula03Introducao",
     component: Aula03Introducao,
+    children: [
+      {
+        path: "",
+        name: "Receitas",
+        component: Receitas,
+      },
+      {
+        path: "arroz-doce",
+        name: "ArroceDoce",
+        component: ArrozDoce,
+      },
+    ],
   },
 ];
 
@@ -40,27 +53,25 @@ const router = new VueRouter({
 });
 
 //salvar ultima pagina visitada ao reabrir o site
-router.afterEach(to => {
-  localStorage.setItem('router', to.name)
-})
+router.afterEach((to) => {
+  localStorage.setItem("router", to.name);
+});
 
-let isFirstTransition = true
+let isFirstTransition = true;
 router.beforeEach((to, from, next) => {
-  
-   const lastRouteName = localStorage.getItem('router')         
-   const shouldRedirect = Boolean( to.name === "Apresentacao" && lastRouteName && isFirstTransition)
-   
-   if (shouldRedirect && to.name !== from.name) {
-     isFirstTransition = false
-     next({ name: lastRouteName })
-     console.log("pega o localstorage")
-   } else {
-      next()
-      console.log("Navegou normal sem reabrir a aba")
-   }
-})
+  const lastRouteName = localStorage.getItem("router");
+  const shouldRedirect = Boolean(
+    to.name === "Apresentacao" && lastRouteName && isFirstTransition
+  );
 
-
-
+  if (shouldRedirect && to.name !== from.name) {
+    isFirstTransition = false;
+    next({ name: lastRouteName });
+    console.log("pega o localstorage");
+  } else {
+    next();
+    console.log("Navegou normal sem reabrir a aba");
+  }
+});
 
 export default router;

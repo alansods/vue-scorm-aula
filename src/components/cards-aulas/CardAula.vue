@@ -19,7 +19,7 @@
         <div class="font-regular text-lg">Aula {{ aula.numeroAula }}</div>
       </div>
       <div class="text-2xl font-bold">{{ aula.nomeAula }}</div>
-      <div class="text-sm">{{ aula.descricaoAula }}</div>
+      <div class="mt-2">{{ aula.descricaoAula }}</div>
       <router-link :to="aula.link">
         <button
           class="
