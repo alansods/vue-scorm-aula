@@ -1,43 +1,42 @@
 <template>
   <div class="container-receitas">
-        <div
-          class="receita-item shadow"
-          v-for="receita in receitas"
-          :key="receita.id"
-        >
-        <router-link :to="receita.path">
-          <div class="container-img">
-            <img :src="require(`@/assets/img/receitas/${receita.imagem}`)" />
-            <div class="bg-titulo-receita"></div>
-            <h2>{{ receita.nome }}</h2>
-          </div>
-
-          <div class="container-icones">
-            <div class="icone">
-              <img
-                src="../../../assets/img/icones-receitas/tempo-de-preparo.png"
-              />
-              <span>{{ receita.tempo }}</span>
-            </div>
-
-            <div class="icone">
-              <img src="../../../assets/img/icones-receitas/porcoes.png" />
-              <span>{{ receita.porcoes }}</span>
-            </div>
-
-            <div class="icone">
-              <img src="../../../assets/img/icones-receitas/dificuldade.png" />
-              <span>{{ receita.dificuldade }}</span>
-            </div>
-          </div>
-          </router-link>
+    <div
+      class="receita-item shadow"
+      v-for="receita in receitas"
+      :key="receita.id"
+    >
+      <router-link :to="receita.path" class="flex flex-col">
+        <div class="container-img">
+          <img :src="require(`@/assets/img/receitas/${receita.imagem}`)" />
         </div>
-      </div>
+        <h2>{{ receita.nome }}</h2>
+        <hr />
+        <div class="container-icones">
+          <div class="icone">
+            <img
+              src="../../../assets/img/icones-receitas/tempo-de-preparo.png"
+            />
+            <span>{{ receita.tempo }}</span>
+          </div>
+
+          <div class="icone">
+            <img src="../../../assets/img/icones-receitas/porcoes.png" />
+            <span>{{ receita.porcoes }}</span>
+          </div>
+
+          <div class="icone">
+            <img src="../../../assets/img/icones-receitas/dificuldade.png" />
+            <span>{{ receita.dificuldade }}</span>
+          </div>
+        </div>
+      </router-link>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-data() {
+  data() {
     return {
       receitas: [
         {
@@ -123,13 +122,13 @@ data() {
       ],
     };
   },
-}
+};
 </script>
 
 <style scoped>
 .container-receitas {
   display: flex;
-  gap: 30px 25px;
+  gap: 35px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -138,7 +137,7 @@ data() {
   background: #fff;
   border-radius: 10px;
   flex-grow: 1;
-  max-width: 320px;
+  max-width: 280px;
   position: relative;
   cursor: pointer;
   transition: transform 150ms ease-in-out;
@@ -162,31 +161,27 @@ data() {
   border-top-right-radius: 10px;
 }
 
-.container-img h2 {
-  color: #fff;
-  font-weight: bold;
+h2 {
+  color: #333;
+  width: 88%;
+  font-weight: 500;
   font-size: 1.2rem;
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  }
+  margin: 18px 0 15px 0;
+  margin-left: 15px;
+  line-height: 1.7rem;
+}
 
-.bg-titulo-receita {
-  background: rgba(0, 0, 0, 0.473);
-  width: 100%;
-  height: 40px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+hr {
+  width: 90%;
+  margin: 0 auto;
+  border-top: 1px solid #ccc ;
 }
 
 .container-icones {
   display: flex;
   gap: 10px;
-  padding: 12px;
   justify-content: space-evenly;
+  padding: 20px 0;
 }
 
 .icone {
@@ -214,7 +209,7 @@ data() {
   }
 
   .receita-item {
-    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
   }
 }
