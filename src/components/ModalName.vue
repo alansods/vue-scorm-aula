@@ -34,7 +34,7 @@
           />
           <button
             class="rounded px-5 py-3 w-full text-white outline-none"
-            :class="inativo ? 'bg-gray-300 cursor-not-allowed' : 'bg-primary-color'"
+            :class="inativo ? 'bg-gray-300 cursor-not-allowed' : 'bg-primary-color xl:hover:bg-primary-color-hover xl:transform xl:hover:-translate-y-1 xl:transition-all'"
             @click="$store.commit('SALVAR_NOME')"
           >
             Confirmar

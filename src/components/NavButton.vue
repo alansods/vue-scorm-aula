@@ -3,9 +3,9 @@
     class="
       bg-primary-color
       xl:hover:bg-primary-color-hover
-      transform
-      transition
-      active:scale-75
+      xl:transform
+      xl:hover:-translate-y-1
+      xl:transition-all
       py-3
       px-4
       rounded-lg
@@ -20,14 +20,13 @@
 export default {
   props: ["icone"],
   data() {
-    return {
-    }
-  }
+    return {};
+  },
 };
 </script>
 
 <style scoped>
-.icone-setas{
+.icone-setas {
   fill: #fff;
 }
 </style>

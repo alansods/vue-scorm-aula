@@ -33,7 +33,7 @@
         >
           <div class="text-center">
             <lottie-player
-            class="mx-auto"
+              class="mx-auto"
               src="https://assets7.lottiefiles.com/private_files/lf30_yo2zavgg.json"
               background="transparent"
               speed="1"
@@ -59,9 +59,10 @@
                   h-14
                   rounded-lg
                   text-white
-                  transform
-                  hover:-translate-y-1
-                  transition-all
+                  xl:hover:bg-primary-color-hover
+                  xl:transform
+                  xl:hover:-translate-y-1
+                  xl:transition-all
                   shadow
                   mx-auto
                   mt-12
