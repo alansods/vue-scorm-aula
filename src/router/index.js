@@ -7,6 +7,7 @@ import Aula03Introducao from "@/views/aulas/aula-03/Aula03Introducao.vue";
 import ArrozDoce from "@/views/aulas/aula-03/receitas/ArrozDoce.vue";
 import Receitas from "@/views/aulas/aula-03/Receitas.vue";
 
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -17,17 +18,17 @@ const routes = [
   },
   {
     path: "/aula-01",
-    name: "Aula01Introducao",
+    name: "Aula 01 - Boas práticas na fabricação de alimentos (BPF)",
     component: Aula01Introducao,
   },
   {
     path: "/aula-02",
-    name: "Aula02Introducao",
+    name: "Aula 02 - Conhecendo os utensílios",
     component: Aula02Introducao,
   },
   {
     path: "/aula-03",
-    name: "Aula03Introducao",
+    name: "Aula 03 - Receitas",
     component: Aula03Introducao,
     children: [
       {
@@ -67,7 +68,7 @@ router.beforeEach((to, from, next) => {
   if (shouldRedirect && to.name !== from.name) {
     isFirstTransition = false;
     next({ name: lastRouteName });
-    console.log("pega o localstorage");
+    console.log("pegou o localstorage");
   } else {
     next();
     console.log("Navegou normal sem reabrir a aba");

@@ -5,10 +5,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    bemVindoDeVolta: null,
     menuShow: false,
     temNome: false,
     iconeMenu: "bars",
-    modalNome: true,
+    modalNome: null,
     modalAulaCompleta: false,
     progresso: Number("0"),
     nomeDoCurso: "Doces Regionais",
@@ -164,7 +165,10 @@ export default new Vuex.Store({
 				this.replaceState(
 					Object.assign(state, JSON.parse(localStorage.getItem('store')))
 				);
-			}
+        state.bemVindoDeVolta = true;
+			} else {
+        state.modalNome = true;
+      }
 		}
 	},
   actions: {
@@ -176,10 +180,6 @@ export default new Vuex.Store({
     finalizarAula01({commit}) {
       commit('SHOW_MODAL_COMPLETAR_AULA_1')
       commit('COMPLETAR_AULA_1')
-    },
-    finalizarAula02({commit}) {
-      commit('SHOW_MODAL_COMPLETAR_AULA_1')
-      commit('COMPLETAR_AULA_2')
     },
   },
   getters: {

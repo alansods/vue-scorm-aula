@@ -2,6 +2,7 @@
   <div id="app" class="bg-gray-200 font-poppins pb-10 text-dark-color">
     <Navbar />
     <ModalName />
+    <ModalBemVindoDeVolta/>
     <div class="pt-10">
       <transition mode="out-in">
         <router-view />
@@ -101,7 +102,10 @@ p:last-of-type {
 </style>
 
 <script>
+import ModalBemVindoDeVolta from '@/components/ModalBemVindoDeVolta'
+
 export default {
+  components: { ModalBemVindoDeVolta },
   data() {
     return {};
   },
