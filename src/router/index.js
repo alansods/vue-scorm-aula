@@ -1,5 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+
 import Apresentacao from "@/views/Apresentacao.vue";
 import Aula01Introducao from "@/views/aulas/aula-01/Aula01Introducao.vue";
 import Aula02Introducao from "@/views/aulas/aula-02/Aula02Introducao.vue";

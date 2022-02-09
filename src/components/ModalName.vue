@@ -50,7 +50,7 @@ export default {
   name: "ModalName",
   data() {
     return {
-      inativo: true
+      inativo: null
     };
   },
   computed: {

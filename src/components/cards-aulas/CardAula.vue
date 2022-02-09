@@ -35,8 +35,10 @@
             text-white
             rounded-lg
             shadow
-            xl:hover:bg-primary-color-hover
-            transition-all
+          xl:hover:bg-primary-color-hover
+            xl:transform
+            xl:hover:-translate-y-1
+            xl:transition-all
           "
         >
           Começar
