@@ -181,6 +181,10 @@ export default new Vuex.Store({
       commit('SHOW_MODAL_COMPLETAR_AULA_1')
       commit('COMPLETAR_AULA_1')
     },
+    finalizarAula02({commit}) {
+      commit('SHOW_MODAL_COMPLETAR_AULA_1')
+      commit('COMPLETAR_AULA_2')
+    },
   },
   getters: {
 /*     nomeEscolhido(state) {

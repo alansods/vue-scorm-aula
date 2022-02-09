@@ -19,7 +19,7 @@
         <div
           class="
             modal
-            px-5
+            px-8
             py-8
             bg-white
             rounded-xl
@@ -41,7 +41,7 @@
               autoplay
             ></lottie-player>
 
-            <h3 class="text-3xl mb-4 text-center">Parabéns, <NomeAluno />!</h3>
+            <h3 class="text-3xl mb-4 text-center text-primary-color">Parabéns, <NomeAluno />!</h3>
 
             <p class="text-center text-lg">
               Você concluiu a
