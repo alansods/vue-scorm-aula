@@ -68,14 +68,35 @@
       <transition mode="out-in">
         <router-view />
       </transition>
-      
+
+      <div class="flex justify-around mt-16">
+        <router-link to="/aula-02">
+          <NavButton :icone="'arrow-left'"></NavButton>
+        </router-link>
+
+        <button
+          class="
+            bg-gray-300
+            py-3
+            px-4
+            rounded-lg
+            text-white
+            cursor-not-allowed
+          "
+        >
+          <v-icon scale="1.5" class="icone-setas" name="arrow-right" />
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import NavButton from "@/components/NavButton";
+
 export default {
   title: "Aula 03 - Receitas",
+  components: { NavButton },
 
   created() {
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);

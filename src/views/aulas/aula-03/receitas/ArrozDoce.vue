@@ -43,7 +43,7 @@
           Ingredientes
         </h3>
 
-        <ul class="lista-check grid grid-cols-2 mb-0">
+        <ul class="lista-check md:grid md:grid-cols-2 mb-0">
           <li style="order: 1">1 xícara de arroz (175g)</li>
           <li style="order: 3">1/3 de xícara de açúcar (65g)</li>
           <li style="order: 5">3 cravos da índia</li>
@@ -94,7 +94,7 @@
           xl:transition-all
           h-12
           w-full
-          md:w-48
+          md:w-60
           rounded-lg
           text-white
           flex
@@ -103,7 +103,7 @@
         "
       >
         <v-icon class="icone-setas mr-3" name="arrow-left" />
-        Voltar
+        Voltar para receitas
       </button>
     </div>
   </div>

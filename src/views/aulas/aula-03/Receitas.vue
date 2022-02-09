@@ -5,7 +5,7 @@
       v-for="receita in receitas"
       :key="receita.id"
     >
-      <router-link :to="receita.path" class="flex flex-col">
+      <div class="flex flex-col" @click="$router.push({ path: receita.path })">
         <div class="container-img">
           <img :src="require(`@/assets/img/receitas/${receita.imagem}`)" />
         </div>
@@ -29,7 +29,7 @@
             <span>{{ receita.dificuldade }}</span>
           </div>
         </div>
-      </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -47,7 +47,7 @@ export default {
           porcoes: "2 porções",
           calorias: "300kcal",
           dificuldade: "fácil",
-          path: "aula-03/arroz-doce",
+          path: "/aula-03/arroz-doce",
         },
         {
           id: 2,
@@ -57,7 +57,7 @@ export default {
           porcoes: "5 porções",
           calorias: "100kcal",
           dificuldade: "médio",
-          path: "aula-03/arroz-doce",
+          path: "/aula-03/arroz-doce",
         },
         {
           id: 3,
@@ -67,7 +67,7 @@ export default {
           porcoes: "3 porções",
           calorias: "200kcal",
           dificuldade: "fácil",
-          path: "aula-03/arroz-doce",
+          path: "/aula-03/arroz-doce",
         },
         {
           id: 4,
@@ -77,7 +77,7 @@ export default {
           porcoes: "3 porções",
           calorias: "200kcal",
           dificuldade: "fácil",
-          path: "aula-03/arroz-doce",
+          path: "/aula-03/arroz-doce",
         },
         {
           id: 5,
@@ -87,7 +87,7 @@ export default {
           porcoes: "3 porções",
           calorias: "200kcal",
           dificuldade: "fácil",
-          path: "aula-03/arroz-doce",
+          path: "/aula-03/arroz-doce",
         },
         {
           id: 6,
@@ -97,7 +97,7 @@ export default {
           porcoes: "3 porções",
           calorias: "200kcal",
           dificuldade: "fácil",
-          path: "aula-03/arroz-doce",
+          path: "/aula-03/arroz-doce",
         },
         {
           id: 7,
@@ -107,7 +107,7 @@ export default {
           porcoes: "3 porções",
           calorias: "200kcal",
           dificuldade: "fácil",
-          path: "aula-03/arroz-doce",
+          path: "/aula-03/arroz-doce",
         },
         {
           id: 8,
@@ -117,11 +117,14 @@ export default {
           porcoes: "3 porções",
           calorias: "200kcal",
           dificuldade: "fácil",
-          path: "aula-03/arroz-doce",
+          path: "/aula-03/arroz-doce",
         },
       ],
     };
   },
+  methods: {
+
+  }
 };
 </script>
 
