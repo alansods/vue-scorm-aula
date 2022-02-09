@@ -27,6 +27,7 @@
             rounded-xl
             w-11/12
             md:w-3/6
+            2xl:w-2/6
             relative
             z-50
             mx-auto
