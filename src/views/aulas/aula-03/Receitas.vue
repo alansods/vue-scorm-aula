@@ -180,13 +180,15 @@ hr {
 .container-icones {
   display: flex;
   gap: 10px;
-  justify-content: space-evenly;
+  justify-content: s;
+  margin-left: 15px;
   padding: 20px 0;
 }
 
 .icone {
   display: flex;
   justify-content: center;
+  margin: 0 2px;
 }
 
 .icone span {
@@ -211,6 +213,12 @@ hr {
   .receita-item {
     max-width: 100%;
     margin: 0 auto;
+    text-align: center;
   }
+
+  .container-icones {
+  justify-content: space-evenly;
+  margin-left: 0;
+}
 }
 </style>
