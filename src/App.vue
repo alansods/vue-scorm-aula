@@ -116,6 +116,9 @@ export default {
       console.log(this.$store.state.progresso);
       this.$store.commit("SALVAR_LOCAL_STORAGE");
     },
+    '$store.state.aluno': function () {
+      this.$store.state.aluno = this.$store.state.aluno.slice(0,14)
+    },
     '$store.state.modalAulaCompleta': function () {
       console.log(this.$store.state.modalAulaCompleta);
       this.$store.commit("SALVAR_LOCAL_STORAGE");

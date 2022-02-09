@@ -56,7 +56,7 @@
           left-0
           h-screen
           w-2/3
-          xl:w-1/5
+          xl:w-3/12
           z-30
           bg-white
           text-dark-color

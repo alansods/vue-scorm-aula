@@ -1,7 +1,7 @@
 <template>
   <div>
     <transition name="CustomModal">
-      <div class="CustomModal-wrapper" v-show="$store.state.modalNome">
+      <div class="CustomModal-wrapper" v-show="$store.state.modalNome === true">
         <div
           class="
             CustomModal
@@ -26,14 +26,16 @@
 
           <input
             ref="nameInput"
+            placeholder="Digite seu nome"
             class="my-6 rounded text-center shadow-lg w-full"
             v-model="$store.state.aluno"
             type="text"
-            @keyup.enter="salvarNome"
+            @keyup.enter="$store.commit('SALVAR_NOME')"
           />
           <button
-            class="rounded bg-primary-color px-5 py-3 w-full text-white"
-            @click="salvarNome"
+            class="rounded px-5 py-3 w-full text-white outline-none"
+            :class="inativo ? 'bg-gray-300 cursor-not-allowed' : 'bg-primary-color'"
+            @click="$store.commit('SALVAR_NOME')"
           >
             Confirmar
           </button>
@@ -47,13 +49,24 @@
 export default {
   name: "ModalName",
   data() {
-    return {};
+    return {
+      inativo: true
+    };
   },
-  methods: {
-    salvarNome() {
-      this.$store.state.modalNome = !this.$store.state.modalNome;
-      this.$store.commit("SALVAR_NOME");
+  computed: {
+    nomeAluno(){
+      return this.$store.state.aluno
     },
+  },
+  watch: {
+    nomeAluno(){
+      if(this.nomeAluno.length >= 3){
+        this.inativo = false
+      } else{
+        this.inativo = true
+      }
+    }
+    
   },
   updated() {
     const labelInputRef = this.$refs.nameInput;
@@ -105,6 +118,7 @@ export default {
 .CustomModal-leave-to .CustomModal {
   animation: slide 0.3s reverse;
 }
+
 
 @keyframes slide {
   from {

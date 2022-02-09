@@ -78,21 +78,21 @@ export default new Vuex.Store({
       },
       {
         id: '2',
-        nome: 'Aula 01',
+        nome: 'Aula 01 - Boas práticas na fabricação de alimentos (BPF)',
         icone: 'book-open',
         link: '/aula-01',
         estaNaAula: false
       },
       {
         id: '3',
-        nome: 'Aula 02',
+        nome: 'Aula 02 - Conhecendo os utensílios',
         icone: 'book-open',
         link: '/aula-02',
         estaNaAula: false
       },
       {
         id: '4',
-        nome: 'Aula 03',
+        nome: 'Aula 03 - Receitas',
         icone: 'book-open',
         link: '/aula-03',
         estaNaAula: false
@@ -120,7 +120,7 @@ export default new Vuex.Store({
       state.navbarItems[3].estaNaAula = payload
     },
     modalNomeOposto(state) {
-      state.modalNome = !state.modalNome
+      state.modalNome = true
     },
     iconeMenuOposto(state) {
       state.iconeMenu = "bars"
@@ -129,8 +129,13 @@ export default new Vuex.Store({
       state.menuShow = !state.menuShow
     },
     SALVAR_NOME(state) {
-      state.temNome = true
-      localStorage.setItem('store', JSON.stringify(state))
+      if(state.aluno.length >= 3 && state.aluno.length <15){
+        state.temNome = true
+        localStorage.setItem('store', JSON.stringify(state))
+        state.modalNome = false
+      } else{
+        return
+      }
     },
     SALVAR_LOCAL_STORAGE(state) {
       localStorage.setItem('store', JSON.stringify(state))
@@ -167,7 +172,6 @@ export default new Vuex.Store({
       commit('modalNomeOposto')
       commit('iconeMenuOposto')
       commit('menuShowOposto')
-      commit('SALVAR_NOME')
     },
     finalizarAula01({commit}) {
       commit('SHOW_MODAL_COMPLETAR_AULA_1')
