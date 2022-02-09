@@ -38,7 +38,7 @@ const routes = [
       },
       {
         path: "arroz-doce",
-        name: "ArroceDoce",
+        name: "Aula 03 - Receita: Arroz Doce",
         component: ArrozDoce,
       },
     ],
