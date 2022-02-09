@@ -20,7 +20,7 @@
             autoplay
           ></lottie-player>
 
-          <h3 v-if="!$store.state.temNome" class="text-center"><span class="font-bold text-lg">Olá!</span> <br />Qual é seu nome?</h3>
+          <h3 v-if="!$store.state.temNome" class="text-center"><span class="font-bold text-lg mt-2">Olá!</span> <br />Qual é seu nome?</h3>
           
           <h3 v-if="$store.state.temNome" class="text-center"><span class="font-bold text-lg">Olá!</span> <br />Deseja alterar seu nome?</h3>
 

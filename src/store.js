@@ -132,8 +132,9 @@ export default new Vuex.Store({
     SALVAR_NOME(state) {
       if(state.aluno.length >= 3 && state.aluno.length <15){
         state.temNome = true
-        localStorage.setItem('store', JSON.stringify(state))
         state.modalNome = false
+        localStorage.setItem('store', JSON.stringify(state))
+        
       } else{
         return
       }
@@ -166,8 +167,10 @@ export default new Vuex.Store({
 					Object.assign(state, JSON.parse(localStorage.getItem('store')))
 				);
         state.bemVindoDeVolta = true;
+        localStorage.setItem('store', JSON.stringify(state))
 			} else {
         state.modalNome = true;
+        localStorage.setItem('store', JSON.stringify(state))
       }
 		}
 	},

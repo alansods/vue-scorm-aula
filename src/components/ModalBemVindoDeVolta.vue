@@ -42,9 +42,9 @@
             loop
             autoplay
           ></lottie-player>
-          <h3 class="text-2xl text-primary-color mb-5">Olá. Bem-vindo de volta <NomeAluno />!</h3>
+          <h3 class="text-2xl text-primary-color mt-2 mb-5">Olá. Bem-vindo(a) de volta <NomeAluno />!</h3>
           <p>
-            Você parou na <span class="font-bold">aula {{$route.name}}.</span>
+            Você parou na <span class="font-bold">Aula {{$route.name}}.</span>
           </p>
           <p>
             Continue seus estudos para avançar cada vez mais! 😀
