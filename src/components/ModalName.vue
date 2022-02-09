@@ -1,11 +1,12 @@
 <template>
   <div>
     <transition name="CustomModal">
-      <div class="CustomModal-wrapper flex items-center justify-center" v-show="$store.state.modalNome === true">
+      <div class="CustomModal-wrapper md:flex md:items-center md:justify-center" v-show="$store.state.modalNome === true">
         <div
           class="
             CustomModal
-            flex flex-col
+            flex
+            flex-col
             items-center
             justify-center
             rounded-lg
