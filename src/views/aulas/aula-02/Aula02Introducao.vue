@@ -45,7 +45,7 @@
           <h3 class="text-3xl xl:text-4xl font-bold shadow-sm mb-4">
             {{ $store.state.aulas[1].nomeAula }}
           </h3>
-          <p class="mt-2 2xl:w-2/3 font-light">
+          <p class="mt-2 font-light" style="width 80%">
             {{ $store.state.aulas[1].descricaoAula }}
           </p>
         </div>
