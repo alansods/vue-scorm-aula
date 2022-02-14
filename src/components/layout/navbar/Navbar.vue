@@ -4,7 +4,7 @@
       id="navbar"
       class="
         fixed
-        z-30
+        z-40
         top-0
         left-0
         w-screen

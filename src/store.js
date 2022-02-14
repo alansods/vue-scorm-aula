@@ -184,6 +184,41 @@ export default new Vuex.Store({
       state.aulas[2].receita_3_completa = true
       localStorage.setItem('store', JSON.stringify(state))
     },
+    COMPLETAR_RECEITA_4(state) {
+      if (!state.aulas[2].receita_4_completa) {
+        state.progresso = state.progresso + 10
+      }
+      state.aulas[2].receita_4_completa = true
+      localStorage.setItem('store', JSON.stringify(state))
+    },
+    COMPLETAR_RECEITA_5(state) {
+      if (!state.aulas[2].receita_5_completa) {
+        state.progresso = state.progresso + 10
+      }
+      state.aulas[2].receita_5_completa = true
+      localStorage.setItem('store', JSON.stringify(state))
+    },
+    COMPLETAR_RECEITA_6(state) {
+      if (!state.aulas[2].receita_6_completa) {
+        state.progresso = state.progresso + 10
+      }
+      state.aulas[2].receita_6_completa = true
+      localStorage.setItem('store', JSON.stringify(state))
+    },
+    COMPLETAR_RECEITA_7(state) {
+      if (!state.aulas[2].receita_7_completa) {
+        state.progresso = state.progresso + 10
+      }
+      state.aulas[2].receita_7_completa = true
+      localStorage.setItem('store', JSON.stringify(state))
+    },
+    COMPLETAR_RECEITA_8(state) {
+      if (!state.aulas[2].receita_8_completa) {
+        state.progresso = state.progresso + 10
+      }
+      state.aulas[2].receita_8_completa = true
+      localStorage.setItem('store', JSON.stringify(state))
+    },
     SHOW_MODAL_COMPLETAR_AULA_1(state) {
       state.modalAulaCompleta = true
     },

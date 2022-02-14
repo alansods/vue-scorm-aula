@@ -4,27 +4,29 @@
       id="corpo"
       class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
-      <h3 class="text-center text-4xl font-bold text-primary-color">
-        Canjica de milho verde
+      <h3
+        class="text-center text-4xl font-bold text-primary-color"
+      >
+        Canjica de milho em conserva
       </h3>
       <div class="container-icones">
-        <div class="icone">
-          <img
-            src="../../../../assets/img/icones-receitas/tempo-de-preparo.png"
-          />
-          <span>50min</span>
-        </div>
+          <div class="icone">
+            <img
+              src="../../../../assets/img/icones-receitas/tempo-de-preparo.png"
+            />
+            <span>40min</span>
+          </div>
 
-        <div class="icone">
-          <img src="../../../../assets/img/icones-receitas/porcoes.png" />
-          <span>7 porções de 140g</span>
-        </div>
+          <div class="icone">
+            <img src="../../../../assets/img/icones-receitas/porcoes.png" />
+            <span>7 porções de 100g</span>
+          </div>
 
-        <div class="icone">
-          <img src="../../../../assets/img/icones-receitas/dificuldade.png" />
-          <span>fácil</span>
+          <div class="icone">
+            <img src="../../../../assets/img/icones-receitas/dificuldade.png" />
+            <span>fácil</span>
+          </div>
         </div>
-      </div>
       <hr class="border-t-1 border-gray-300 my-5" />
       <div class="md:grid md:grid-cols-2 flex flex-col gap-5 mt-10">
         <div class="rounded-lg">
@@ -45,11 +47,11 @@
           </h3>
 
           <ul class="lista-check mb-0">
-            <li>Fogão</li>
-            <li>Balança ou xicara medidora</li>
+            <li>Liquidificador</li>
             <li>Peneira</li>
             <li>Panela</li>
             <li>Espátula</li>
+            <li>Bowl</li>
           </ul>
         </div>
       </div>
@@ -60,11 +62,13 @@
         </h3>
 
         <ul class="lista-check md:grid md:grid-cols-2 mb-0">
-          <li>6 unidades de espigas de milho verde (290g)</li>
-          <li>1 xícara de açúcar(200g)</li>
-          <li>3 ½ xícara de leite integral(720g)</li>
-          <li>¼ de xícara de margarina ou manteiga (50g)</li>
+          <li>300 ml de leite integral (300g)</li>
+          <li>200 ml de leite de coco (200g)</li>
+          <li>¾ de xícara de leite condensado (250g)</li>
+          <li>1 colher de sopa de amido de milho (15g)</li>
+          <li>2 latas de milho em conserva</li>
           <li>Canela em pó a gosto</li>
+          <li>½ xícara de queijo coalho (50g)</li>
         </ul>
       </div>
 
@@ -74,29 +78,15 @@
         </h3>
 
         <p>
-          Higienize as espigas de milho tirando todo o estigma após lavar bem
-          com auxílio de uma faca corte todos os grãos do sabugo. Feito isso
-          leve o milho junto com o leite ao liquidificador, depois de bem
-          triturado passe a mistura pela peneira, descarte o bagaço, leve ao
-          fogo baixo numa panela juntamente com o açúcar e margarina.
+          No liquidificador, coloque as duas latas de milho escorrido, o leite de coco, e o leite integral bata até ficar triturado. Em seguida, peneire essa mistura e descarte o bagaço.
         </p>
 
         <p>
-          Mexa bem para que não grude no fundo da panela, sua canjica estará
-          pronta quando estiver bem consistente, após retirar da panela coloque
-          em uma assadeira untada com margarina, finalize com canela a gosto.
-        </p>
-
-        <p>Sirva frio!</p>
+          Em uma panela coloque a mistura, acrescente o leite condensado, o amido, o pau de canela e o queijo, antes de levar ao fogo mexa bem para dissolver o amido na mistura logo após com fogo baixo mexa de vez em quando com cuidado para não grudar.
+          <p>
+            Após ganhar consistência, desligue o fogo e coloque a canjica em um bowl para esfriar finalize com canela em pó a gosto. 
+          </p>
       </div>
-
-      <BoxTips :icone="'bookmark'">
-        <template v-slot:titulo>Lembrete</template>
-        <template v-slot:conteudo>
-          Para que a canjica não fique com gosto amargo tenha cuidado ao cortar
-          as espigas. Não corte rente ao sabugo.
-        </template>
-      </BoxTips>
 
       <button
         @click.prevent="$router.push('/aula-03')"
@@ -125,16 +115,15 @@
 </template>
 
 <script>
-import BoxTips from "@/components/BoxTips.vue";
 
 export default {
   title: "Aula 03 - Receitas: Mugunzá Doce",
-  components: { BoxTips },
+  components: { },
   data() {
     return {};
   },
   created() {
-    this.$store.commit("COMPLETAR_RECEITA_3");
+    this.$store.commit('COMPLETAR_RECEITA_4')
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
     this.$store.commit("ESTA_NA_AULA_1", false);
     this.$store.commit("ESTA_NA_AULA_2", false);
@@ -145,6 +134,7 @@ export default {
 </script>
 
 <style scoped>
+
 .container-icones {
   display: flex;
   gap: 10px;
@@ -168,4 +158,5 @@ export default {
   height: 18px;
   margin-right: 5px;
 }
+
 </style>

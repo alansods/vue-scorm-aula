@@ -8,6 +8,8 @@ import Receitas from "@/views/aulas/aula-03/Receitas.vue";
 import ArrozDoce from "@/views/aulas/aula-03/receitas/ArrozDoce.vue";
 import MugunzaDoce from "@/views/aulas/aula-03/receitas/MugunzaDoce.vue";
 import CanjicaDeMilhoVerde from "@/views/aulas/aula-03/receitas/CanjicaDeMilhoVerde.vue";
+import CanjicaDeMilhoEmConserva from "@/views/aulas/aula-03/receitas/CanjicaDeMilhoEmConserva.vue";
+import CocadaBaianaDeColher from "@/views/aulas/aula-03/receitas/CocadaBaianaDeColher.vue";
 
 
 Vue.use(VueRouter);
@@ -35,7 +37,7 @@ const routes = [
     children: [
       {
         path: "",
-        name: "Receitas",
+        name: "Aula 03 - Receitas",
         component: Receitas,
       },
       {
@@ -52,6 +54,16 @@ const routes = [
         path: "canjica-de-milho-verde",
         name: "Aula 03 - Receita: Canjica de milho verde",
         component: CanjicaDeMilhoVerde,
+      },
+      {
+        path: "canjica-de-milho-em-conserva",
+        name: "Aula 03 - Receita: Cocada baiana de colher",
+        component: CanjicaDeMilhoEmConserva,
+      },
+      {
+        path: "cocada-baiana-de-colher",
+        name: "Aula 03 - Receita: Cocada baiana de colher",
+        component: CocadaBaianaDeColher,
       },
     ],
   },

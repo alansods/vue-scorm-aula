@@ -77,7 +77,7 @@ export default {
           porcoes: "3 porções",
           calorias: "200kcal",
           dificuldade: "fácil",
-          path: "/aula-03/arroz-doce",
+          path: "/aula-03/canjica-de-milho-em-conserva",
         },
         {
           id: 5,
@@ -87,7 +87,7 @@ export default {
           porcoes: "3 porções",
           calorias: "200kcal",
           dificuldade: "fácil",
-          path: "/aula-03/arroz-doce",
+          path: "/aula-03/cocada-baiana-de-colher",
         },
         {
           id: 6,
