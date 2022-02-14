@@ -26,8 +26,8 @@
             bg-white
             rounded-xl
             w-11/12
-            md:w-3/6
-            2xl:w-2/6
+            md:w-auto
+            block
             relative
             z-50
             mx-auto
@@ -39,11 +39,11 @@
             src="https://assets8.lottiefiles.com/packages/lf20_34RWGs.json"
             background="transparent"
             speed="1"
-            style="width: 200px; height: 200px; margin: 0 auto"
+            style="width: 220px; height: 220px; margin: 0 auto"
             loop
             autoplay
           ></lottie-player>
-          <h3 class="text-2xl text-primary-color mt-2 mb-5">Olá! <br/> Bem-vindo(a) de volta <NomeAluno />.</h3>
+          <h3 class="text-xl text-primary-color mt-4 mb-5"><span class="text-2xl font-bold"> Olá!</span> <br/> Bem-vindo(a) de volta <NomeAluno />.</h3>
           <p>
             Você parou na <span class="font-bold">Aula {{$route.name}}.</span>
           </p>

@@ -40,7 +40,14 @@ export default new Vuex.Store({
         descricaoAula: "Neste tópico iremos aprender receitas de doces tradicionais, tais como: canjica com milho verde e também milho em conserva, arroz doce saborizado com casca de laranja e especiarias, cocada baiana de colher entre outras receitas que você poderá aplicar de forma fácil e vender.",
         img: "aula-3.jpg",
         link: "/aula-03",
-        completa: false,
+        receita_1_completa: false,
+        receita_2_completa: false,
+        receita_3_completa: false,
+        receita_4_completa: false,
+        receita_5_completa: false,
+        receita_6_completa: false,
+        receita_7_completa: false,
+        receita_8_completa: false,
       },
     ],
     topicosAula_01: [
@@ -154,6 +161,27 @@ export default new Vuex.Store({
         state.progresso = state.progresso + 10
       }
       state.aulas[1].completa = true
+      localStorage.setItem('store', JSON.stringify(state))
+    },
+    COMPLETAR_RECEITA_1(state) {
+      if (!state.aulas[2].receita_1_completa) {
+        state.progresso = state.progresso + 10
+      }
+      state.aulas[2].receita_1_completa = true
+      localStorage.setItem('store', JSON.stringify(state))
+    },
+    COMPLETAR_RECEITA_2(state) {
+      if (!state.aulas[2].receita_2_completa) {
+        state.progresso = state.progresso + 10
+      }
+      state.aulas[2].receita_2_completa = true
+      localStorage.setItem('store', JSON.stringify(state))
+    },
+    COMPLETAR_RECEITA_3(state) {
+      if (!state.aulas[2].receita_3_completa) {
+        state.progresso = state.progresso + 10
+      }
+      state.aulas[2].receita_3_completa = true
       localStorage.setItem('store', JSON.stringify(state))
     },
     SHOW_MODAL_COMPLETAR_AULA_1(state) {

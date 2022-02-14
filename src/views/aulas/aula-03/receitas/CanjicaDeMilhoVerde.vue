@@ -7,19 +7,19 @@
       <h3
         class="text-center text-4xl font-bold text-primary-color"
       >
-        Mugunzá Doce
+        Canjica de milho verde
       </h3>
       <div class="container-icones">
           <div class="icone">
             <img
               src="../../../../assets/img/icones-receitas/tempo-de-preparo.png"
             />
-            <span>55min</span>
+            <span>50min</span>
           </div>
 
           <div class="icone">
             <img src="../../../../assets/img/icones-receitas/porcoes.png" />
-            <span>12 porções de 150g</span>
+            <span>7 porções de 140g</span>
           </div>
 
           <div class="icone">
@@ -47,10 +47,11 @@
           </h3>
 
           <ul class="lista-check mb-0">
-            <li>fogão</li>
-            <li>balança ou xicara medidora</li>
-            <li>panela</li>
-            <li>espátula</li>
+            <li>Fogão</li>
+            <li>Balança ou xicara medidora</li>
+            <li>Peneira</li>
+            <li>Panela</li>
+            <li>Espátula</li>
           </ul>
         </div>
       </div>
@@ -61,17 +62,11 @@
         </h3>
 
         <ul class="lista-check md:grid md:grid-cols-2 mb-0">
-          <li>500g de milho para mungunzá ou canjica</li>
-          <li>50g de coco ralado sem açúcar (fresco ou seco)</li>
-          <li>1 xícara de açúcar (175g)</li>
-          <li>200ml de leite de coco (200g)</li>
-          <li>1 caixa de leite condensado(395g)</li>
-          <li>1 xícara de creme de leite (200g)</li>
-          <li>250 ml de leite integral</li>
-          <li>1 pau de canela</li>
-          <li>4 unid cravos</li>
+          <li>6 unidades de espigas de milho verde (290g)</li>
+          <li>1 xícara de açúcar(200g)</li>
+          <li>3 ½ xícara de leite integral(720g)</li>
+          <li>¼ de xícara de margarina ou manteiga (50g)</li>
           <li>Canela em pó a gosto</li>
-          <li>Sal a gosto</li>
         </ul>
       </div>
 
@@ -81,26 +76,21 @@
         </h3>
 
         <p>
-          Numa vasilha coloque o milho e cubra com água e deixe descansar por no mínimo 12hs.
+          Higienize as espigas de milho tirando todo o estigma após lavar bem com auxílio de uma faca corte todos os grãos do sabugo. Feito isso leve o milho junto com o leite ao liquidificador, depois de bem triturado passe a mistura pela peneira, descarte o bagaço, leve ao fogo baixo numa panela juntamente com o açúcar e margarina.
         </p>
 
         <p>
-          Após esse período coloque o milho na panela de pressão com 2 litros de água, canela em pau, os cravos e sal a gosto, deixe cozinhar por 50 min.
-        </p>
-
-        <p>
-          Depois do cozimento derrame a água e acrescente na panela o leite integral, leite de coco, açúcar e o coco ralado, mexendo de vez em quando para não grudar no fundo da panela, ficará pronto assim que engrossar, passe seu munguzá para uma vasilha, cubra com plástico filme rente ao doce.
-        </p>
-
-        <p>
-          Você pode servir quente ou gelado, finalize com canela em pó ao gosto.
-        </p>
+          Mexa bem para que não grude no fundo da panela, sua canjica estará pronta quando estiver bem consistente, após retirar da panela coloque em uma assadeira untada com margarina, finalize com canela a gosto. 
+          
+          <p>
+            Sirva frio!
+          </p>
       </div>
 
       <BoxTips :icone="'bookmark'">
         <template v-slot:titulo>Lembrete</template>
         <template v-slot:conteudo>
-          O milho é deixado descansado de um dia para outro para que ele cozinhe mais rápido. Se colocar na mesma hora para cozinhar o processo será mais demorado.
+          Para que a canjica não fique com gosto amargo tenha cuidado ao cortar as espigas. Não corte rente ao sabugo.
         </template>
       </BoxTips>
 
@@ -140,7 +130,7 @@ export default {
     return {};
   },
   created() {
-    this.$store.commit('COMPLETAR_RECEITA_2')
+    this.$store.commit('COMPLETAR_RECEITA_3')
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
     this.$store.commit("ESTA_NA_AULA_1", false);
     this.$store.commit("ESTA_NA_AULA_2", false);

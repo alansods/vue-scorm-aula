@@ -128,6 +128,7 @@ export default {
     return {};
   },
   created() {
+    this.$store.commit('COMPLETAR_RECEITA_1')
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
     this.$store.commit("ESTA_NA_AULA_1", false);
     this.$store.commit("ESTA_NA_AULA_2", false);

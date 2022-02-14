@@ -41,7 +41,7 @@ export default {
       receitas: [
         {
           id: 1,
-          nome: "Arroz Doce",
+          nome: "Arroz doce",
           imagem: "receita1.jpg",
           tempo: "25min",
           porcoes: "2 porções",
@@ -67,7 +67,7 @@ export default {
           porcoes: "3 porções",
           calorias: "200kcal",
           dificuldade: "fácil",
-          path: "/aula-03/arroz-doce",
+          path: "/aula-03/canjica-de-milho-verde",
         },
         {
           id: 4,

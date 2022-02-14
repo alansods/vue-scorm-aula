@@ -7,6 +7,7 @@ import Aula03Introducao from "@/views/aulas/aula-03/Aula03Introducao.vue";
 import Receitas from "@/views/aulas/aula-03/Receitas.vue";
 import ArrozDoce from "@/views/aulas/aula-03/receitas/ArrozDoce.vue";
 import MugunzaDoce from "@/views/aulas/aula-03/receitas/MugunzaDoce.vue";
+import CanjicaDeMilhoVerde from "@/views/aulas/aula-03/receitas/CanjicaDeMilhoVerde.vue";
 
 
 Vue.use(VueRouter);
@@ -39,13 +40,18 @@ const routes = [
       },
       {
         path: "arroz-doce",
-        name: "Aula 03 - Receita: Arroz Doce",
+        name: "Aula 03 - Receita: Arroz doce",
         component: ArrozDoce,
       },
       {
         path: "mugunza-doce",
-        name: "Aula 03 - Receita: Mugunzá Doce",
+        name: "Aula 03 - Receita: Mugunzá doce",
         component: MugunzaDoce,
+      },
+      {
+        path: "canjica-de-milho-verde",
+        name: "Aula 03 - Receita: Canjica de milho verde",
+        component: CanjicaDeMilhoVerde,
       },
     ],
   },
