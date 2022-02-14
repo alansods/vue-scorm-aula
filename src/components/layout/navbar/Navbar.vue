@@ -151,8 +151,9 @@ export default {
 
 #green {
   border-radius: inherit;
-  background: greenyellow;
+  background: rgb(91, 241, 86);
   height: 100%;
+  transition: all .5s ease;
 }
 
 .progress-text {
