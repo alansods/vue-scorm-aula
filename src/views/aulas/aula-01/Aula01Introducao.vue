@@ -79,7 +79,7 @@
           </h3>
         </div>
 
-        <ul class="lista-check">
+        <ul class="lista-check mb-0">
           <div class="ml-0 md:ml-7">
             <li>
               Compreender a importância das boas práticas na manipulação de
@@ -114,7 +114,7 @@
           das BPF’s são:
         </p>
 
-        <ul class="lista-check">
+        <ul class="lista-check mb-0">
           <div class="ml-0 md:ml-7">
             <li>
               O ambiente de trabalho torna-se mais agradável, limpo e seguro;
@@ -203,7 +203,7 @@
           certos cuidados com sua higiene pessoal. Mas, o que deve ser feito?
         </p>
 
-        <ul class="lista-check">
+        <ul class="lista-check mb-0">
           <div class="ml-0 md:ml-7">
             <li>
               Manter as mãos sempre limpas antes e depois de produzir o
@@ -238,7 +238,7 @@
           lavadas de forma correta.
         </p>
 
-        <ul class="lista-check">
+        <ul class="lista-check mb-0">
           <div class="ml-0 md:ml-7">
             <li>Utilize a água corrente e limpa nas mãos;</li>
 

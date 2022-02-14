@@ -77,10 +77,9 @@
           <h3 class="font-bold text-primary-color text-2xl">Objetivos</h3>
         </div>
 
-        <ul class="lista-check">
+        <ul class="lista-check mb-0">
           <div class="ml-0 md:ml-7">
             <li>Conhecer os utensílios.</li>
-
             <li>Entender sua aplicabilidade nas receitas.</li>
           </div>
         </ul>

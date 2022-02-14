@@ -57,7 +57,7 @@ export default {
           porcoes: "5 porções",
           calorias: "100kcal",
           dificuldade: "médio",
-          path: "/aula-03/arroz-doce",
+          path: "/aula-03/mugunza-doce",
         },
         {
           id: 3,

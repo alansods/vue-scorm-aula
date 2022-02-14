@@ -4,8 +4,9 @@ import Apresentacao from "@/views/Apresentacao.vue";
 import Aula01Introducao from "@/views/aulas/aula-01/Aula01Introducao.vue";
 import Aula02Introducao from "@/views/aulas/aula-02/Aula02Introducao.vue";
 import Aula03Introducao from "@/views/aulas/aula-03/Aula03Introducao.vue";
-import ArrozDoce from "@/views/aulas/aula-03/receitas/ArrozDoce.vue";
 import Receitas from "@/views/aulas/aula-03/Receitas.vue";
+import ArrozDoce from "@/views/aulas/aula-03/receitas/ArrozDoce.vue";
+import MugunzaDoce from "@/views/aulas/aula-03/receitas/MugunzaDoce.vue";
 
 
 Vue.use(VueRouter);
@@ -40,6 +41,11 @@ const routes = [
         path: "arroz-doce",
         name: "Aula 03 - Receita: Arroz Doce",
         component: ArrozDoce,
+      },
+      {
+        path: "mugunza-doce",
+        name: "Aula 03 - Receita: Mugunzá Doce",
+        component: MugunzaDoce,
       },
     ],
   },

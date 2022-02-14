@@ -7,19 +7,19 @@
       <h3
         class="text-center text-4xl font-bold text-primary-color"
       >
-        Arroz Doce
+        Mugunzá Doce
       </h3>
       <div class="container-icones">
           <div class="icone">
             <img
               src="../../../../assets/img/icones-receitas/tempo-de-preparo.png"
             />
-            <span>25min</span>
+            <span>55min</span>
           </div>
 
           <div class="icone">
             <img src="../../../../assets/img/icones-receitas/porcoes.png" />
-            <span>8 porções de 150g</span>
+            <span>12 porções de 150g</span>
           </div>
 
           <div class="icone">
@@ -33,7 +33,7 @@
           <div id="video-apresentacao" class="aspect-w-16 aspect-h-9">
             <iframe
               class="border-white border-4 shadow rounded-lg"
-              src="https://www.youtube.com/embed/YxQHHdFDauE"
+              src="https://www.youtube.com/embed/1oIC01tSt60"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
@@ -51,7 +51,6 @@
             <li>balança ou xicara medidora</li>
             <li>panela</li>
             <li>espátula</li>
-            <li>bowl</li>
           </ul>
         </div>
       </div>
@@ -62,16 +61,16 @@
         </h3>
 
         <ul class="lista-check md:grid md:grid-cols-2 mb-0">
-          <li>1 xícara de arroz (175g)</li>
-          <li>1/3 de xícara de açúcar (65g)</li>
-          <li>3 cravos da índia</li>
-          <li>1 canela em pau</li>
-          <li>2 xícaras de água (420g)</li>
-          <li>3 xícaras de leite (648g)</li>
-          <li>½ caixa de leite condensado(198g)</li>
+          <li>500g de milho para mungunzá ou canjica</li>
+          <li>50g de coco ralado sem açúcar (fresco ou seco)</li>
+          <li>1 xícara de açúcar (175g)</li>
+          <li>200ml de leite de coco (200g)</li>
+          <li>1 caixa de leite condensado(395g)</li>
           <li>1 xícara de creme de leite (200g)</li>
-          <li>Casca de 1 laranja</li>
-          <li>1 xícara de creme de leite (200g)</li>
+          <li>250 ml de leite integral</li>
+          <li>1 pau de canela</li>
+          <li>4 unid cravos</li>
+          <li>Canela em pó a gosto</li>
           <li>Sal a gosto</li>
         </ul>
       </div>
@@ -82,17 +81,28 @@
         </h3>
 
         <p>
-          Em uma panela de fundo grosso adicione todos os ingredientes exceto o leite condensado e creme de leite e leve ao fogo mexendo de vez em quando para que não grude no fundo da panela.
+          Numa vasilha coloque o milho e cubra com água e deixe descansar por no mínimo 12hs.
         </p>
 
         <p>
-           Após 20 minutos, acrescente o leite condensado e deixe cozinhar por mais 5 min, e para finalizar acrescente o creme de leite, mexa bem. O arroz deve ficar meio líquido, não tem problema pois depois de esfriar ele ganha consistência.
+          Após esse período coloque o milho na panela de pressão com 2 litros de água, canela em pau, os cravos e sal a gosto, deixe cozinhar por 50 min.
         </p>
 
         <p>
-          Após esta pronto coloque o arroz doce em um bowl, para evitar que crie uma crosta no seu arroz cubra com plástico filme tocando diretamente no seu doce, você pode deixar esfriando em temperatura ambiente ou levar para geladeira por 3hs.
+          Depois do cozimento derrame a água e acrescente na panela o leite integral, leite de coco, açúcar e o coco ralado, mexendo de vez em quando para não grudar no fundo da panela, ficará pronto assim que engrossar, passe seu munguzá para uma vasilha, cubra com plástico filme rente ao doce.
+        </p>
+
+        <p>
+          Você pode servir quente ou gelado, finalize com canela em pó ao gosto.
         </p>
       </div>
+
+      <BoxTips :icone="'bookmark'">
+        <template v-slot:titulo>Lembrete</template>
+        <template v-slot:conteudo>
+          O milho é deixado descansado de um dia para outro para que ele cozinhe mais rápido. Se colocar na mesma hora para cozinhar o processo será mais demorado.
+        </template>
+      </BoxTips>
 
       <button
         @click.prevent="$router.push('/aula-03')"
@@ -121,9 +131,11 @@
 </template>
 
 <script>
+import BoxTips from "@/components/BoxTips.vue";
+
 export default {
-  title: "Aula 03 - Receitas: Arroz Doce",
-  components: {},
+  title: "Aula 03 - Receitas: Mugunzá Doce",
+  components: { BoxTips },
   data() {
     return {};
   },
@@ -138,7 +150,6 @@ export default {
 </script>
 
 <style scoped>
-
 
 .container-icones {
   display: flex;
