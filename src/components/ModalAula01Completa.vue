@@ -6,6 +6,8 @@
         class="
           bg-black bg-opacity-70
           fixed
+          top-0
+          left-0
           w-screen
           h-full
           overflow-y-scroll
@@ -24,11 +26,11 @@
             bg-white
             rounded-xl
             w-11/12
-            md:w-2/6
+            md:auto
+            block
             relative
             z-50
-            mx-auto
-            mb-16
+            max-w-xl
           "
         >
           <div class="text-center">
@@ -55,7 +57,6 @@
                 class="
                   bg-primary-color
                   w-full
-                  md:w-52
                   h-14
                   rounded-lg
                   text-white
