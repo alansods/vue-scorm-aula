@@ -36,9 +36,10 @@
               Aula {{ $store.state.aulas[2].numeroAula }}
             </h2>
           </div>
-          <h3 class="text-3xl xl:text-4xl font-bold shadow-sm mb-4">
+          <h3 class="text-3xl xl:text-4xl font-bold shadow-sm">
             {{ $store.state.aulas[2].nomeAula }}
           </h3>
+          <hr style="opacity: 40%; margin: 15px 0;">
           <p class="mt-2 font-light" style="width 80%">
             {{ $store.state.aulas[2].descricaoAula }}
           </p>

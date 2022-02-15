@@ -22,6 +22,7 @@
         <div class="font-regular text-lg">Aula {{ aula.numeroAula }}</div>
       </div>
       <div class="text-2xl font-bold">{{ aula.nomeAula }}</div>
+      <hr style="opacity: 20%; margin: 15px 0; border-top:1px solid #333">
       <div class="mt-2 descricao-aula">{{ aula.descricaoAula }}</div>
       <router-link :to="aula.link">
         <button
