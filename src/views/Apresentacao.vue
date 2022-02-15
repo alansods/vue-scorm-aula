@@ -81,7 +81,7 @@
           >
             Apresentação
           </h2>
-          <hr class="border-t-1 border-gray-300 my-10" />
+          <hr class="border-t-1 border-gray-300 my-5 md:my-10" />
         </div>
         <p class="text-2xl text-left">Olá <NomeAluno />!</p>
 
