@@ -2,7 +2,7 @@
   <div>
     <transition name="CustomModal">
       <div
-        class="CustomModal-wrapper md:flex md:items-center md:justify-center"
+        class="CustomModal-wrapper flex items-center justify-center"
         v-show="$store.state.modalNome === true"
       >
         <div
@@ -13,6 +13,8 @@
             justify-center
             rounded-lg
             md:w-1/3
+            mb-16
+            md:mb-0
           "
         >
           <lottie-player
@@ -117,7 +119,6 @@ export default {
   background: #fff;
   padding: 30px 50px;
   max-width: 400px;
-  margin: 0 auto;
   z-index: 60;
 }
 
@@ -148,10 +149,4 @@ export default {
   }
 }
 
-
-@media (max-width: 600px){
-  #CustomModal{
-    margin: 70px auto 0 auto;
-  }
-}
 </style>
