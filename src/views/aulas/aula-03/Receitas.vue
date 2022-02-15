@@ -97,7 +97,7 @@ export default {
           porcoes: "3 porções",
           calorias: "200kcal",
           dificuldade: "fácil",
-          path: "/aula-03/arroz-doce",
+          path: "/aula-03/pe-de-moleque",
         },
         {
           id: 7,
@@ -107,7 +107,7 @@ export default {
           porcoes: "3 porções",
           calorias: "200kcal",
           dificuldade: "fácil",
-          path: "/aula-03/arroz-doce",
+          path: "/aula-03/brigadeiro-de-milho",
         },
         {
           id: 8,
@@ -117,7 +117,7 @@ export default {
           porcoes: "3 porções",
           calorias: "200kcal",
           dificuldade: "fácil",
-          path: "/aula-03/arroz-doce",
+          path: "/aula-03/queijadinha",
         },
       ],
     };

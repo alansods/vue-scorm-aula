@@ -90,13 +90,18 @@
         <p>Sirva frio!</p>
       </div>
 
-      <BoxTips :icone="'bookmark'">
-        <template v-slot:titulo>Lembrete</template>
-        <template v-slot:conteudo>
-          Para que a canjica não fique com gosto amargo tenha cuidado ao cortar
+      <div class="bg-green-400 p-8 rounded-lg shadow my-5 text-white">
+        <div class="flex items-center font-semibold text-2xl text-white mb-5">
+          <v-icon name="bookmark" class="mr-2 fill-current" scale="1.8" />
+          <h3>Lembrete</h3>
+        </div>
+        <div>
+          <p>
+            Para que a canjica não fique com gosto amargo tenha cuidado ao cortar
           as espigas. Não corte rente ao sabugo.
-        </template>
-      </BoxTips>
+          </p>
+        </div>
+      </div>
 
       <button
         @click.prevent="$router.push('/aula-03')"
@@ -125,11 +130,10 @@
 </template>
 
 <script>
-import BoxTips from "@/components/BoxTips.vue";
 
 export default {
   title: "Aula 03 - Receitas: Mugunzá Doce",
-  components: { BoxTips },
+  components: {  },
   data() {
     return {};
   },
@@ -145,13 +149,13 @@ export default {
 </script>
 
 <style scoped>
+
 .container-icones {
   display: flex;
   gap: 10px;
-  padding: 12px;
   justify-content: center;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 12px auto;
 }
 
 .icone {
@@ -165,7 +169,7 @@ export default {
 
 .icone img {
   width: auto;
-  height: 18px;
+  height: 17px;
   margin-right: 5px;
 }
 </style>

@@ -121,6 +121,7 @@
 </template>
 
 <script>
+
 export default {
   title: "Aula 03 - Receitas: Arroz Doce",
   components: {},
@@ -140,14 +141,12 @@ export default {
 
 <style scoped>
 
-
 .container-icones {
   display: flex;
   gap: 10px;
-  padding: 12px;
   justify-content: center;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 12px auto;
 }
 
 .icone {
@@ -161,7 +160,7 @@ export default {
 
 .icone img {
   width: auto;
-  height: 18px;
+  height: 17px;
   margin-right: 5px;
 }
 

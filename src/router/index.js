@@ -10,6 +10,9 @@ import MugunzaDoce from "@/views/aulas/aula-03/receitas/MugunzaDoce.vue";
 import CanjicaDeMilhoVerde from "@/views/aulas/aula-03/receitas/CanjicaDeMilhoVerde.vue";
 import CanjicaDeMilhoEmConserva from "@/views/aulas/aula-03/receitas/CanjicaDeMilhoEmConserva.vue";
 import CocadaBaianaDeColher from "@/views/aulas/aula-03/receitas/CocadaBaianaDeColher.vue";
+import PeDeMoleque from "@/views/aulas/aula-03/receitas/PeDeMoleque.vue";
+import BrigadeiroDeMilho from "@/views/aulas/aula-03/receitas/BrigadeiroDeMilho.vue";
+import Queijadinha from "@/views/aulas/aula-03/receitas/Queijadinha.vue";
 
 
 Vue.use(VueRouter);
@@ -64,6 +67,21 @@ const routes = [
         path: "cocada-baiana-de-colher",
         name: "Aula 03 - Receita: Cocada baiana de colher",
         component: CocadaBaianaDeColher,
+      },
+      {
+        path: "pe-de-moleque",
+        name: "Aula 03 - Receita: Pé de moleque",
+        component: PeDeMoleque,
+      },
+      {
+        path: "brigadeiro-de-milho",
+        name: "Aula 03 - Receita: Brigadeiro de milho",
+        component: BrigadeiroDeMilho,
+      },
+      {
+        path: "queijadinha",
+        name: "Aula 03 - Receita: Queijadinha",
+        component: Queijadinha,
       },
     ],
   },

@@ -4,29 +4,27 @@
       id="corpo"
       class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
-      <h3
-        class="text-center text-4xl font-bold text-primary-color"
-      >
-        Canjica de milho em conserva
+      <h3 class="text-center text-4xl font-bold text-primary-color">
+        Pé de moleque
       </h3>
       <div class="container-icones">
-          <div class="icone">
-            <img
-              src="../../../../assets/img/icones-receitas/tempo-de-preparo.png"
-            />
-            <span>40min</span>
-          </div>
-
-          <div class="icone">
-            <img src="../../../../assets/img/icones-receitas/porcoes.png" />
-            <span>7 porções de 100g</span>
-          </div>
-
-          <div class="icone">
-            <img src="../../../../assets/img/icones-receitas/dificuldade.png" />
-            <span>fácil</span>
-          </div>
+        <div class="icone">
+          <img
+            src="../../../../assets/img/icones-receitas/tempo-de-preparo.png"
+          />
+          <span>35min</span>
         </div>
+
+        <div class="icone">
+          <img src="../../../../assets/img/icones-receitas/porcoes.png" />
+          <span>16 porções de 40g</span>
+        </div>
+
+        <div class="icone">
+          <img src="../../../../assets/img/icones-receitas/dificuldade.png" />
+          <span>fácil</span>
+        </div>
+      </div>
       <hr class="border-t-1 border-gray-300 my-5" />
       <div class="md:grid md:grid-cols-2 flex flex-col gap-5 mt-10">
         <div class="rounded-lg">
@@ -47,11 +45,10 @@
           </h3>
 
           <ul class="lista-check mb-0">
-            <li>Liquidificador</li>
-            <li>Peneira</li>
+            <li>Fogão</li>
+            <li>Balança ou xícara medidora</li>
             <li>Panela</li>
             <li>Espátula</li>
-            <li>Bowl</li>
           </ul>
         </div>
       </div>
@@ -62,13 +59,10 @@
         </h3>
 
         <ul class="lista-check md:grid md:grid-cols-2 mb-0">
-          <li>300 ml de leite integral (300g)</li>
-          <li>200 ml de leite de coco (200g)</li>
-          <li>¾ de xícara de leite condensado (250g)</li>
-          <li>1 colher de sopa de amido de milho (15g)</li>
-          <li>2 latas de milho em conserva</li>
-          <li>Canela em pó a gosto</li>
-          <li>½ xícara de queijo coalho (50g)</li>
+          <li>3 xícaras de amendoim sem sal (390g)</li>
+          <li>2 xícaras de açúcar (360g)</li>
+          <li>½ colher de margarina ou manteiga (30g)</li>
+          <li>1 colher de chá de bicarbonato de sódio</li>
         </ul>
       </div>
 
@@ -78,14 +72,27 @@
         </h3>
 
         <p>
-          No liquidificador, coloque as duas latas de milho escorrido, o leite de coco, e o leite integral bata até ficar triturado. Em seguida, peneire essa mistura e descarte o bagaço.
+          Numa panela coloque o açúcar e leve ao fogo médio mexendo sempre até
+          chegar na cor caramelo, cuidado para não queimar, em seguida junte a
+          margarina e bicarbonato de sódio, mexa bem, logo mais acrescente o
+          amendoim, envolva bem, sobre uma bancada ou mesa untada com margarina,
+          coloque o pé de moleque faça corte em quadrado, espere esfriar para
+          servir.
         </p>
+      </div>
 
-        <p>
-          Em uma panela coloque a mistura, acrescente o leite condensado, o amido, o pau de canela e o queijo, antes de levar ao fogo mexa bem para dissolver o amido na mistura logo após com fogo baixo mexa de vez em quando com cuidado para não grudar.
+      <div class="bg-green-400 p-8 rounded-lg shadow my-5 text-white">
+        <div class="flex items-center font-semibold text-2xl text-white mb-5">
+          <v-icon name="bookmark" class="mr-2 fill-current" scale="1.8" />
+          <h3>Lembrete</h3>
+        </div>
+        <div>
           <p>
-            Após ganhar consistência, desligue o fogo e coloque a canjica em um bowl para esfriar finalize com canela em pó a gosto. 
+            Para facilitar o corte do seu pé de moleque, corte ainda quente,
+            pois o açúcar não estará cristalizado. Isso facilitará o corte do
+            doce.
           </p>
+        </div>
       </div>
 
       <button
@@ -115,15 +122,14 @@
 </template>
 
 <script>
-
 export default {
   title: "Aula 03 - Receitas: Mugunzá Doce",
-  components: { },
+  components: {},
   data() {
     return {};
   },
   created() {
-    this.$store.commit('COMPLETAR_RECEITA_4')
+    this.$store.commit("COMPLETAR_RECEITA_6");
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
     this.$store.commit("ESTA_NA_AULA_1", false);
     this.$store.commit("ESTA_NA_AULA_2", false);
@@ -134,7 +140,6 @@ export default {
 </script>
 
 <style scoped>
-
 .container-icones {
   display: flex;
   gap: 10px;
@@ -157,5 +162,4 @@ export default {
   height: 17px;
   margin-right: 5px;
 }
-
 </style>

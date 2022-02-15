@@ -4,29 +4,27 @@
       id="corpo"
       class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
-      <h3
-        class="text-center text-4xl font-bold text-primary-color"
-      >
-        Canjica de milho em conserva
+      <h3 class="text-center text-4xl font-bold text-primary-color">
+        Brigadeiro de milho
       </h3>
       <div class="container-icones">
-          <div class="icone">
-            <img
-              src="../../../../assets/img/icones-receitas/tempo-de-preparo.png"
-            />
-            <span>40min</span>
-          </div>
-
-          <div class="icone">
-            <img src="../../../../assets/img/icones-receitas/porcoes.png" />
-            <span>7 porções de 100g</span>
-          </div>
-
-          <div class="icone">
-            <img src="../../../../assets/img/icones-receitas/dificuldade.png" />
-            <span>fácil</span>
-          </div>
+        <div class="icone">
+          <img
+            src="../../../../assets/img/icones-receitas/tempo-de-preparo.png"
+          />
+          <span>45min</span>
         </div>
+
+        <div class="icone">
+          <img src="../../../../assets/img/icones-receitas/porcoes.png" />
+          <span>85 porções de 10g</span>
+        </div>
+
+        <div class="icone">
+          <img src="../../../../assets/img/icones-receitas/dificuldade.png" />
+          <span>médio</span>
+        </div>
+      </div>
       <hr class="border-t-1 border-gray-300 my-5" />
       <div class="md:grid md:grid-cols-2 flex flex-col gap-5 mt-10">
         <div class="rounded-lg">
@@ -47,8 +45,8 @@
           </h3>
 
           <ul class="lista-check mb-0">
+            <li>Fogão</li>
             <li>Liquidificador</li>
-            <li>Peneira</li>
             <li>Panela</li>
             <li>Espátula</li>
             <li>Bowl</li>
@@ -62,13 +60,12 @@
         </h3>
 
         <ul class="lista-check md:grid md:grid-cols-2 mb-0">
-          <li>300 ml de leite integral (300g)</li>
-          <li>200 ml de leite de coco (200g)</li>
-          <li>¾ de xícara de leite condensado (250g)</li>
-          <li>1 colher de sopa de amido de milho (15g)</li>
-          <li>2 latas de milho em conserva</li>
-          <li>Canela em pó a gosto</li>
-          <li>½ xícara de queijo coalho (50g)</li>
+          <li>⅓ de xícara de leite (80g)</li>
+          <li>1 xícara creme de leite (220g)</li>
+          <li>1 lata de milho em conserva</li>
+          <li>1 xícara de leite condensado (300g)</li>
+          <li>1 colher de chá de margarina (10g)</li>
+          <li>2 ½ xícara de coco seco ralado (200g)</li>
         </ul>
       </div>
 
@@ -78,14 +75,16 @@
         </h3>
 
         <p>
-          No liquidificador, coloque as duas latas de milho escorrido, o leite de coco, e o leite integral bata até ficar triturado. Em seguida, peneire essa mistura e descarte o bagaço.
+          No liquidificador coloque o leite, o milho escorrido e creme de leite, deixe bater bem, logo após passe essa mistura numa peneira, descarte o bagaço. 
         </p>
 
         <p>
-          Em uma panela coloque a mistura, acrescente o leite condensado, o amido, o pau de canela e o queijo, antes de levar ao fogo mexa bem para dissolver o amido na mistura logo após com fogo baixo mexa de vez em quando com cuidado para não grudar.
-          <p>
-            Após ganhar consistência, desligue o fogo e coloque a canjica em um bowl para esfriar finalize com canela em pó a gosto. 
-          </p>
+          Numa  panela coloque essa mistura  e leve em fogo médio junto com o leite condensado e a margarina, mexa sempre, estará pronto quando desgrudar do fundo da panela, após passe para um bowl (não é necessário passar margarina pois o doce já tem bastante gordura), passe em um filme plástico e deixe em temperatura ambiente para esfriar, depois leve a geladeira  e tire momentos antes de enrolar para que não fique “duros”.
+        </p>
+
+        <p>
+          Em seguida molhando as mãos com água ou passando margarina modele os docinhos em 10g ou 15g. Em uma panela coloque o coco ralado e leve ao fogo para criar uma cor caramelo, não necessita acrescentar gordura, mexa sempre, após chegar a coloração desejada apague o fogo e transfira o coco para um bowl para que possa esfriar, depois de enrolar os docinhos envolva no coco.
+        </p>
       </div>
 
       <button
@@ -115,15 +114,14 @@
 </template>
 
 <script>
-
 export default {
   title: "Aula 03 - Receitas: Mugunzá Doce",
-  components: { },
+  components: {},
   data() {
     return {};
   },
   created() {
-    this.$store.commit('COMPLETAR_RECEITA_4')
+    this.$store.commit("COMPLETAR_RECEITA_7");
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
     this.$store.commit("ESTA_NA_AULA_1", false);
     this.$store.commit("ESTA_NA_AULA_2", false);
@@ -134,7 +132,6 @@ export default {
 </script>
 
 <style scoped>
-
 .container-icones {
   display: flex;
   gap: 10px;
@@ -157,5 +154,4 @@ export default {
   height: 17px;
   margin-right: 5px;
 }
-
 </style>

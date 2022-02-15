@@ -83,9 +83,12 @@
         </p>
       </div>
 
-      <BoxTips :icone="'bookmark'">
-        <template v-slot:titulo>Lembrete</template>
-        <template v-slot:conteudo>
+      <div class="bg-green-400 p-8 rounded-lg shadow my-5 text-white">
+        <div class="flex items-center font-semibold text-2xl text-white mb-5">
+          <v-icon name="bookmark" class="mr-2 fill-current" scale="1.8" />
+          <h3>Lembrete</h3>
+        </div>
+        <div>
           <p>
             Muito cuidado ao fazer a calda, devido a temperatura da panela seu caramelo pode escurecer bem rápido.
           </p>
@@ -93,8 +96,8 @@
           <p>
             Então quando você ver que está começando a dourar não espere muito para colocar o coco ralado.
           </p>
-        </template>
-      </BoxTips>
+        </div>
+      </div>
 
       <button
         @click.prevent="$router.push('/aula-03')"
@@ -123,11 +126,10 @@
 </template>
 
 <script>
-import BoxTips from "@/components/BoxTips.vue";
 
 export default {
   title: "Aula 03 - Receitas: Mugunzá Doce",
-  components: { BoxTips },
+  components: {  },
   data() {
     return {};
   },
@@ -147,10 +149,9 @@ export default {
 .container-icones {
   display: flex;
   gap: 10px;
-  padding: 12px;
   justify-content: center;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 12px auto;
 }
 
 .icone {
@@ -164,7 +165,7 @@ export default {
 
 .icone img {
   width: auto;
-  height: 18px;
+  height: 17px;
   margin-right: 5px;
 }
 
