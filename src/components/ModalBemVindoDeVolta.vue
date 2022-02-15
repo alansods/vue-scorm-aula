@@ -45,7 +45,7 @@
             autoplay
           ></lottie-player>
           <h3 class="text-xl text-primary-color mt-4 mb-5"><span class="text-2xl font-bold"> Olá!</span> <br/> Bem-vindo(a) de volta <NomeAluno />.</h3>
-          <p>
+          <p style="line-height: 0;">
             Você parou na <span class="font-bold">{{$route.name}}.</span>
           </p>
           <p>
@@ -59,8 +59,13 @@
               rounded-full
               cursor-pointer
               bg-red-500
-              px-4
-              py-2
+              hover:bg-red-400
+              h-10
+              w-10
+              leading-none
+              flex
+              items-center
+              justify-center
               text-white
               font-bold
             "
