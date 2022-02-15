@@ -14,6 +14,7 @@ export default new Vuex.Store({
     progresso: Number("0"),
     nomeDoCurso: "Doces Regionais",
     aluno: " ",
+    btnAlunoInativo: true,
     aulas: [
       {
         id: "1",

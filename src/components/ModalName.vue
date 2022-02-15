@@ -44,7 +44,10 @@
           />
           <button
             class="rounded px-5 py-3 w-full text-white outline-none"
-            :class="inativo ? 'bg-gray-300 cursor-not-allowed' : 'bg-primary-color xl:hover:bg-primary-color-hover xl:transform xl:hover:-translate-y-1 xl:transition-all'
+            :class="
+              inativo
+                ? 'bg-gray-300 cursor-not-allowed'
+                : 'bg-primary-color xl:hover:bg-primary-color-hover xl:transform xl:hover:-translate-y-1 xl:transition-all'
             "
             @click="$store.commit('SALVAR_NOME')"
           >
@@ -86,6 +89,13 @@ export default {
     const labelInputRef = this.$refs.nameInput;
     labelInputRef.focus();
   },
+  created() {
+    if (this.$store.state.aluno.length >= 3) {
+        this.inativo = false;
+      } else {
+        this.inativo = true;
+      }
+  }
 };
 </script>
 
@@ -107,7 +117,7 @@ export default {
   background: #fff;
   padding: 30px 50px;
   max-width: 400px;
-  margin: 70px auto 0 auto;
+  margin: 0 auto;
   z-index: 60;
 }
 
@@ -135,6 +145,13 @@ export default {
   }
   to {
     transform: translate3d(0, 0, 0);
+  }
+}
+
+
+@media (max-width: 600px){
+  #CustomModal{
+    margin: 70px auto 0 auto;
   }
 }
 </style>
