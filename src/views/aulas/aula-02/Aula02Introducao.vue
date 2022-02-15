@@ -10,7 +10,7 @@
     <div
       id="container-bg-video"
       class="
-        img-fundo bg-cover
+        img-bg-aula bg-cover
         h-1/4
         px-5
         pb-10

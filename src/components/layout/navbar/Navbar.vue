@@ -153,7 +153,7 @@ export default {
 
 #green {
   border-radius: inherit;
-  background: rgb(91, 241, 86);
+  background: #34D399;
   height: 100%;
   transition: all .5s ease;
 }

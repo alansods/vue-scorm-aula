@@ -3,7 +3,7 @@
     <div
       id="container-bg-video"
       class="
-        img-fundo
+        img-bg-aula
         bg-cover
         h-1/4
         px-5

@@ -10,7 +10,7 @@
     <div
       id="container-bg-video"
       class="
-        img-fundo bg-cover
+        img-bg-aula bg-cover
         h-1/4
         px-5
         pb-10
@@ -260,13 +260,18 @@
         </ul>
       </div>
 
-      <BoxTips :icone="'bookmark'">
-        <template v-slot:titulo>Lembrete</template>
-        <template v-slot:conteudo
-          >O Cuidado é muito importante para garantir um bom produto e assim
-          fidelizar seus clientes.</template
-        >
-      </BoxTips>
+      <div class="bg-green-400 p-8 rounded-lg shadow my-5 text-white">
+        <div class="flex items-center font-semibold text-2xl text-white mb-5">
+          <v-icon name="bookmark" class="mr-2 fill-current" scale="1.8" />
+          <h3>Lembrete</h3>
+        </div>
+        <div>
+          <p>
+            O Cuidado é muito importante para garantir um bom produto e assim
+          fidelizar seus clientes.
+          </p>
+        </div>
+      </div>
 
       <div class="flex justify-around mt-12">
         <router-link to="/">
@@ -285,7 +290,6 @@
 import NavButton from "@/components/NavButton";
 import Accordion from "@/components/accordion/Accordion.vue";
 import AccordionItem from "@/components/accordion/AccordionItem.vue";
-import BoxTips from "@/components/BoxTips.vue";
 
 export default {
   title: "Aula 01 - Boas práticas na fabricação de alimentos (BPF)",
@@ -293,7 +297,6 @@ export default {
     NavButton,
     Accordion,
     AccordionItem,
-    BoxTips,
   },
   created() {
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
@@ -307,4 +310,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+</style>

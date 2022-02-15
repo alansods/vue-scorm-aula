@@ -42,7 +42,7 @@ export default {
         {
           id: 1,
           nome: "Arroz doce",
-          imagem: "receita1.jpg",
+          imagem: "arroz-doce.jpg",
           tempo: "25min",
           porcoes: "8 porções",
           calorias: "300kcal",
@@ -52,7 +52,7 @@ export default {
         {
           id: 2,
           nome: "Mungunzá doce",
-          imagem: "receita2.jpg",
+          imagem: "mugunza-doce.jpg",
           tempo: "55min",
           porcoes: "12 porções",
           calorias: "100kcal",
@@ -62,7 +62,7 @@ export default {
         {
           id: 3,
           nome: "Canjica de milho verde",
-          imagem: "receita3.jpg",
+          imagem: "canjica-de-milho-verde.jpg",
           tempo: "50min",
           porcoes: "7 porções",
           calorias: "200kcal",
@@ -72,7 +72,7 @@ export default {
         {
           id: 4,
           nome: "Canjica de milho em conserva",
-          imagem: "receita3.jpg",
+          imagem: "canjica-de-milho-em-conserva.jpg",
           tempo: "40min",
           porcoes: "7 porções",
           calorias: "200kcal",
@@ -82,7 +82,7 @@ export default {
         {
           id: 5,
           nome: "Cocada baiana de colher",
-          imagem: "receita3.jpg",
+          imagem: "cocada-baiana-de-colher.jpg",
           tempo: "30min",
           porcoes: "12 porções",
           calorias: "200kcal",
@@ -92,7 +92,7 @@ export default {
         {
           id: 6,
           nome: "Pé de moleque",
-          imagem: "receita3.jpg",
+          imagem: "pe-de-moleque.jpg",
           tempo: "35min",
           porcoes: "16 porções",
           calorias: "200kcal",
@@ -102,7 +102,7 @@ export default {
         {
           id: 7,
           nome: "Brigadeiro de milho",
-          imagem: "receita3.jpg",
+          imagem: "brigadeiro-de-milho.jpg",
           tempo: "45min",
           porcoes: "85 porções",
           calorias: "200kcal",
@@ -112,7 +112,7 @@ export default {
         {
           id: 8,
           nome: "Queijadinha",
-          imagem: "receita3.jpg",
+          imagem: "queijadinha.jpg",
           tempo: "60min",
           porcoes: "20 porções",
           calorias: "200kcal",
@@ -160,7 +160,7 @@ export default {
 
 .container-img img {
   width: 100%;
-  height: auto;
+  height: 200px;
   object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -219,6 +219,7 @@ hr {
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
+    width: 100%;
   }
 
   .container-icones {

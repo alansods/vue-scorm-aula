@@ -2,7 +2,7 @@
   <div id="apresentação">
     <div
       id="container-bg-video"
-      class="img-fundo h-bg-apresentacao px-3 xl:px-0 mx-auto text-white"
+      class="img-bg-apresentacao h-bg-apresentacao px-3 xl:px-0 mx-auto text-white"
     >
       <div
         id="container-all-content-bg-video"
