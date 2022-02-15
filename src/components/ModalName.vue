@@ -1,12 +1,14 @@
 <template>
   <div>
     <transition name="CustomModal">
-      <div class="CustomModal-wrapper md:flex md:items-center md:justify-center" v-show="$store.state.modalNome === true">
+      <div
+        class="CustomModal-wrapper md:flex md:items-center md:justify-center"
+        v-show="$store.state.modalNome === true"
+      >
         <div
           class="
             CustomModal
-            flex
-            flex-col
+            flex flex-col
             items-center
             justify-center
             rounded-lg
@@ -22,9 +24,15 @@
             autoplay
           ></lottie-player>
 
-          <h3 v-if="!$store.state.temNome" class="text-center"><span class="font-bold text-lg mt-2">Olá!</span> <br />Qual é seu nome?</h3>
-          
-          <h3 v-if="$store.state.temNome" class="text-center"><span class="font-bold text-lg">Olá!</span> <br />Deseja alterar seu nome?</h3>
+          <h3 v-if="!$store.state.temNome" class="text-center">
+            <span class="font-bold text-2xl mt-2">Olá!</span> <br />Qual é seu
+            nome?
+          </h3>
+
+          <h3 v-if="$store.state.temNome" class="text-center">
+            <span class="font-bold text-2xl">Olá!</span> <br />Deseja alterar
+            seu nome?
+          </h3>
 
           <input
             ref="nameInput"
@@ -36,7 +44,8 @@
           />
           <button
             class="rounded px-5 py-3 w-full text-white outline-none"
-            :class="inativo ? 'bg-gray-300 cursor-not-allowed' : 'bg-primary-color xl:hover:bg-primary-color-hover xl:transform xl:hover:-translate-y-1 xl:transition-all'"
+            :class="inativo ? 'bg-gray-300 cursor-not-allowed' : 'bg-primary-color xl:hover:bg-primary-color-hover xl:transform xl:hover:-translate-y-1 xl:transition-all'
+            "
             @click="$store.commit('SALVAR_NOME')"
           >
             Confirmar
@@ -52,23 +61,22 @@ export default {
   name: "ModalName",
   data() {
     return {
-      inativo: null
+      inativo: true,
     };
   },
   computed: {
-    nomeAluno(){
-      return this.$store.state.aluno
+    nomeAluno() {
+      return this.$store.state.aluno;
     },
   },
   watch: {
-    nomeAluno(){
-      if(this.nomeAluno.length >= 3){
-        this.inativo = false
-      } else{
-        this.inativo = true
+    "$store.state.aluno": function () {
+      if (this.$store.state.aluno.length >= 3) {
+        this.inativo = false;
+      } else {
+        this.inativo = true;
       }
-    }
-    
+    },
   },
   updated() {
     const labelInputRef = this.$refs.nameInput;
@@ -91,7 +99,7 @@ export default {
   background: rgb(0, 0, 0, 0.8);
   overflow-y: scroll;
   z-index: 50;
-  padding: 0 30px
+  padding: 0 30px;
 }
 
 .CustomModal {
@@ -120,7 +128,6 @@ export default {
 .CustomModal-leave-to .CustomModal {
   animation: slide 0.3s reverse;
 }
-
 
 @keyframes slide {
   from {

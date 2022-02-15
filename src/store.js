@@ -13,7 +13,7 @@ export default new Vuex.Store({
     modalAulaCompleta: false,
     progresso: Number("0"),
     nomeDoCurso: "Doces Regionais",
-    aluno: "",
+    aluno: " ",
     aulas: [
       {
         id: "1",
@@ -229,7 +229,9 @@ export default new Vuex.Store({
 				this.replaceState(
 					Object.assign(state, JSON.parse(localStorage.getItem('store')))
 				);
-        state.bemVindoDeVolta = true;
+        if (state.aluno.length >= 3) {
+          state.bemVindoDeVolta = true;
+        } 
         localStorage.setItem('store', JSON.stringify(state))
 			} else {
         state.modalNome = true;
