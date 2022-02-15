@@ -22,7 +22,7 @@
         <div class="font-regular text-lg">Aula {{ aula.numeroAula }}</div>
       </div>
       <div class="text-2xl font-bold">{{ aula.nomeAula }}</div>
-      <div class="mt-2">{{ aula.descricaoAula }}</div>
+      <div class="mt-2 descricao-aula">{{ aula.descricaoAula }}</div>
       <router-link :to="aula.link">
         <button
           class="
@@ -56,6 +56,11 @@ export default {
 
 <style scoped>
 
-
-
+/* .descricao-aula{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+ */
 </style>

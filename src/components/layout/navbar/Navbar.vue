@@ -31,12 +31,13 @@
         
       </div>
 
-      <div class="text-white font-light text-right text-xs xl:pr-5 w-2/3">
+      <div class="text-white font-light text-right text-xs xl:pr-5 w-2/3 flex">
         <!-- <router-link to="/">{{ $store.state.nomeDoCurso }}</router-link> -->
-        <div id="progress-bar">
+        <div id="progress-bar" class="flex-1 mr-3">
           <div class="progress-text">{{ this.$store.state.progresso + '%' }}</div>
           <div id="green" :style="{width:this.$store.state.progresso + '%'}"></div>
         </div>
+        <div id="menu-right"><v-icon @click.prevent="$store.dispatch('abrirModalNome')" class="fill-current cursor-pointer active:scale-75 transform transition" scale="1.2" name="user" /></div>
       </div>
     </nav>
 
@@ -64,8 +65,9 @@
         "
       >
         <nav class="mt-14">
-          <h2 class="font-bold text-2xl mb-5">Menu</h2>
-          <div class="px-5 py-2 my-1 hover:bg-gray-200 rounded flex items-center cursor-pointer" @click.prevent="$store.dispatch('abrirModalNome')"><v-icon name="edit" class="mr-2" />Editar Nome</div>
+          <h2 class="font-bold text-3xl mb-5">Sumário</h2>
+          <!-- <div class="px-5 py-2 my-1 hover:bg-gray-200 rounded flex items-center cursor-pointer" @click.prevent="$store.dispatch('abrirModalNome')"><v-icon name="edit" class="mr-2" />Editar Nome
+          </div> -->
           <ul>
             <NavbarItems
               v-for="navbarItem in $store.state.navbarItems"

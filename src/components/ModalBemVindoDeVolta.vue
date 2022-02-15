@@ -32,6 +32,7 @@
             z-50
             mx-auto
             mb-16
+            md:mb-0
             text-center
           "
         >

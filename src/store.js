@@ -13,7 +13,7 @@ export default new Vuex.Store({
     modalAulaCompleta: false,
     progresso: Number("0"),
     nomeDoCurso: "Doces Regionais",
-    aluno: " ",
+    aluno: "",
     btnAlunoInativo: true,
     aulas: [
       {
@@ -243,8 +243,10 @@ export default new Vuex.Store({
   actions: {
     abrirModalNome({commit}) {
       commit('modalNomeOposto')
-      commit('iconeMenuOposto')
-      commit('menuShowOposto')
+      if(this.state.menuShow){
+        commit('iconeMenuOposto')
+        commit('menuShowOposto')
+      }
     },
     finalizarAula01({commit}) {
       commit('SHOW_MODAL_COMPLETAR_AULA_1')
