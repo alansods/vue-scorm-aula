@@ -19,14 +19,14 @@
     >
       <div class="text-white flex justify-center items-center leading-none">
         
-        <router-link class="cursor-pointer active:scale-75 transform transition" to="/">
-          <v-icon class="fill-current" scale="1.3" name="home" />
-        </router-link>
+        <a class="cursor-pointer active:scale-75 transform transition" @click="$router.push('/')">
+          <v-icon class="fill-current" scale="1.2" name="home" />
+        </a>
 
         <span class="mx-3">|</span>
 
-        <a class="cursor-pointer active:scale-75 transform transition" @click.prevent>
-          <v-icon class="fill-current" scale="1.2" @click="clicouMenu" :name="$store.state.iconeMenu" />
+        <a class="cursor-pointer active:scale-75 transform transition" @click="clicouMenu">
+          <v-icon class="fill-current" scale="1.2" :name="$store.state.iconeMenu" />
         </a>
         
       </div>
@@ -37,7 +37,7 @@
           <div class="progress-text">{{ this.$store.state.progresso + '%' }}</div>
           <div id="green" :style="{width:this.$store.state.progresso + '%'}"></div>
         </div>
-        <div id="menu-right"><v-icon @click.prevent="$store.dispatch('abrirModalNome')" class="fill-current cursor-pointer active:scale-75 transform transition" scale="1.2" name="user" /></div>
+        <div id="menu-right" @click.prevent="$store.dispatch('abrirModalNome')"><v-icon class="fill-current cursor-pointer active:scale-75 transform transition" scale="1.2" name="user" /></div>
       </div>
     </nav>
 
@@ -167,4 +167,5 @@ export default {
   left: 50%;
   top: -2px;
 }
+
 </style>
