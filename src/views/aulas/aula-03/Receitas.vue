@@ -139,8 +139,8 @@ export default {
 .receita-item {
   background: #fff;
   border-radius: 10px;
-  flex-grow: 1;
-  max-width: 280px;
+  flex: 1 1 300px;
+  max-width: 320px;
   position: relative;
   cursor: pointer;
   transition: transform 150ms ease-in-out;
@@ -207,20 +207,6 @@ hr {
 }
 
 @media (max-width: 600px) {
-  .container-receitas {
-    display: flex;
-    flex-direction: column;
-    gap: 30px 0;
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-
-  .receita-item {
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
-  }
 
   .container-icones {
   justify-content: space-evenly;
