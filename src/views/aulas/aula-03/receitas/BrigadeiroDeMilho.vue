@@ -66,6 +66,7 @@
           <li>1 xícara de leite condensado (300g)</li>
           <li>1 colher de chá de margarina (10g)</li>
           <li>2 ½ xícara de coco seco ralado (200g)</li>
+          <li>1 colher de chá de amido de milho</li>
         </ul>
       </div>
 

@@ -12,6 +12,10 @@ import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
 Vue.component('v-icon', Icon)
 
+//import vue-youtube
+import VueYoutube from 'vue-youtube'
+Vue.use(VueYoutube)
+
 //Importing the global css file
 import "@/assets/css/styles.css";
 
