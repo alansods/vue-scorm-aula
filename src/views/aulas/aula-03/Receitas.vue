@@ -1,6 +1,8 @@
 <template>
   <div id="receitas">
-    <p class="pb-10 text-center text-gray-400 font-light">Assita todas as receitas para completar essa aula.</p>
+    <p class="pb-10 text-center text-gray-400 font-light">
+      Assita todas as receitas para completar essa aula.
+    </p>
 
     <div class="container-receitas">
       <div
@@ -34,11 +36,10 @@
               <img src="../../../assets/img/icones-receitas/dificuldade.png" />
               <span>{{ receita.dificuldade }}</span>
             </div>
-            
+
             <div class="icone" v-if="receita.finalizada">
               <img src="../../../assets/img/padrao/check.svg" />
             </div>
-            
           </div>
         </div>
       </div>
@@ -49,9 +50,7 @@
 <script>
 export default {
   data() {
-    return {
-      
-    };
+    return {};
   },
   methods: {},
 };
@@ -138,7 +137,10 @@ hr {
 @media (max-width: 600px) {
   .container-icones {
     justify-content: space-evenly;
-    margin-left: 0;
+    margin: 0 auto;
+  }
+  h2 {
+    text-align: center;
   }
 }
 </style>
