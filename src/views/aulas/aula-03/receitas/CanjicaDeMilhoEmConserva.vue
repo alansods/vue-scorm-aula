@@ -4,40 +4,32 @@
       id="corpo"
       class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
-      <h3
-        class="text-center text-4xl font-bold text-primary-color"
-      >
+      <h3 class="text-center text-4xl font-bold text-primary-color">
         Canjica de milho em conserva
       </h3>
       <div class="container-icones">
-          <div class="icone">
-            <img
-              src="../../../../assets/img/icones-receitas/tempo-de-preparo.png"
-            />
-            <span>40min</span>
-          </div>
-
-          <div class="icone">
-            <img src="../../../../assets/img/icones-receitas/porcoes.png" />
-            <span>7 porções de 100g</span>
-          </div>
-
-          <div class="icone">
-            <img src="../../../../assets/img/icones-receitas/dificuldade.png" />
-            <span>fácil</span>
-          </div>
+        <div class="icone">
+          <img
+            src="../../../../assets/img/icones-receitas/tempo-de-preparo.png"
+          />
+          <span>40min</span>
         </div>
+
+        <div class="icone">
+          <img src="../../../../assets/img/icones-receitas/porcoes.png" />
+          <span>7 porções de 100g</span>
+        </div>
+
+        <div class="icone">
+          <img src="../../../../assets/img/icones-receitas/dificuldade.png" />
+          <span>fácil</span>
+        </div>
+      </div>
       <hr class="border-t-1 border-gray-300 my-5" />
       <div class="md:grid md:grid-cols-2 flex flex-col gap-5 mt-10">
         <div class="rounded-lg">
           <div id="video-apresentacao" class="aspect-w-16 aspect-h-9">
-            <iframe
-              class="border-white border-4 shadow rounded-lg"
-              src="https://www.youtube.com/embed/fNCw2NaT6xs"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+             <youtube video-id="fNCw2NaT6xs" class="border-white border-4 shadow-xl rounded-sm"  @ended="ended"/>
           </div>
         </div>
 
@@ -78,14 +70,22 @@
         </h3>
 
         <p>
-          No liquidificador, coloque as duas latas de milho escorrido, o leite de coco, e o leite integral bata até ficar triturado. Em seguida, peneire essa mistura e descarte o bagaço.
+          No liquidificador, coloque as duas latas de milho escorrido, o leite
+          de coco, e o leite integral bata até ficar triturado. Em seguida,
+          peneire essa mistura e descarte o bagaço.
         </p>
 
         <p>
-          Em uma panela coloque a mistura, acrescente o leite condensado, o amido, o pau de canela e o queijo, antes de levar ao fogo mexa bem para dissolver o amido na mistura logo após com fogo baixo mexa de vez em quando com cuidado para não grudar.
-          <p>
-            Após ganhar consistência, desligue o fogo e coloque a canjica em um bowl para esfriar finalize com canela em pó a gosto. 
-          </p>
+          Em uma panela coloque a mistura, acrescente o leite condensado, o
+          amido, o pau de canela e o queijo, antes de levar ao fogo mexa bem
+          para dissolver o amido na mistura logo após com fogo baixo mexa de vez
+          em quando com cuidado para não grudar.
+        </p>
+
+        <p>
+          Após ganhar consistência, desligue o fogo e coloque a canjica em um
+          bowl para esfriar finalize com canela em pó a gosto.
+        </p>
       </div>
 
       <button
@@ -115,15 +115,18 @@
 </template>
 
 <script>
-
 export default {
-  title: "Aula 03 - Receitas: Mugunzá Doce",
-  components: { },
+  title: "Aula 03 - Receitas: Canjica de milho em conserva",
+  components: {},
   data() {
     return {};
   },
+  methods: {
+    ended() {
+      this.$store.commit("COMPLETAR_RECEITA_4");
+    },
+  },
   created() {
-    this.$store.commit('COMPLETAR_RECEITA_4')
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
     this.$store.commit("ESTA_NA_AULA_1", false);
     this.$store.commit("ESTA_NA_AULA_2", false);
@@ -134,7 +137,6 @@ export default {
 </script>
 
 <style scoped>
-
 .container-icones {
   display: flex;
   gap: 10px;
@@ -157,5 +159,4 @@ export default {
   height: 17px;
   margin-right: 5px;
 }
-
 </style>

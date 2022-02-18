@@ -209,6 +209,7 @@ export default {
   title: "Aula 02 - Conhecendo os utensílios",
   components: { NavButton },
   created() {
+    this.$store.commit('COMPLETAR_AULA_2')
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
     this.$store.commit("ESTA_NA_AULA_1", false);
     this.$store.commit("ESTA_NA_AULA_2", true);

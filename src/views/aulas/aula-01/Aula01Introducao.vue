@@ -300,6 +300,7 @@ export default {
     AccordionItem,
   },
   created() {
+    this.$store.commit('COMPLETAR_AULA_1')
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
     this.$store.commit("ESTA_NA_AULA_1", true);
     this.$store.commit("ESTA_NA_AULA_2", false);

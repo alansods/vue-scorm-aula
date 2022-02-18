@@ -1,32 +1,44 @@
 <template>
-  <div class="container-receitas">
-    <div
-      class="receita-item shadow"
-      v-for="receita in receitas"
-      :key="receita.id"
-    >
-      <div class="flex flex-col" @click="$router.push({ path: receita.path })">
-        <div class="container-img">
-          <img :src="require(`@/assets/img/receitas/${receita.imagem}`)" />
-        </div>
-        <h2>{{ receita.nome }}</h2>
-        <hr />
-        <div class="container-icones">
-          <div class="icone">
-            <img
-              src="../../../assets/img/icones-receitas/tempo-de-preparo.png"
-            />
-            <span>{{ receita.tempo }}</span>
-          </div>
+  <div id="receitas">
+    <p class="pb-10 text-center text-gray-400 font-light">Assita todas as receitas para completar essa aula.</p>
 
-          <div class="icone">
-            <img src="../../../assets/img/icones-receitas/porcoes.png" />
-            <span>{{ receita.porcoes }}</span>
+    <div class="container-receitas">
+      <div
+        class="receita-item shadow"
+        v-for="receita in $store.state.receitas"
+        :key="receita.id"
+      >
+        <div
+          class="flex flex-col"
+          @click="$router.push({ path: receita.path })"
+        >
+          <div class="container-img">
+            <img :src="require(`@/assets/img/receitas/${receita.imagem}`)" />
           </div>
+          <h2>{{ receita.nome }}</h2>
+          <hr />
+          <div class="container-icones">
+            <div class="icone">
+              <img
+                src="../../../assets/img/icones-receitas/tempo-de-preparo.png"
+              />
+              <span>{{ receita.tempo }}</span>
+            </div>
 
-          <div class="icone">
-            <img src="../../../assets/img/icones-receitas/dificuldade.png" />
-            <span>{{ receita.dificuldade }}</span>
+            <div class="icone">
+              <img src="../../../assets/img/icones-receitas/porcoes.png" />
+              <span>{{ receita.porcoes }}</span>
+            </div>
+
+            <div class="icone">
+              <img src="../../../assets/img/icones-receitas/dificuldade.png" />
+              <span>{{ receita.dificuldade }}</span>
+            </div>
+            
+            <div class="icone" v-if="receita.finalizada">
+              <img src="../../../assets/img/padrao/check.svg" />
+            </div>
+            
           </div>
         </div>
       </div>
@@ -38,93 +50,10 @@
 export default {
   data() {
     return {
-      receitas: [
-        {
-          id: 1,
-          nome: "Arroz doce",
-          imagem: "arroz-doce.jpg",
-          tempo: "25min",
-          porcoes: "8 porções",
-          calorias: "300kcal",
-          dificuldade: "fácil",
-          path: "/aula-03/arroz-doce",
-        },
-        {
-          id: 2,
-          nome: "Mungunzá doce",
-          imagem: "mugunza-doce.jpg",
-          tempo: "55min",
-          porcoes: "12 porções",
-          calorias: "100kcal",
-          dificuldade: "fácil",
-          path: "/aula-03/mugunza-doce",
-        },
-        {
-          id: 3,
-          nome: "Canjica de milho verde",
-          imagem: "canjica-de-milho-verde.jpg",
-          tempo: "50min",
-          porcoes: "7 porções",
-          calorias: "200kcal",
-          dificuldade: "fácil",
-          path: "/aula-03/canjica-de-milho-verde",
-        },
-        {
-          id: 4,
-          nome: "Canjica de milho em conserva",
-          imagem: "canjica-de-milho-em-conserva.jpg",
-          tempo: "40min",
-          porcoes: "7 porções",
-          calorias: "200kcal",
-          dificuldade: "fácil",
-          path: "/aula-03/canjica-de-milho-em-conserva",
-        },
-        {
-          id: 5,
-          nome: "Cocada baiana de colher",
-          imagem: "cocada-baiana-de-colher.jpg",
-          tempo: "30min",
-          porcoes: "12 porções",
-          calorias: "200kcal",
-          dificuldade: "fácil",
-          path: "/aula-03/cocada-baiana-de-colher",
-        },
-        {
-          id: 6,
-          nome: "Pé de moleque",
-          imagem: "pe-de-moleque.jpg",
-          tempo: "35min",
-          porcoes: "16 porções",
-          calorias: "200kcal",
-          dificuldade: "fácil",
-          path: "/aula-03/pe-de-moleque",
-        },
-        {
-          id: 7,
-          nome: "Brigadeiro de milho",
-          imagem: "brigadeiro-de-milho.jpg",
-          tempo: "45min",
-          porcoes: "85 porções",
-          calorias: "200kcal",
-          dificuldade: "médio",
-          path: "/aula-03/brigadeiro-de-milho",
-        },
-        {
-          id: 8,
-          nome: "Queijadinha",
-          imagem: "queijadinha.jpg",
-          tempo: "60min",
-          porcoes: "20 porções",
-          calorias: "200kcal",
-          dificuldade: "médio",
-          path: "/aula-03/queijadinha",
-        },
-      ],
+      
     };
   },
-  methods: {
-
-  }
+  methods: {},
 };
 </script>
 
@@ -179,21 +108,21 @@ h2 {
 hr {
   width: 90%;
   margin: 0 auto;
-  border-top: 1px solid #ccc ;
+  border-top: 1px solid #ccc;
 }
 
 .container-icones {
   display: flex;
   gap: 10px;
-  justify-content: s;
+  justify-content: start;
   margin-left: 15px;
   padding: 20px 0;
 }
 
 .icone {
   display: flex;
-  justify-content: center;
   margin: 0 2px;
+  flex: 1 0 auto;
 }
 
 .icone span {
@@ -207,10 +136,9 @@ hr {
 }
 
 @media (max-width: 600px) {
-
   .container-icones {
-  justify-content: space-evenly;
-  margin-left: 0;
-}
+    justify-content: space-evenly;
+    margin-left: 0;
+  }
 }
 </style>

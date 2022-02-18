@@ -29,13 +29,11 @@
       <div class="md:grid md:grid-cols-2 flex flex-col gap-5 mt-10">
         <div class="rounded-lg">
           <div id="video-apresentacao" class="aspect-w-16 aspect-h-9">
-            <iframe
-              class="border-white border-4 shadow rounded-lg"
-              src="https://www.youtube.com/embed/1oIC01tSt60"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            <youtube
+              video-id="rSgMkfjIvmw"
+              class="border-white border-4 shadow-xl rounded-sm"
+              @ended="ended"
+            />
           </div>
         </div>
 
@@ -64,7 +62,7 @@
           <li>2 xícaras de leite condensado (600g)</li>
           <li>½ xícara de margarina (100g)</li>
           <li>1 xícara de farinha de trigo (100g)</li>
-          <li> ½  xícara de queijo coalho ralado (40g)</li>
+          <li>½ xícara de queijo coalho ralado (40g)</li>
           <li>2 ½ xícara de coco seco ralado (175g)</li>
         </ul>
       </div>
@@ -75,21 +73,22 @@
         </h3>
 
         <p>
-          Separe as claras da gema e reserve, pegue uma peneira e passe as gemas e logo depois misture gemas e claras num bowl mexa com um fouet. 
+          Separe as claras da gema e reserve, pegue uma peneira e passe as gemas
+          e logo depois misture gemas e claras num bowl mexa com um fouet.
         </p>
 
         <p>
-          Em seguida acrescente o leite condensado, e margarina, a farinha de trigo deve ser acrescentada aos poucos e por último o coco ralado e o queijo mexa bem. 
+          Em seguida acrescente o leite condensado, e margarina, a farinha de
+          trigo deve ser acrescentada aos poucos e por último o coco ralado e o
+          queijo mexa bem.
         </p>
 
         <p>
-          Depois de pronto coloque a massa em forminhas próprias de cupcake e leve ao forno pré aquecido a 160ºc por 35 minutos, ou até dourar.
+          Depois de pronto coloque a massa em forminhas próprias de cupcake e
+          leve ao forno pré aquecido a 160ºc por 35 minutos, ou até dourar.
         </p>
 
-        <p>
-          Retire do forno e deixe esfriar.
-        </p>
-
+        <p>Retire do forno e deixe esfriar.</p>
       </div>
 
       <button
@@ -120,13 +119,17 @@
 
 <script>
 export default {
-  title: "Aula 03 - Receitas: Mugunzá Doce",
+  title: "Aula 03 - Receitas: Queijadinha",
   components: {},
   data() {
     return {};
   },
+  methods: {
+    ended() {
+      this.$store.commit("COMPLETAR_RECEITA_83");
+    },
+  },
   created() {
-    this.$store.commit("COMPLETAR_RECEITA_8");
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
     this.$store.commit("ESTA_NA_AULA_1", false);
     this.$store.commit("ESTA_NA_AULA_2", false);

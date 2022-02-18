@@ -51,32 +51,6 @@ export default new Vuex.Store({
         receita_8_completa: false,
       },
     ],
-    topicosAula_01: [
-      {
-        id: '1',
-        numeroTopico: '01',
-        nome: 'Boas práticas na fabricação de alimentos (BPF)',
-        link: '/aula-01/topico-01',
-      },
-      {
-        id: '2',
-        numeroTopico: '02',
-        nome: 'Contaminação Química, física e biológica',
-        link: '/aula-01/topico-02'
-      },
-      {
-        id: '3',
-        numeroTopico: '03',
-        nome: 'Higiene do manipulador de alimentos',
-        link: '/aula-01/topico-03'
-      },
-      {
-        id: '4',
-        numeroTopico: '04',
-        nome: 'Como lavar as mãos?',
-        link: '/aula-01/topico-03'
-      },
-    ],
     navbarItems: [
       {
         id: '1',
@@ -112,6 +86,96 @@ export default new Vuex.Store({
         icone: 'book',
         link: '/Referências',
         estaNaAula: false
+      },
+    ],
+    receitas: [
+      {
+        id: 1,
+        nome: "Arroz doce",
+        imagem: "arroz-doce.jpg",
+        tempo: "25min",
+        porcoes: "8 porções",
+        calorias: "300kcal",
+        dificuldade: "fácil",
+        path: "/aula-03/arroz-doce",
+        finalizada: false,
+      },
+      {
+        id: 2,
+        nome: "Mungunzá doce",
+        imagem: "mugunza-doce.jpg",
+        tempo: "55min",
+        porcoes: "12 porções",
+        calorias: "100kcal",
+        dificuldade: "fácil",
+        path: "/aula-03/mugunza-doce",
+        finalizada: false,
+      },
+      {
+        id: 3,
+        nome: "Canjica de milho verde",
+        imagem: "canjica-de-milho-verde.jpg",
+        tempo: "50min",
+        porcoes: "7 porções",
+        calorias: "200kcal",
+        dificuldade: "fácil",
+        path: "/aula-03/canjica-de-milho-verde",
+        finalizada: false,
+      },
+      {
+        id: 4,
+        nome: "Canjica de milho em conserva",
+        imagem: "canjica-de-milho-em-conserva.jpg",
+        tempo: "40min",
+        porcoes: "7 porções",
+        calorias: "200kcal",
+        dificuldade: "fácil",
+        path: "/aula-03/canjica-de-milho-em-conserva",
+        finalizada: false,
+      },
+      {
+        id: 5,
+        nome: "Cocada baiana de colher",
+        imagem: "cocada-baiana-de-colher.jpg",
+        tempo: "30min",
+        porcoes: "12 porções",
+        calorias: "200kcal",
+        dificuldade: "fácil",
+        path: "/aula-03/cocada-baiana-de-colher",
+        finalizada: false,
+      },
+      {
+        id: 6,
+        nome: "Pé de moleque",
+        imagem: "pe-de-moleque.jpg",
+        tempo: "35min",
+        porcoes: "16 porções",
+        calorias: "200kcal",
+        dificuldade: "fácil",
+        path: "/aula-03/pe-de-moleque",
+        finalizada: false,
+      },
+      {
+        id: 7,
+        nome: "Brigadeiro de milho",
+        imagem: "brigadeiro-de-milho.jpg",
+        tempo: "45min",
+        porcoes: "85 porções",
+        calorias: "200kcal",
+        dificuldade: "médio",
+        path: "/aula-03/brigadeiro-de-milho",
+        finalizada: false,
+      },
+      {
+        id: 8,
+        nome: "Queijadinha",
+        imagem: "queijadinha.jpg",
+        tempo: "60min",
+        porcoes: "20 porções",
+        calorias: "200kcal",
+        dificuldade: "médio",
+        path: "/aula-03/queijadinha",
+        finalizada: false,
       },
     ]
   },
@@ -169,6 +233,7 @@ export default new Vuex.Store({
         state.progresso = state.progresso + 10
       }
       state.aulas[2].receita_1_completa = true
+      state.receitas[0].finalizada = true
       localStorage.setItem('store', JSON.stringify(state))
     },
     COMPLETAR_RECEITA_2(state) {
@@ -176,6 +241,7 @@ export default new Vuex.Store({
         state.progresso = state.progresso + 10
       }
       state.aulas[2].receita_2_completa = true
+      state.receitas[1].finalizada = true
       localStorage.setItem('store', JSON.stringify(state))
     },
     COMPLETAR_RECEITA_3(state) {
@@ -183,6 +249,7 @@ export default new Vuex.Store({
         state.progresso = state.progresso + 10
       }
       state.aulas[2].receita_3_completa = true
+      state.receitas[2].finalizada = true
       localStorage.setItem('store', JSON.stringify(state))
     },
     COMPLETAR_RECEITA_4(state) {
@@ -190,6 +257,7 @@ export default new Vuex.Store({
         state.progresso = state.progresso + 10
       }
       state.aulas[2].receita_4_completa = true
+      state.receitas[3].finalizada = true
       localStorage.setItem('store', JSON.stringify(state))
     },
     COMPLETAR_RECEITA_5(state) {
@@ -197,6 +265,7 @@ export default new Vuex.Store({
         state.progresso = state.progresso + 10
       }
       state.aulas[2].receita_5_completa = true
+      state.receitas[4].finalizada = true
       localStorage.setItem('store', JSON.stringify(state))
     },
     COMPLETAR_RECEITA_6(state) {
@@ -204,6 +273,7 @@ export default new Vuex.Store({
         state.progresso = state.progresso + 10
       }
       state.aulas[2].receita_6_completa = true
+      state.receitas[5].finalizada = true
       localStorage.setItem('store', JSON.stringify(state))
     },
     COMPLETAR_RECEITA_7(state) {
@@ -211,6 +281,7 @@ export default new Vuex.Store({
         state.progresso = state.progresso + 10
       }
       state.aulas[2].receita_7_completa = true
+      state.receitas[6].finalizada = true
       localStorage.setItem('store', JSON.stringify(state))
     },
     COMPLETAR_RECEITA_8(state) {
@@ -218,6 +289,7 @@ export default new Vuex.Store({
         state.progresso = state.progresso + 10
       }
       state.aulas[2].receita_8_completa = true
+      state.receitas[7].finalizada = true
       localStorage.setItem('store', JSON.stringify(state))
     },
     SHOW_MODAL_COMPLETAR_AULA_1(state) {
@@ -250,11 +322,11 @@ export default new Vuex.Store({
     },
     finalizarAula01({commit}) {
       commit('SHOW_MODAL_COMPLETAR_AULA_1')
-      commit('COMPLETAR_AULA_1')
+      //commit('COMPLETAR_AULA_1')
     },
     finalizarAula02({commit}) {
       commit('SHOW_MODAL_COMPLETAR_AULA_1')
-      commit('COMPLETAR_AULA_2')
+      //commit('COMPLETAR_AULA_2')
     },
   },
   getters: {

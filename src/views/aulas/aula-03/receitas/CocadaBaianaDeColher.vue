@@ -31,13 +31,7 @@
       <div class="md:grid md:grid-cols-2 flex flex-col gap-5 mt-10">
         <div class="rounded-lg">
           <div id="video-apresentacao" class="aspect-w-16 aspect-h-9">
-            <iframe
-              class="border-white border-4 shadow rounded-lg"
-              src="https://www.youtube.com/embed/uY8szYnmW3M"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            <youtube video-id="uY8szYnmW3M" class="border-white border-4 shadow-xl rounded-sm"  @ended="ended"/>
           </div>
         </div>
 
@@ -128,13 +122,17 @@
 <script>
 
 export default {
-  title: "Aula 03 - Receitas: Mugunzá Doce",
+  title: "Aula 03 - Receitas: Cocada baiana de colher",
   components: {  },
   data() {
     return {};
   },
+      methods: {
+    ended() {
+      this.$store.commit("COMPLETAR_RECEITA_5");
+    },
+  },
   created() {
-    this.$store.commit('COMPLETAR_RECEITA_5')
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
     this.$store.commit("ESTA_NA_AULA_1", false);
     this.$store.commit("ESTA_NA_AULA_2", false);
