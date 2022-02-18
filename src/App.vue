@@ -3,6 +3,7 @@
     <Navbar />
     <ModalName />
     <ModalBemVindoDeVolta/>
+    <ModalCursoFinalizado/>
     <div class="pt-10">
       <transition mode="out-in">
         <router-view />
@@ -109,9 +110,10 @@ p:last-of-type {
 
 <script>
 import ModalBemVindoDeVolta from '@/components/ModalBemVindoDeVolta'
+import ModalCursoFinalizado from '@/components/ModalCursoFinalizado'
 
 export default {
-  components: { ModalBemVindoDeVolta },
+  components: { ModalBemVindoDeVolta, ModalCursoFinalizado },
   data() {
     return {};
   },
@@ -131,6 +133,9 @@ export default {
     },
     '$store.state.modalAulaCompleta': function () {
       console.log(this.$store.state.modalAulaCompleta);
+      this.$store.commit("SALVAR_LOCAL_STORAGE");
+    },
+    '$store.state.modalCursoFinalizado': function () {
       this.$store.commit("SALVAR_LOCAL_STORAGE");
     },
   },

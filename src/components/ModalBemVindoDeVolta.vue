@@ -49,7 +49,7 @@
             Você parou na <span class="font-bold">{{$route.name}}.</span>
           </p>
           <p>
-            Continue seus estudos para avançar cada vez mais! 😀
+            Continue seus estudos para avançar cada vez mais! 😄
           </p>
           <a
             class="

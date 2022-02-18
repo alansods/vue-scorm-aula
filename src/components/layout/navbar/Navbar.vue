@@ -88,7 +88,6 @@ export default {
   components: { NavbarItems },
   data() {
     return {
-      progresso: 50,
     }
   },
   methods: {

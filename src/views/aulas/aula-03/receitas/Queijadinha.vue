@@ -126,7 +126,7 @@ export default {
   },
   methods: {
     ended() {
-      this.$store.commit("COMPLETAR_RECEITA_83");
+      this.$store.commit("COMPLETAR_RECEITA_8");
     },
   },
   created() {

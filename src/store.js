@@ -15,6 +15,7 @@ export default new Vuex.Store({
     nomeDoCurso: "Doces Regionais",
     aluno: "",
     btnAlunoInativo: true,
+    modalCursoFinalizado: false,
     aulas: [
       {
         id: "1",
