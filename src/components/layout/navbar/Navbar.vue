@@ -41,11 +41,11 @@
       </div>
     </nav>
 
-    <div v-if="$store.state.menuShow" class="menu" :class="{ativo: $store.state.menuShow}">
+    <div v-if="$store.state.menuShow" class="fixed top-0 left-0 z-30">
       <div
         id="overlay"
         @click="cliqueFora"
-        class="bg-black opacity-0 h-screen w-screen fixed top-0 left-0 z-30"
+        class="bg-black opacity-0 h-screen w-screen"
       ></div>
 
       <div
@@ -58,10 +58,10 @@
           h-screen
           w-2/3
           xl:w-3/12
-          z-30
           bg-white
           text-dark-color
           shadow-lg
+          menu-animation
         "
       >
         <nav class="mt-14">
@@ -122,13 +122,9 @@ export default {
 
 <style scoped>
 
-.menu {
-  opacity: 0;
-}
-
-.menu.ativo {
+.menu-animation {
   opacity: 1;
-  /* animation: slideMenu .4s ease; */
+  animation: slideMenu .4s ease;
 }
 
 @keyframes slideMenu {
@@ -136,7 +132,7 @@ export default {
     transform: translate3d(-300px, 0, 0);
   }
   to {
-    transform: translate3d(0, 0, 0);
+    transform: initial;
   }
 }
 

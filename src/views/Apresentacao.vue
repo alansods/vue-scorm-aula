@@ -40,7 +40,7 @@
           class="w-full md:w-4/5 xl:w-3/6 2xl:w-4/6 3xl:w-4/5 mx-auto my-12 3xl:my-14"
         >
           <div id="video-apresentacao" class="aspect-w-16 aspect-h-9">
-            <youtube video-id="LPbeHufmwtU" class="border-white border-4 shadow-xl rounded-sm"/>
+            <youtube video-id="LPbeHufmwtU" class="border-white border-4 shadow-xl rounded-sm z-0"/>
           </div>
         </div>
 

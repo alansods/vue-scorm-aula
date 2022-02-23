@@ -44,11 +44,11 @@
             loop
             autoplay
           ></lottie-player>
-          <h3 class="text-xl text-primary-color mt-4 mb-5"><span class="text-2xl font-bold"> Olá!</span> <br/> Bem-vindo(a) de volta <NomeAluno />.</h3>
+          <h3 class="text-xl text-primary-color mt-4"><span class="text-2xl font-bold"> Olá!</span> <br/> Bem-vindo(a) de volta <NomeAluno />.</h3>
+          <hr class="my-3">
           <p>
             Você parou na <span class="font-bold">{{$route.name}}.</span>
-          </p>
-          <p>
+            <br>
             Continue seus estudos para avançar cada vez mais! 😄
           </p>
           <a
