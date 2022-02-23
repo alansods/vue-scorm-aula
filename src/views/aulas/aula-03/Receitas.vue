@@ -1,7 +1,7 @@
 <template>
   <div id="receitas">
-    <p class="pb-10 text-center text-gray-400 font-light">
-      Assita todas as receitas para completar essa aula.
+    <p class="pb-10 block w-2/3 md:w-full text-center text-gray-400 font-light" style="margin: 0 auto !important">
+      Assista todas as receitas para completar essa aula.
     </p>
 
     <div class="container-receitas">

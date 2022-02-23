@@ -157,8 +157,8 @@
             <template slot="accordion-content">
               <span
                 >Ocorre devido a materiais químicos estranhos ou toxinas
-                produzidos pelos microrganismos tais como: agrotóxicos,
-                materiais de limpeza, metais pesados.</span
+                produzidos pelos microrganismos tais como: <strong>agrotóxicos,
+                materiais de limpeza, metais pesados</strong>.</span
               >
             </template>
           </accordion-item>
@@ -172,8 +172,8 @@
             <template slot="accordion-content">
               <span
                 >Se dá por meio de contaminação por objetos durante o preparo de
-                alimentos pode ser: pregos, saco plástico, palito de dente,
-                brincos, etc.
+                alimentos pode ser: <strong>pregos, saco plástico, palito de dente,
+                brincos, etc</strong>.
               </span>
             </template>
           </accordion-item>
@@ -186,8 +186,8 @@
             <!-- This slot will handle all the content that is passed to the accordion -->
             <template slot="accordion-content">
               <span
-                >Ocasionada pela contaminação de microorganismos como bactérias,
-                fungos, parasitas e vírus.</span
+                >Ocasionada pela contaminação de microorganismos como: <strong>bactérias,
+                fungos, parasitas e vírus</strong>.</span
               >
             </template>
           </accordion-item>
