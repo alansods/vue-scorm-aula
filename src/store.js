@@ -81,13 +81,6 @@ export default new Vuex.Store({
         link: '/aula-03',
         estaNaAula: false
       },
-      {
-        id: '5',
-        nome: 'Referências',
-        icone: 'book',
-        link: '/Referências',
-        estaNaAula: false
-      },
     ],
     receitas: [
       {
