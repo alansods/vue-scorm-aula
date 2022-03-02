@@ -83,7 +83,14 @@ export default {
   font-weight: medium;
   cursor: pointer;
   border-radius: 5px;
+  transition: all .2s;
 }
+
+.accordion__trigger:hover{
+  background: #3F51B5;
+  color: #fff;
+}
+
 
 .arrowOpened {
   transform: rotateZ(90deg);

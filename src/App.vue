@@ -87,7 +87,7 @@ p:last-of-type {
 .lista-check li::before {
   content: url('./assets/img/padrao/check.svg');
   display: inline-block;
-  margin-left: -1.5rem;
+  margin-left: -1.8rem;
   width: 1.2rem;
   margin-right: .4rem;
 }
