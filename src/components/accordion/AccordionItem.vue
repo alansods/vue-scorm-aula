@@ -73,6 +73,13 @@ export default {
   padding: 5px 0;
 }
 
+ul{
+  background: #3f51b523;
+  padding: 20px 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 .accordion__trigger {
   display: flex;
   justify-content: space-between;
@@ -102,9 +109,9 @@ export default {
   color: white;
 }
 
-.accordion__content ul {
+/* .accordion__content ul {
   margin: 10px 15px 0 15px;
-}
+} */
 
 .accordion-enter-active,
 .accordion-leave-active {
