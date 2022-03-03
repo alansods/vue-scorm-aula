@@ -100,10 +100,16 @@ p:last-of-type {
 }
 
 .img-bg-aula {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(./assets/img/padrao/bg-aula.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.2)), url(./assets/img/padrao/bg-aula.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+@media (max-width: 600px){
+  .img-bg-aula {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.2)), url(./assets/img/padrao/bg-aula.jpg);
+}
 }
 
 </style>
