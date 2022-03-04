@@ -71,7 +71,7 @@ p:last-of-type {
 /* LISTA-CHECK */
 
 .lista-check {
-  margin: 2rem 25px;
+  margin: 2rem 25px 2rem 32px;
 }
 
 .lista-check li {
