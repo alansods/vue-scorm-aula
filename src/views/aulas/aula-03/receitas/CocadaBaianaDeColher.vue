@@ -31,7 +31,7 @@
       <div class="md:grid md:grid-cols-2 flex flex-col gap-5 mt-10">
         <div class="rounded-lg">
           <div id="video-apresentacao" class="aspect-w-16 aspect-h-9">
-            <youtube video-id="uY8szYnmW3M" class="border-white border-4 shadow-xl rounded-sm"  @ended="ended"/>
+            <youtube video-id="kha6xlxMNDU" class="border-white border-4 shadow-xl rounded-sm"  @ended="ended"/>
           </div>
         </div>
 
