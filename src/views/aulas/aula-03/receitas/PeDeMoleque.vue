@@ -29,7 +29,11 @@
       <div class="md:grid md:grid-cols-2 flex flex-col gap-5 mt-10">
         <div class="rounded-lg">
           <div id="video-apresentacao" class="aspect-w-16 aspect-h-9">
-            <youtube video-id="zqUsUdqAUoo" class="border-white border-4 shadow-xl rounded-sm"  @ended="ended"/>
+            <youtube
+              video-id="zqUsUdqAUoo"
+              class="border-white border-4 shadow-xl rounded-sm"
+              @ended="ended"
+            />
           </div>
         </div>
 
@@ -65,14 +69,24 @@
           Modo de preparo
         </h3>
 
-        <p>
-          Numa panela coloque o açúcar e leve ao fogo médio mexendo sempre até
-          chegar na cor caramelo, cuidado para não queimar, em seguida junte a
-          margarina e bicarbonato de sódio, mexa bem, logo mais acrescente o
-          amendoim, envolva bem, sobre uma bancada ou mesa untada com margarina,
-          coloque o pé de moleque faça corte em quadrado, espere esfriar para
-          servir.
-        </p>
+        <ol class="lista-numerica">
+          <li>
+            Numa panela coloque o açúcar e leve ao fogo médio mexendo sempre até
+            chegar na cor caramelo, cuidado para não queimar.
+          </li>
+
+          <li>
+            Em seguida junte a margarina e bicarbonato de sódio e mexa bem.
+          </li>
+
+          <li>
+            Logo mais, acrescente o amendoim, envolva bem, sobre uma bancada ou
+            mesa untada com margarina, coloque o pé de moleque faça corte em
+            quadrado.
+          </li>
+
+          <li>Espere esfriar para servir.</li>
+        </ol>
       </div>
 
       <div class="bg-green-400 p-8 rounded-lg shadow my-5 text-white">
@@ -122,7 +136,7 @@ export default {
   data() {
     return {};
   },
-      methods: {
+  methods: {
     ended() {
       this.$store.commit("COMPLETAR_RECEITA_6");
     },

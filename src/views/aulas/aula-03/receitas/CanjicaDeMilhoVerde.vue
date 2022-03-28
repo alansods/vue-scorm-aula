@@ -29,7 +29,11 @@
       <div class="md:grid md:grid-cols-2 flex flex-col gap-5 mt-10">
         <div class="rounded-lg">
           <div id="video-apresentacao" class="aspect-w-16 aspect-h-9">
-            <youtube video-id="KUuq6xZnuIU" class="border-white border-4 shadow-xl rounded-sm"  @ended="ended"/>
+            <youtube
+              video-id="KUuq6xZnuIU"
+              class="border-white border-4 shadow-xl rounded-sm"
+              @ended="ended"
+            />
           </div>
         </div>
 
@@ -67,21 +71,24 @@
           Modo de preparo
         </h3>
 
-        <p>
-          Higienize as espigas de milho tirando todo o estigma após lavar bem
-          com auxílio de uma faca corte todos os grãos do sabugo. Feito isso
-          leve o milho junto com o leite ao liquidificador, depois de bem
-          triturado passe a mistura pela peneira, descarte o bagaço, leve ao
-          fogo baixo numa panela juntamente com o açúcar e margarina.
-        </p>
+        <ol class="lista-numerica">
+          <li>
+            Higienize as espigas de milho tirando todo o estigma após lavar bem
+            com auxílio de uma faca corte todos os grãos do sabugo. Feito isso
+            leve o milho junto com o leite ao liquidificador, depois de bem
+            triturado passe a mistura pela peneira, descarte o bagaço, leve ao
+            fogo baixo numa panela juntamente com o açúcar e margarina.
+          </li>
 
-        <p>
-          Mexa bem para que não grude no fundo da panela, sua canjica estará
-          pronta quando estiver bem consistente, após retirar da panela coloque
-          em uma assadeira untada com margarina, finalize com canela a gosto.
-        </p>
+          <li>
+            Mexa bem para que não grude no fundo da panela, sua canjica estará
+            pronta quando estiver bem consistente, após retirar da panela
+            coloque em uma assadeira untada com margarina, finalize com canela a
+            gosto.
+          </li>
 
-        <p>Sirva frio!</p>
+          <li>Sirva frio!</li>
+        </ol>
       </div>
 
       <div class="bg-green-400 p-8 rounded-lg shadow my-5 text-white">
@@ -91,8 +98,8 @@
         </div>
         <div>
           <p>
-            Para que a canjica não fique com gosto amargo tenha cuidado ao cortar
-          as espigas. Não corte rente ao sabugo.
+            Para que a canjica não fique com gosto amargo tenha cuidado ao
+            cortar as espigas. Não corte rente ao sabugo.
           </p>
         </div>
       </div>
@@ -124,14 +131,13 @@
 </template>
 
 <script>
-
 export default {
   title: "Aula 03 - Receitas: Canjica de milho verde",
-  components: {  },
+  components: {},
   data() {
     return {};
   },
-    methods: {
+  methods: {
     ended() {
       this.$store.commit("COMPLETAR_RECEITA_3");
     },
@@ -147,7 +153,6 @@ export default {
 </script>
 
 <style scoped>
-
 .container-icones {
   display: flex;
   gap: 10px;

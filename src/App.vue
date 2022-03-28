@@ -92,6 +92,33 @@ p:last-of-type {
   margin-right: .4rem;
 }
 
+/* LISTA-NUMÉRICA */
+.lista-numerica{
+  counter-reset: item;
+  margin-left: 30px;}
+
+ol li {
+  margin: 2rem 0;
+  margin: 1rem 0;
+  list-style: none;
+  counter-increment: item;
+  position: relative;
+}
+
+ol li:last-of-type {
+  margin: 0;
+}
+
+ol li::before {
+  content:counter(item)".";
+  counter-increment: li;
+  font-weight: bold;
+  font-size: 1.35rem;
+  position: absolute;
+  line-height: 1;
+  left: -28px;
+}
+
 .img-bg-apresentacao {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(./assets/img/padrao/bg-apresentacao.jpg);
   background-repeat: no-repeat;

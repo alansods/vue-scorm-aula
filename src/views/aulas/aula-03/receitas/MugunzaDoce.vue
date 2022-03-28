@@ -41,10 +41,10 @@
           </h3>
 
           <ul class="lista-check mb-0">
-            <li>fogão</li>
-            <li>balança ou xicara medidora</li>
-            <li>panela</li>
-            <li>espátula</li>
+            <li>Fogão</li>
+            <li>Balança ou xicara medidora</li>
+            <li>Panela</li>
+            <li>Espátula</li>
           </ul>
         </div>
       </div>
@@ -74,21 +74,23 @@
           Modo de preparo
         </h3>
 
-        <p>
+        <ol class="lista-numerica">
+        <li>
           Numa vasilha coloque o milho e cubra com água e deixe descansar por no mínimo 12hs.
-        </p>
+        </li>
 
-        <p>
+        <li>
           Após esse período coloque o milho na panela de pressão com 2 litros de água, canela em pau, os cravos e sal a gosto, deixe cozinhar por 50 min.
-        </p>
+        </li>
 
-        <p>
+        <li>
           Depois do cozimento derrame a água e acrescente na panela o leite integral, leite de coco, açúcar e o coco ralado, mexendo de vez em quando para não grudar no fundo da panela, ficará pronto assim que engrossar, passe seu munguzá para uma vasilha, cubra com plástico filme rente ao doce.
-        </p>
+        </li>
 
-        <p>
+        <li>
           Você pode servir quente ou gelado, finalize com canela em pó ao gosto.
-        </p>
+        </li>
+        </ol>
       </div>
 
       <div class="bg-green-400 p-8 rounded-lg shadow my-5 text-white">

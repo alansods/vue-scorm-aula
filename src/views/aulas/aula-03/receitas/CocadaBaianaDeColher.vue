@@ -68,13 +68,22 @@
           Modo de preparo
         </h3>
 
-        <p>
-          Em uma panela, coloque o açúcar e a água, mexa bem com uma colher, ligue o fogo e deixe chegar a cor caramelo sem mexer (mesmo depois de tirar o açúcar do fogo ele continua cozinhando, então cuidado pra não deixar escurecer demais e ele ficar amargo) quando chegar nesse ponto acrescente o coco ralado envolva bem no caramelo e em seguida acrescente o leite condensado, leite e os cravos, não pare de mexer, sua cocada estará pronta quando soltar do fundo da panela.
-        </p>
+        <ol class="lista-numerica">
 
-        <p>
+        <li>
+          Em uma panela, coloque o açúcar e a água, mexa bem com uma colher, ligue o fogo e deixe chegar a cor caramelo sem mexer (mesmo depois de tirar o açúcar do fogo ele continua cozinhando, então cuidado pra não deixar escurecer demais e ele ficar amargo).
+        </li>
+
+        <li>
+          Quando chegar nesse ponto acrescente o coco ralado envolva bem no caramelo e em seguida acrescente o leite condensado, leite e os cravos, não pare de mexer, sua cocada estará pronta quando soltar do fundo da panela.
+        </li>
+
+        <li>
           Após passe a cocada para uma forma untada com margarina e deixe esfriar.
-        </p>
+        </li>
+
+        </ol>
+
       </div>
 
       <div class="bg-green-400 p-8 rounded-lg shadow my-5 text-white">

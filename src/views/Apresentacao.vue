@@ -2,7 +2,14 @@
   <div id="apresentação">
     <div
       id="container-bg-video"
-      class="img-bg-apresentacao h-bg-apresentacao px-3 xl:px-0 mx-auto text-white"
+      class="
+        img-bg-apresentacao
+        h-bg-apresentacao
+        px-3
+        xl:px-0
+        mx-auto
+        text-white
+      "
     >
       <div
         id="container-all-content-bg-video"
@@ -20,8 +27,7 @@
         <div id="titulo-curso" class="xl:w-2/3 2xl:w-auto">
           <h1
             class="
-              text-center
-              text-4xl
+              text-center text-4xl
               md:text-3xl
               xl:text-4xl
               2xl:text-5xl
@@ -37,10 +43,22 @@
 
         <div
           id="container-video-apresentacao"
-          class="w-full md:w-4/5 xl:w-3/6 2xl:w-4/6 3xl:w-4/5 mx-auto my-12 3xl:my-14"
+          class="
+            w-full
+            md:w-4/5
+            xl:w-3/6
+            2xl:w-4/6
+            3xl:w-4/5
+            mx-auto
+            my-12
+            3xl:my-14
+          "
         >
           <div id="video-apresentacao" class="aspect-w-16 aspect-h-9">
-            <youtube video-id="BTBPdA3FjrA" class="border-white border-4 shadow-xl rounded-sm z-0"/>
+            <youtube
+              video-id="BTBPdA3FjrA"
+              class="border-white border-4 shadow-xl rounded-sm z-0"
+            />
           </div>
         </div>
 
@@ -77,16 +95,27 @@
           </h2>
           <hr class="border-t-1 border-gray-300 my-5 md:my-10" />
         </div>
-        <p class="text-xl text-left">Olá, <NomeAluno />!</p>
+        <p class="text-xl text-left">Caro, <NomeAluno />!</p>
 
         <p class="text-left">
-          Boas vindas ao nosso curso, nele você desenvolverá habilidades e
-          conhecimentos para a produção de doces regionais que vai desde
-          canjicas, brigadeiro, o delicioso pé de moleque e munguzá entre outras
-          receitas, seguindo as boas práticas na manipulação de alimentos, além
-          de conhecer os utensílios que serão utilizados.
+          Seja bem vindo ao curso Doces Regionais! A região Nordeste é bem
+          conhecida por sua cultura e por sua gastronomia, que se destaca por
+          seus sabores característicos. Vamos conhecer alguns doces que fazem
+          parte desta culinária tão rica e diversificada, presentes sempre na
+          mesa dos nordestinos.
         </p>
-        <p class="text-left">Então vem com a gente!</p>
+
+        <p>
+          No curso você conhecerá as receitas, os utensílios de cozinha
+          necessários, desenvolverá habilidades para a produção de doces
+          seguindo as boas práticas na manipulação de alimentos.
+        </p>
+
+        <p>
+          Faremos juntos as seguintes receitas: arroz doce, mungunzá doce, canjica de milho verde, canjica de milho em conserva, pé de moleque, brigadeiro de milho, queijadinha e a cocada baiana de colher.
+        </p>
+
+        <p class="text-left">Então, vem conhecer!</p>
       </div>
 
       <div id="container-cards-aulas" class="mt-16">
@@ -135,14 +164,14 @@ export default {
 }
 
 @media (min-width: 1920px) {
-  #container-video-apresentacao{
+  #container-video-apresentacao {
     width: 80%;
   }
 
-  #titulo-curso h1{
+  #titulo-curso h1 {
     font-size: 4rem;
   }
-  #seta-descer{
+  #seta-descer {
     transform: scale(1.3);
   }
 }

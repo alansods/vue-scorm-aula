@@ -72,23 +72,26 @@
           Modo de preparo
         </h3>
 
-        <p>
-          Separe as claras da gema e reserve, pegue uma peneira e passe as gemas
-          e logo depois misture gemas e claras num bowl mexa com um fouet.
-        </p>
+        <ol class="lista-numerica">
+          <li>
+            Separe as claras da gema e reserve, pegue uma peneira e passe as
+            gemas e logo depois misture gemas e claras num bowl mexa com um
+            fouet.
+          </li>
 
-        <p>
-          Em seguida acrescente o leite condensado, e margarina, a farinha de
-          trigo deve ser acrescentada aos poucos e por último o coco ralado e o
-          queijo mexa bem.
-        </p>
+          <li>
+            Em seguida acrescente o leite condensado, e margarina, a farinha de
+            trigo deve ser acrescentada aos poucos e por último o coco ralado e
+            o queijo mexa bem.
+          </li>
 
-        <p>
-          Depois de pronto coloque a massa em forminhas próprias de cupcake e
-          leve ao forno pré aquecido a 160ºc por 35 minutos, ou até dourar.
-        </p>
+          <li>
+            Depois de pronto coloque a massa em forminhas próprias de cupcake e
+            leve ao forno pré aquecido a 160ºc por 35 minutos, ou até dourar.
+          </li>
 
-        <p>Retire do forno e deixe esfriar.</p>
+          <li>Retire do forno e deixe esfriar.</li>
+        </ol>
       </div>
 
       <button

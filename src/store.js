@@ -21,7 +21,7 @@ export default new Vuex.Store({
         id: "1",
         numeroAula: "01",
         nomeAula: "Boas práticas na fabricação de alimentos (BPF)",
-        descricaoAula: "Para garantir uma melhor condição do alimento é necessário ter atenção e aplicação das boas práticas de fabricação, por meio de cuidados desde a compra dos insumos até chegar às mãos do consumidor e não esquecer do manipulador que é uma peça chave para garantir o controle de qualidade.",
+        descricaoAula: "Para garantir uma melhor condição do alimento é necessário ter atenção e aplicar as boas práticas de fabricação por meio de cuidados, desde a compra dos insumos até chegar às mãos do consumidor. Não podemos esquecer do manipulador que é uma peça chave para garantir o controle de qualidade.",
         img: "aula-1.jpg",
         link: "/aula-01",
         completa: false,

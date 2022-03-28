@@ -4,34 +4,36 @@
       id="corpo"
       class="w-full px-3 xl:px-0 xl:max-w-screen-lg xl:mx-auto mt-16"
     >
-      <h3
-        class="text-center text-4xl font-bold text-primary-color"
-      >
+      <h3 class="text-center text-4xl font-bold text-primary-color">
         Arroz Doce
       </h3>
       <div class="container-icones">
-          <div class="icone">
-            <img
-              src="../../../../assets/img/icones-receitas/tempo-de-preparo.png"
-            />
-            <span>25min</span>
-          </div>
-
-          <div class="icone">
-            <img src="../../../../assets/img/icones-receitas/porcoes.png" />
-            <span>8 porções de 150g</span>
-          </div>
-
-          <div class="icone">
-            <img src="../../../../assets/img/icones-receitas/dificuldade.png" />
-            <span>fácil</span>
-          </div>
+        <div class="icone">
+          <img
+            src="../../../../assets/img/icones-receitas/tempo-de-preparo.png"
+          />
+          <span>25min</span>
         </div>
+
+        <div class="icone">
+          <img src="../../../../assets/img/icones-receitas/porcoes.png" />
+          <span>8 porções de 150g</span>
+        </div>
+
+        <div class="icone">
+          <img src="../../../../assets/img/icones-receitas/dificuldade.png" />
+          <span>fácil</span>
+        </div>
+      </div>
       <hr class="border-t-1 border-gray-300 my-5" />
       <div class="md:grid md:grid-cols-2 flex flex-col gap-5 mt-10">
         <div class="rounded-lg">
           <div id="video-apresentacao" class="aspect-w-16 aspect-h-9">
-            <youtube video-id="JIQ49DetwmM" class="border-white border-4 shadow-xl rounded-sm"  @ended="ended"/>
+            <youtube
+              video-id="JIQ49DetwmM"
+              class="border-white border-4 shadow-xl rounded-sm"
+              @ended="ended"
+            />
           </div>
         </div>
 
@@ -41,11 +43,11 @@
           </h3>
 
           <ul class="lista-check mb-0">
-            <li>fogão</li>
-            <li>balança ou xicara medidora</li>
-            <li>panela</li>
-            <li>espátula</li>
-            <li>bowl</li>
+            <li>Fogão</li>
+            <li>Balança ou xicara medidora</li>
+            <li>Panela</li>
+            <li>Espátula</li>
+            <li>Bowl</li>
           </ul>
         </div>
       </div>
@@ -63,7 +65,6 @@
           <li>2 xícaras de água (420g)</li>
           <li>3 xícaras de leite (648g)</li>
           <li>½ caixa de leite condensado(198g)</li>
-          <li>1 xícara de creme de leite (200g)</li>
           <li>Casca de 1 laranja</li>
           <li>1 xícara de creme de leite (200g)</li>
           <li>Sal a gosto</li>
@@ -75,17 +76,27 @@
           Modo de preparo
         </h3>
 
-        <p>
-          Em uma panela de fundo grosso adicione todos os ingredientes exceto o leite condensado e creme de leite e leve ao fogo mexendo de vez em quando para que não grude no fundo da panela.
-        </p>
+        <ol class="lista-numerica">
+          <li>
+            Em uma panela de fundo grosso adicione todos os ingredientes exceto
+            o leite condensado e creme de leite e leve ao fogo mexendo de vez em
+            quando para que não grude no fundo da panela.
+          </li>
 
-        <p>
-           Após 20 minutos, acrescente o leite condensado e deixe cozinhar por mais 5 min, e para finalizar acrescente o creme de leite, mexa bem. O arroz deve ficar meio líquido, não tem problema pois depois de esfriar ele ganha consistência.
-        </p>
+          <li>
+            Após 20 minutos, acrescente o leite condensado e deixe cozinhar por
+            mais 5 min, e para finalizar acrescente o creme de leite, mexa bem.
+            O arroz deve ficar meio líquido, não tem problema pois depois de
+            esfriar ele ganha consistência.
+          </li>
 
-        <p>
-          Após esta pronto coloque o arroz doce em um bowl, para evitar que crie uma crosta no seu arroz cubra com plástico filme tocando diretamente no seu doce, você pode deixar esfriando em temperatura ambiente ou levar para geladeira por 3hs.
-        </p>
+          <li>
+            Após esta pronto coloque o arroz doce em um bowl, para evitar que
+            crie uma crosta no seu arroz cubra com plástico filme tocando
+            diretamente no seu doce, você pode deixar esfriando em temperatura
+            ambiente ou levar para geladeira por 3hs.
+          </li>
+        </ol>
       </div>
 
       <button
@@ -115,17 +126,16 @@
 </template>
 
 <script>
-
 export default {
   title: "Aula 03 - Receitas: Arroz doce",
   components: {},
   data() {
     return {};
   },
-  methods:{
-    ended(){
-      this.$store.commit('COMPLETAR_RECEITA_1')
-    }
+  methods: {
+    ended() {
+      this.$store.commit("COMPLETAR_RECEITA_1");
+    },
   },
   created() {
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
@@ -138,7 +148,6 @@ export default {
 </script>
 
 <style scoped>
-
 .container-icones {
   display: flex;
   gap: 10px;
@@ -161,5 +170,4 @@ export default {
   height: 17px;
   margin-right: 5px;
 }
-
 </style>

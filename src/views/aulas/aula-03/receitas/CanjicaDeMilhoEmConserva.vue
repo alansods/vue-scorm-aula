@@ -29,7 +29,11 @@
       <div class="md:grid md:grid-cols-2 flex flex-col gap-5 mt-10">
         <div class="rounded-lg">
           <div id="video-apresentacao" class="aspect-w-16 aspect-h-9">
-             <youtube video-id="b0BuHBpzhdI" class="border-white border-4 shadow-xl rounded-sm"  @ended="ended"/>
+            <youtube
+              video-id="b0BuHBpzhdI"
+              class="border-white border-4 shadow-xl rounded-sm"
+              @ended="ended"
+            />
           </div>
         </div>
 
@@ -69,23 +73,25 @@
           Modo de preparo
         </h3>
 
-        <p>
-          No liquidificador, coloque as duas latas de milho escorrido, o leite
-          de coco, e o leite integral bata até ficar triturado. Em seguida,
-          peneire essa mistura e descarte o bagaço.
-        </p>
+        <ol class="lista-numerica">
+          <li>
+            No liquidificador, coloque as duas latas de milho escorrido, o leite
+            de coco, e o leite integral bata até ficar triturado. Em seguida,
+            peneire essa mistura e descarte o bagaço.
+          </li>
 
-        <p>
-          Em uma panela coloque a mistura, acrescente o leite condensado, o
-          amido, o pau de canela e o queijo, antes de levar ao fogo mexa bem
-          para dissolver o amido na mistura logo após com fogo baixo mexa de vez
-          em quando com cuidado para não grudar.
-        </p>
+          <li>
+            Em uma panela coloque a mistura, acrescente o leite condensado, o
+            amido, o pau de canela e o queijo, antes de levar ao fogo mexa bem
+            para dissolver o amido na mistura logo após com fogo baixo mexa de
+            vez em quando com cuidado para não grudar.
+          </li>
 
-        <p>
-          Após ganhar consistência, desligue o fogo e coloque a canjica em um
-          bowl para esfriar finalize com canela em pó a gosto.
-        </p>
+          <li>
+            Após ganhar consistência, desligue o fogo e coloque a canjica em um
+            bowl para esfriar finalize com canela em pó a gosto.
+          </li>
+        </ol>
       </div>
 
       <button

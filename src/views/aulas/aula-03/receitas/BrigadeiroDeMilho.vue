@@ -29,7 +29,11 @@
       <div class="md:grid md:grid-cols-2 flex flex-col gap-5 mt-10">
         <div class="rounded-lg">
           <div id="video-apresentacao" class="aspect-w-16 aspect-h-9">
-            <youtube video-id="_GRiEcBLRwU" class="border-white border-4 shadow-xl rounded-sm"  @ended="ended"/>           
+            <youtube
+              video-id="_GRiEcBLRwU"
+              class="border-white border-4 shadow-xl rounded-sm"
+              @ended="ended"
+            />
           </div>
         </div>
 
@@ -69,17 +73,44 @@
           Modo de preparo
         </h3>
 
-        <p>
-          No liquidificador coloque o leite, o milho escorrido e creme de leite, deixe bater bem, logo após passe essa mistura numa peneira, descarte o bagaço. 
-        </p>
+        <ol class="lista-numerica">
+          <li>
+            No liquidificador coloque o leite, o milho escorrido e creme de
+            leite, deixe bater bem.
+          </li>
 
-        <p>
-          Numa  panela coloque essa mistura  e leve em fogo médio junto com o leite condensado e a margarina, mexa sempre, estará pronto quando desgrudar do fundo da panela, após passe para um bowl (não é necessário passar margarina pois o doce já tem bastante gordura), passe em um filme plástico e deixe em temperatura ambiente para esfriar, depois leve a geladeira  e tire momentos antes de enrolar para que não fique “duros”.
-        </p>
+          <li>
+            Logo após passe essa mistura numa peneira,
+            descarte o bagaço.
+          </li>
 
-        <p>
-          Em seguida molhando as mãos com água ou passando margarina modele os docinhos em 10g ou 15g. Em uma panela coloque o coco ralado e leve ao fogo para criar uma cor caramelo, não necessita acrescentar gordura, mexa sempre, após chegar a coloração desejada apague o fogo e transfira o coco para um bowl para que possa esfriar, depois de enrolar os docinhos envolva no coco.
-        </p>
+          <li>
+            Numa panela coloque essa mistura e leve em fogo médio junto com o
+            leite condensado e a margarina, mexa sempre, estará pronto quando
+            desgrudar do fundo da panela. 
+          </li>
+
+          <li>
+            Depois passe para um bowl (não é
+            necessário passar margarina pois o doce já tem bastante gordura),
+            passe em um filme plástico e deixe em temperatura ambiente para
+            esfriar, depois leve a geladeira e tire momentos antes de enrolar
+            para que não fique “duros”.
+          </li>
+
+          <li>
+            Em seguida molhando as mãos com água ou passando margarina modele os
+            docinhos em 10g ou 15g. Em uma panela coloque o coco ralado e leve
+            ao fogo para criar uma cor caramelo, não necessita acrescentar
+            gordura, mexa sempre. 
+          </li>
+
+          <li>
+            Após chegar a coloração desejada apague o fogo
+            e transfira o coco para um bowl para que possa esfriar, depois de
+            enrolar os docinhos envolva no coco.
+          </li>
+        </ol>
       </div>
 
       <button
@@ -115,10 +146,10 @@ export default {
   data() {
     return {};
   },
-      methods:{
-    ended(){
-      this.$store.commit('COMPLETAR_RECEITA_7')
-    }
+  methods: {
+    ended() {
+      this.$store.commit("COMPLETAR_RECEITA_7");
+    },
   },
   created() {
     this.$store.commit("ESTA_NA_AULA_APRESENTACAO", false);
