@@ -13,15 +13,15 @@
         v-for="receita in $store.state.receitas"
         :key="receita.id"
       >
-        <div v-if="skeleton" class="skeleton"></div>
+        <div v-if="receita.skeleton" class="skeleton"></div>
         <div
-          class="flex flex-col" :class="{opacidade: skeleton}"
+          class="flex flex-col" :class="{opacidade: receita.skeleton}"
           @click="$router.push({ path: receita.path })"
         >
         
           <div class="container-img">
             <img
-              @load="handleLoad"
+              @load="receita.skeleton = false"
               :src="require(`@/assets/img/receitas/${receita.imagem}`)"
             />
           </div>
@@ -59,15 +59,10 @@
 export default {
   data() {
     return {
-      skeleton: true,
     };
   },
   methods: {
-    handleLoad({target}) {
-      console.log("carregou img")
-      this.skeleton = false;
-      target.style.opacity = 1
-    },
+
   },
 };
 </script>

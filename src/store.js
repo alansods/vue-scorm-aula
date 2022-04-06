@@ -93,6 +93,7 @@ export default new Vuex.Store({
         dificuldade: "fácil",
         path: "/aula-03/arroz-doce",
         finalizada: false,
+        skeleton: true
       },
       {
         id: 2,
@@ -104,6 +105,7 @@ export default new Vuex.Store({
         dificuldade: "fácil",
         path: "/aula-03/mugunza-doce",
         finalizada: false,
+        skeleton: true
       },
       {
         id: 3,
@@ -115,6 +117,7 @@ export default new Vuex.Store({
         dificuldade: "fácil",
         path: "/aula-03/canjica-de-milho-verde",
         finalizada: false,
+        skeleton: true
       },
       {
         id: 4,
@@ -126,6 +129,7 @@ export default new Vuex.Store({
         dificuldade: "fácil",
         path: "/aula-03/canjica-de-milho-em-conserva",
         finalizada: false,
+        skeleton: true
       },
       {
         id: 5,
@@ -137,6 +141,7 @@ export default new Vuex.Store({
         dificuldade: "fácil",
         path: "/aula-03/cocada-baiana-de-colher",
         finalizada: false,
+        skeleton: true
       },
       {
         id: 6,
@@ -148,6 +153,7 @@ export default new Vuex.Store({
         dificuldade: "fácil",
         path: "/aula-03/pe-de-moleque",
         finalizada: false,
+        skeleton: true
       },
       {
         id: 7,
@@ -159,6 +165,7 @@ export default new Vuex.Store({
         dificuldade: "médio",
         path: "/aula-03/brigadeiro-de-milho",
         finalizada: false,
+        skeleton: true
       },
       {
         id: 8,
@@ -170,6 +177,7 @@ export default new Vuex.Store({
         dificuldade: "médio",
         path: "/aula-03/queijadinha",
         finalizada: false,
+        skeleton: true
       },
     ]
   },
