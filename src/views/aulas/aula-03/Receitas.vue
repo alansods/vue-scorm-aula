@@ -1,6 +1,9 @@
 <template>
   <div id="receitas">
-    <p class="pb-10 block w-2/3 md:w-full text-center text-gray-400 font-light" style="margin: 0 auto !important">
+    <p
+      class="pb-10 block w-2/3 md:w-full text-center text-gray-400 font-light"
+      style="margin: 0 auto !important"
+    >
       Assista todas as receitas para completar essa aula.
     </p>
 
@@ -10,12 +13,17 @@
         v-for="receita in $store.state.receitas"
         :key="receita.id"
       >
+        <div v-if="skeleton" class="skeleton"></div>
         <div
-          class="flex flex-col"
+          class="flex flex-col" :class="{opacidade: skeleton}"
           @click="$router.push({ path: receita.path })"
         >
+        
           <div class="container-img">
-            <img :src="require(`@/assets/img/receitas/${receita.imagem}`)" />
+            <img
+              @load="handleLoad"
+              :src="require(`@/assets/img/receitas/${receita.imagem}`)"
+            />
           </div>
           <h2>{{ receita.nome }}</h2>
           <hr />
@@ -50,9 +58,17 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      skeleton: true,
+    };
   },
-  methods: {},
+  methods: {
+    handleLoad({target}) {
+      console.log("carregou img")
+      this.skeleton = false;
+      target.style.opacity = 1
+    },
+  },
 };
 </script>
 
@@ -142,5 +158,27 @@ hr {
   h2 {
     text-align: center;
   }
+}
+
+.skeleton {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, #eee 0px, #fff 50%, #eee 100%);
+  background-color: #eee;
+  background-size: 200%;
+  animation: skeleton 1.5s infinite linear;
+}
+
+@keyframes skeleton {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -200%;
+  }
+}
+
+.opacidade {
+  opacity: 0;
 }
 </style>
