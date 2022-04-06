@@ -158,7 +158,7 @@ hr {
 .skeleton {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(90deg, #eee 0px, #fff 50%, #eee 100%);
+  background-image: linear-gradient(90deg, #ccc 0px, #eee 50%, #ccc 100%);
   background-color: #eee;
   background-size: 200%;
   animation: skeleton 1.5s infinite linear;
